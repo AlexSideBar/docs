@@ -1,0 +1,44 @@
+{
+  "name": "Alex Editor",
+  "logo": {
+    "dark": "/logo/alex_profile.jpeg",
+    "light": "/logo/alex_profile.jpeg"
+  },
+  "favicon": "/logo/alex_profile.jpeg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D93F3",
+      "to": "#00C083"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:team@alexcodes.app"
+    }
+  ],
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
+  },
+  "topbarCtaButton": {
+    "name": "My Apps",
+    "url": "https://portal.alexcodes.app"
+  },
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "firebase_setup",
+        "upload_app_store"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/alexcodes_ai"
+  }
+}
