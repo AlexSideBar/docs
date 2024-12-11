@@ -51,13 +51,12 @@ Note that o1 model is limited to 50 credits - to purchase additional credits, jo
 
 ## API Key Configuration
 
-You can add your API keys directly in the Model Settings screen. Simply click the settings icon and look for the API key input fields for each provider.
+You can add your API keys directly in the Model Settings screen. Simply click the settings icon on the top right corner of the sidebar and look for the API key input fields for each provider under the section "Model Settings".
 
 <AccordionGroup>
   <Accordion title="OpenAI API Key">
     To use GPT-4 or OpenAI models:
     1. Get an API key from [OpenAI's platform](https://platform.openai.com)
-    2. Open Alex Sidebar settings
     3. Find the "OpenAI Key" field
     4. Enter your API key in the input box
   </Accordion>
@@ -65,7 +64,6 @@ You can add your API keys directly in the Model Settings screen. Simply click th
   <Accordion title="Anthropic API Key">
     To use Claude models:
     1. Obtain an API key from [Anthropic's console](https://console.anthropic.com)
-    2. Open Alex Sidebar settings
     3. Find the "Anthropic Key" field
     4. Enter your API key in the input box
   </Accordion>
@@ -82,24 +80,33 @@ You can add your API keys directly in the Model Settings screen. Simply click th
 Your API keys are stored securely and only used to authenticate with the respective AI providers. You can update or remove them at any time from the settings screen.
 </Note>
 
-## Local Model Setup
+## Custom Model Setup
 
-Alex Sidebar supports running models locally through Ollama for offline usage:
+You can add custom models that comply with the OpenAI API scheme. Follow these steps to configure a custom model:
 
 <Steps>
-  <Step title="Install Ollama">
-    Download and install [Ollama](https://ollama.ai) on your machine.
+  <Step title="Add Custom Model">
+    1. Navigate to "Settings" by selecting the gear icon on the top right corner of the sidebar 
+    2. Select "Model Settings" and scroll to the "Custom Models" section
+    3. Click the "Add New Model" button to create a new custom model configuration
   </Step>
   
-  <Step title="Configure Local Model">
-    1. Open Alex Sidebar settings
-    2. Navigate to "Local Models"
-    3. Enable local model support
-    4. Select your preferred local model
+  <Step title="Configure Model Details">
+    1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`, `llama-3.3-70b-instruct`)
+    2. Provide the Base URL for your model's API endpoint
+    3. Add your API Key for authentication
+    4. (Optional) Specify if the model supports image inputs
   </Step>
   
-  <Step title="Start Using">
-    The local model will now appear in your model selection options.
+  <Step title="Example: Qwen 2.5 32B Coder Model">
+    To run the Qwen 2.5 32B Coder model:
+    - Model ID: `qwen2.5-coder-32b-instruct`
+    - Base URL: `https://openrouter.ai/api/v1`
+    - Enter your API Key in the provided field
+  </Step>
+  
+  <Step title="Finalize Setup">
+    Go back to the chat screen by clicking on the closs icon on the top right corner of the sidebar and you will see the custom model in the model selection options.
   </Step>
 </Steps>
 
@@ -107,14 +114,12 @@ Alex Sidebar supports running models locally through Ollama for offline usage:
 
 <CardGroup cols={2}>
   <Card title="Model Selection Tips" icon="lightbulb">
-    - Use Claude or GPT-4 for complex architectural decisions
-    - O1 models for quick code completions
-    - Local models for offline work or privacy requirements
+    - Use Claude 3.5 Sonnet or GPT-4 for complex architectural decisions
+    - Claude 3.5 Haiku or GPT-4 Mini for quick code completions
   </Card>
 
   <Card title="Performance Optimization" icon="gauge">
-    - Clear chat history regularly
-    - Use appropriate context window sizes
+    - Start new chats for long conversations to maintain accuracy
     - Match model capabilities to task complexity
   </Card>
 </CardGroup>
@@ -130,5 +135,5 @@ If you encounter issues with model responses:
 5. Restart Alex Sidebar if issues persist
 
 <Note>
-Need help? Join our [Discord community](https://discord.gg/alexsidebar) for support and tips from other developers.
+Need help? Join our [Discord community](https://discord.gg/T5zxfReEnd) for support and tips from other developers.
 </Note> 
