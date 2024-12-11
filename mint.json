@@ -8,9 +8,9 @@
   },
   "favicon": "/logo/alex_profile.jpeg",
   "colors": {
-    "primary": "#5D4CFE",
-    "light": "#8477FF",
-    "dark": "#5D4CFE"
+    "primary": "#6ED511",
+    "light": "#6ED511",
+    "dark": "#6ED511"
   },
   "topbarLinks": [
     {
