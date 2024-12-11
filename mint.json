@@ -33,6 +33,12 @@
         "introduction",
         "getting-started"
       ]
+    },
+    {
+      "group": "Configuration",
+      "pages": [
+        "model-configuration"
+      ]
     }
   ],
   "footerSocials": {

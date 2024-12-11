@@ -1,0 +1,124 @@
+---
+title: "Model Configuration"
+description: "Configure and customize AI models in Alex Sidebar"
+---
+
+# Model Configuration
+
+Alex Sidebar supports multiple AI models to suit different development needs and preferences. This guide explains the available models and how to configure them.
+
+## Available Models
+
+<CardGroup cols={2}>
+  <Card title="Claude Sonnet 3.5" icon="sparkles">
+    Anthropic's latest model, offering excellent code understanding and generation capabilities. Best for complex coding tasks and detailed explanations.
+  </Card>
+  
+  <Card title="GPT-4" icon="robot">
+    OpenAI's advanced model known for strong reasoning and code generation. Excellent for architectural decisions and complex refactoring.
+  </Card>
+
+  <Card title="OpenAI O1 Preview" icon="stars">
+    Specialized for code-related tasks with fast response times. Great for quick code suggestions and improvements.
+  </Card>
+
+  <Card title="OpenAI O1 Mini" icon="bolt">
+    Lightweight version optimized for speed. Perfect for simple code completions and quick queries.
+  </Card>
+</CardGroup>
+
+## Model Selection
+
+You can switch between models in the Alex Sidebar settings:
+
+1. Click the settings icon in the sidebar
+2. Navigate to the "AI Models" section
+3. Select your preferred model from the dropdown
+
+<Note>
+Some models may require API keys for full access. The free tier includes limited credits for testing different models.
+</Note>
+
+## API Key Configuration
+
+You can add your API keys directly in the Model Settings screen. Simply click the settings icon and look for the API key input fields for each provider.
+
+<AccordionGroup>
+  <Accordion title="OpenAI API Key">
+    To use GPT-4 or OpenAI models:
+    1. Get an API key from [OpenAI's platform](https://platform.openai.com)
+    2. Open Alex Sidebar settings
+    3. Find the "OpenAI Key" field
+    4. Enter your API key in the input box
+  </Accordion>
+
+  <Accordion title="Anthropic API Key">
+    To use Claude models:
+    1. Obtain an API key from [Anthropic's console](https://console.anthropic.com)
+    2. Open Alex Sidebar settings
+    3. Find the "Anthropic Key" field
+    4. Enter your API key in the input box
+  </Accordion>
+
+  <Accordion title="Other Providers">
+    Additional model providers like Perplexity and VoyageAI can also be configured:
+    1. Obtain the appropriate API key from the provider's website
+    2. Find the corresponding key field in settings
+    3. Enter your API key
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+Your API keys are stored securely and only used to authenticate with the respective AI providers. You can update or remove them at any time from the settings screen.
+</Note>
+
+## Local Model Setup
+
+Alex Sidebar supports running models locally through Ollama for offline usage:
+
+<Steps>
+  <Step title="Install Ollama">
+    Download and install [Ollama](https://ollama.ai) on your machine.
+  </Step>
+  
+  <Step title="Configure Local Model">
+    1. Open Alex Sidebar settings
+    2. Navigate to "Local Models"
+    3. Enable local model support
+    4. Select your preferred local model
+  </Step>
+  
+  <Step title="Start Using">
+    The local model will now appear in your model selection options.
+  </Step>
+</Steps>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Model Selection Tips" icon="lightbulb">
+    - Use Claude or GPT-4 for complex architectural decisions
+    - O1 models for quick code completions
+    - Local models for offline work or privacy requirements
+  </Card>
+
+  <Card title="Performance Optimization" icon="gauge">
+    - Clear chat history regularly
+    - Use appropriate context window sizes
+    - Match model capabilities to task complexity
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+If you encounter issues with model responses:
+
+1. Check your API key configuration
+2. Verify your internet connection
+3. Ensure you're within the model's context limit
+4. Try switching to a different model
+5. Restart Alex Sidebar if issues persist
+
+<Note>
+Need help? Join our [Discord community](https://discord.gg/alexsidebar) for support and tips from other developers.
+</Note> 
