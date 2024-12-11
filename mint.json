@@ -19,8 +19,8 @@
     }
   ],
   "modeToggle": {
-    "default": "light",
-    "isHidden": true
+    "default": "dark",
+    "isHidden": false
   },
   "topbarCtaButton": {
     "name": "Discord Community",
