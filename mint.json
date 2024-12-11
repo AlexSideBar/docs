@@ -31,8 +31,7 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "firebase_setup",
-        "upload_app_store"
+        "getting-started"
       ]
     }
   ],
