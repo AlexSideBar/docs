@@ -1,0 +1,136 @@
+---
+title: "Chat Interface"
+description: "Learn how to effectively use Alex Sidebar's chat capabilities for code assistance"
+---
+
+## Quick Actions
+
+<CardGroup cols={2}>
+  <Card title="Command + L" icon="message-bot">
+    Select code in Xcode and instantly start a chat about it. The selected code will be automatically added as context.
+  </Card>
+  
+  <Card title="Command + Shift + L" icon="plus">
+    Add selected code to your existing chat without opening a new window. Perfect for building context incrementally.
+  </Card>
+
+  <Card title="Command + Enter" icon="code">
+    Start a chat with your entire codebase as context. Useful for high-level questions about your project.
+  </Card>
+
+  <Card title="@ Commands" icon="at">
+    Access documentation, trigger actions, and more using the @ menu in your chat.
+  </Card>
+</CardGroup>
+
+## Chat Basics
+
+<Steps>
+  <Step title="Starting a Chat">
+    There are three main ways to start a chat:
+    - Select code and press **Command + L**
+    - Click the chat icon in the sidebar
+    - Use **Command + Enter** for a new chat with full codebase context
+  </Step>
+  
+  <Step title="Adding Context">
+    You can add context to your chat in multiple ways:
+    - Select code and use **Command + Shift + L**
+    - Drag and drop files into the chat
+    - Use the file browser to select additional files
+    
+    <Note>
+    The more relevant context you provide, the more accurate and helpful the responses will be.
+    </Note>
+  </Step>
+  
+  <Step title="Using @ Commands">
+    Type @ in the chat to access quick actions:
+    - @docs - Search documentation
+    - @file - Reference specific files
+    - @model - Switch AI models
+    - @clear - Clear chat history
+  </Step>
+</Steps>
+
+## Advanced Features
+
+### Context Management
+
+#### Managing Chat History
+- Chats are automatically saved
+- Access previous chats from the history panel
+- Clear individual chats or all history
+- Export chat history for sharing or reference
+
+#### Code Context
+- View current context in the sidebar
+- Remove specific files from context
+- Set default context preferences
+- Manage context size limits
+
+#### Multi-File Interactions
+- Reference multiple files in one chat
+- Compare code across files
+- Generate changes for multiple files
+- Navigate between referenced files
+
+### Chat Commands
+
+<CardGroup cols={2}>
+  <Card title="Code Generation" icon="code">
+    Use `/generate` to create new code based on your description
+  </Card>
+  
+  <Card title="Code Review" icon="magnifying-glass">
+    Use `/review` to get feedback on your code
+  </Card>
+  
+  <Card title="Documentation" icon="book">
+    Use `/docs` to generate documentation for your code
+  </Card>
+  
+  <Card title="Refactoring" icon="arrows-rotate">
+    Use `/refactor` to get refactoring suggestions
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Writing Effective Prompts" icon="pencil">
+    - Be specific about what you want
+    - Provide necessary context
+    - Use appropriate commands
+    - Break complex questions into smaller parts
+  </Card>
+
+  <Card title="Managing Context" icon="layer-group">
+    - Keep context focused and relevant
+    - Remove unnecessary files
+    - Update context when switching tasks
+    - Clear context for new topics
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Common Issues">
+    - Chat not responding
+    - Context not updating
+    - Command shortcuts not working
+    - Model switching problems
+  </Accordion>
+
+  <Accordion title="Performance Tips">
+    - Clear chat history regularly
+    - Manage context size
+    - Use appropriate models
+    - Optimize prompt length
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+Need more help? Join our [Discord community](https://discord.gg/alexsidebar) for support and tips from other developers.
+</Note> 
