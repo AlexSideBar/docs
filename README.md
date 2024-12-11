@@ -1,4 +1,4 @@
-# Alex Sidebar
+# Alex Sidebar Docs (Beta)
 
 Alex Sidebar is your intelligent coding companion that seamlessly integrates with Xcode to enhance your development experience. With powerful features and intuitive shortcuts, you'll write better code faster than ever before.
 
