@@ -1,5 +1,7 @@
 {
-  "name": "Alex Editor",
+  "name": "Alex Sidebar",
+  "$schema": "https://mintlify.com/schema.json",
+  "theme": "prism",
   "logo": {
     "dark": "/logo/alex_profile.jpeg",
     "light": "/logo/alex_profile.jpeg"
