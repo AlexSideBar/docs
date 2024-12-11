@@ -35,15 +35,12 @@
       ]
     }
   ],
-  "footerSocials": [
-    {
-      "x": "https://x.com/alexcodes_ai"
-    },
-    {
-      "discord": "https://discord.gg/T5zxfReEnd"
-    },
-    {
-      "linkedin": "https://www.linkedin.com/company/alex-sidebar/"
-    }
-  ]
+  "footerSocials": {
+    "type": "x",
+    "url": "https://x.com/alexcodes_ai",
+    "type": "discord",
+    "url": "https://discord.gg/T5zxfReEnd",
+    "type": "linkedin",
+    "url": "https://www.linkedin.com/company/alex-sidebar/"
+  }
 }
