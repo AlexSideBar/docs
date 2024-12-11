@@ -3,10 +3,10 @@
   "$schema": "https://mintlify.com/schema.json",
   "theme": "prism",
   "logo": {
-    "dark": "/logo/alex_profile.jpeg",
-    "light": "/logo/alex_profile.jpeg"
+    "dark": "/logo/alex_logo.png",
+    "light": "/logo/alex_logo.png"
   },
-  "favicon": "/logo/alex_profile.jpeg",
+  "favicon": "/logo/alex_logo.png",
   "colors": {
     "primary": "#6ED511",
     "light": "#6ED511",
