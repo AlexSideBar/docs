@@ -124,6 +124,58 @@ You can add custom models that comply with the OpenAI API scheme. Follow these s
   </Card>
 </CardGroup>
 
+## Running Local Models
+
+Alex Sidebar supports running local AI models through Ollama, providing a free and privacy-focused alternative to cloud-based models. Here's how to set up a local model like Qwen2.5-Coder:
+
+<Steps>
+  <Step title="Install Prerequisites">
+    1. Install Ollama to manage and serve the local model
+    2. Install ngrok for creating a secure tunnel (temporary requirement until direct localhost support)
+    3. Create a free ngrok account at [ngrok.com](https://ngrok.com) to get an authentication token
+  </Step>
+  
+  <Step title="Set Up the Model">
+    ```bash
+    # Pull the Qwen2.5-Coder model
+    ollama pull qwen2.5-coder:32b
+    
+    # Start the Ollama server
+    ollama serve
+    ```
+  </Step>
+  
+  <Step title="Configure ngrok">
+    ```bash
+    # Install ngrok
+    brew install ngrok
+    
+    # Authenticate with your token
+    ngrok config add-authtoken YOUR_AUTH_TOKEN
+    
+    # Create tunnel to Ollama server
+    ngrok http 11434 --host-header="localhost:11434"
+    ```
+  </Step>
+  
+  <Step title="Configure in Alex Sidebar">
+    Add a custom model with these settings:
+    - Model ID: `qwen2.5-coder:32b`
+    - Base URL: Your ngrok URL + `/v1` (e.g., `https://your-subdomain.ngrok-free.app/v1`)
+    - API Key: Your ngrok authentication token
+  </Step>
+</Steps>
+
+<Note>
+Direct localhost support is coming soon to Alex Sidebar, which will eliminate the need for ngrok tunneling.
+</Note>
+
+<Warning>
+Local models may run slower than cloud-based alternatives, especially on less powerful hardware. Consider your performance requirements when choosing between local and cloud models.
+</Warning>
+
+Credit: This setup process was documented by [Daniel Raffel](https://danielraffel.me/til/2024/11/13/how-to-set-up-a-local-ai-model-with-xcode-ollama-qwen2-5-coder-alex-sidebar/) who tested and validated the local model configuration with Alex Sidebar.
+
 ## Troubleshooting
 
 If you encounter issues with model responses:
