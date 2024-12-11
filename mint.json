@@ -6,13 +6,9 @@
   },
   "favicon": "/logo/alex_profile.jpeg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D93F3",
-      "to": "#00C083"
-    }
+    "primary": "#5D4CFE",
+    "light": "#8477FF",
+    "dark": "#5D4CFE"
   },
   "topbarLinks": [
     {
