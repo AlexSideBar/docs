@@ -34,6 +34,12 @@
         "getting-started",
         "data-usage"
       ]
+    },
+    {
+      "group": "Configuration",
+      "pages": [
+        "model-configuration"
+      ]
     }
   ],
   "footer": {
