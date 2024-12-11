@@ -1,0 +1,121 @@
+---
+title: "Data Usage"
+description: "Understanding how Alex Sidebar handles and protects your data"
+---
+
+## Overview
+
+Alex Sidebar is designed with privacy and security in mind. We maintain strict data handling practices to protect your code and personal information.
+
+## Core Principles
+
+- No code storage or collection
+- Opt-out of all third-party training data
+- Minimal analytics collection (feature usage and diagnostics only)
+- Local storage prioritization
+
+## Infrastructure
+
+### API Processing
+
+All LLM interactions are processed through our secure infrastructure:
+
+1. API endpoint: https://api.alexcodes.app
+2. Server location: United States (Render hosting)
+3. Processing workflow:
+   - Context collection from user selection
+   - Prompt construction with provided context
+   - Secure routing to model providers
+   - Response delivery without data persistence
+
+### Future Data Practices
+
+We maintain a strict opt-out-by-default policy for all users. Any future data collection initiatives will:
+- Require explicit user consent
+- Be clearly communicated
+- Include granular opt-in controls
+- Maintain existing user preferences
+
+## Data Storage
+
+### Code Embeddings
+
+Alex Sidebar implements local embedding storage for search functionality:
+
+1. **Generation Process**
+   - Automatic embedding of Xcode project code
+   - Processing through VoyageAI's embedding service
+   - Explicit opt-out from provider data collection
+
+2. **Storage Location**
+   - Local SQLite database
+   - Path: Application Support/com.DanielEdrisian.AlexSideBar
+   - No cloud storage or sync
+
+### Chat History
+
+Chat data management follows local-first principles:
+- Storage in Application Support directory
+- No server-side persistence
+- User-controlled retention
+
+## AI Provider Integration
+
+### Chat Models
+
+Current providers:
+- OpenAI
+- Anthropic
+- Perplexity
+
+All integrations configured with:
+- Training data opt-out enabled
+- No persistent storage
+- Request-only data transmission
+
+### Code Application Models
+
+Implementation providers:
+- Groq
+- Cerebras
+- Fireworks AI
+- Google (Gemini)
+
+Security measures:
+- Training opt-out enforced
+- Temporary request processing
+- No provider-side data retention
+
+## Monitoring Systems
+
+### Analytics Implementation
+
+Posthog integration limited to:
+- Feature activation events
+- Command usage frequency
+- No content or context collection
+- Anonymous usage patterns
+
+### Error Tracking System
+
+Sentry implementation captures:
+- Application crash reports
+- Error stack traces
+- Performance metrics
+  - Frame rate analysis
+  - UI responsiveness
+- Basic system information
+  - OS version
+  - Device identifiers
+  - IP addressing
+
+## Authentication System
+
+Firebase implementation handles:
+- User authentication
+- O1-Preview credit management
+- Basic account state
+
+For comprehensive details on our data handling practices, refer to our official documentation:
+- [Terms of Service](https://alexcodes.app/terms)
+- [Privacy Policy](https://alexcodes.app/privacy)

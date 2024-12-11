@@ -31,7 +31,8 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "getting-started"
+        "getting-started",
+        "data-usage"
       ]
     }
   ],
