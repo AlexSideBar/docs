@@ -101,6 +101,78 @@ When Xcode displays errors or warnings, Alex Sidebar can help resolve them quick
   </Card>
 </CardGroup>
 
+## SwiftUI Code Examples
+
+Here are some practical examples of how Alex Sidebar's inline suggestions work with SwiftUI code:
+
+    Start typing a basic SwiftUI view and let inline suggestions help:
+    ```swift
+    struct ContentView: View {
+      var body: some View {
+        // Type "VStack", wait for a bit and then press TAB
+        VStack(spacing: 16) {
+          Text("Hello, World!")
+            .font(.title)
+            .foregroundColor(.blue)
+
+          Button("Tap me") {
+            // Suggestions will offer action implementations
+          }
+        }
+      }
+    }
+    ```
+
+<AccordionGroup>
+  
+  <Accordion title="Property Wrappers">
+    Get intelligent suggestions for SwiftUI property wrappers:
+    ```swift
+    struct TodoView: View {
+      // Type "@St" and use Tab completion
+      @State private var taskTitle = ""
+      // Type "@Ob" for Observable properties
+      @ObservedObject var viewModel: TodoViewModel
+      
+      var body: some View {
+        Form {
+          TextField("Task Title", text: $taskTitle)
+          // Suggestions will offer common modifiers
+        }
+      }
+    }
+    ```
+  </Accordion>
+
+  <Accordion title="Custom Modifiers">
+    Get suggestions for custom view modifiers:
+    ```swift
+    struct CardModifier: ViewModifier {
+      // Type "func" and let suggestions complete the method
+      func body(content: Content) -> some View {
+        content
+          .padding()
+          .background(Color.white)
+          .cornerRadius(10)
+          .shadow(radius: 5)
+      }
+    }
+
+    // Usage example with inline suggestions
+    Text("Card Content")
+      .modifier(CardModifier())
+    ```
+
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  The examples above demonstrate common SwiftUI patterns where inline
+  suggestions are particularly helpful. As you type these patterns, Alex Sidebar
+  will suggest: - Property wrapper completions - View modifier chains - Common
+  SwiftUI view structures - Closure completions
+</Note>
+
 <Warning>
   While AI suggestions are powerful, always review generated code to ensure it
   meets your requirements and follows your project's conventions.
