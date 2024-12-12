@@ -1,0 +1,139 @@
+---
+title: "Troubleshooting Guide"
+description: "Common issues, solutions, and performance optimization tips for Alex Sidebar"
+---
+
+## Common Issues and Solutions
+
+### Chat and Response Issues
+
+<AccordionGroup>
+  <Accordion title="Chat Response and Connection Problems">
+    **Symptoms:** - No responses in chat - Server timeouts - "Error connecting
+    to LLM API" - Rainbow wheel appearing - Infinite spinners **Solutions:** 1.
+    Check API Connection: - Verify internet connection - If using custom API
+    key, ensure it's valid - Try removing custom API key to use beta credits 2.
+    If App Freezes: - Force quit Alex Sidebar - Restart Xcode - Clear chat
+    history 3. For Server Timeouts: - Reduce context size - Break large requests
+    into smaller ones - Check if you're exceeding context limits
+  </Accordion>
+</AccordionGroup>
+### Project Indexing and File Issues
+
+**Symptoms:**
+
+- Stuck on indexing
+- Files not being created properly
+- Wrong file modifications
+- Issues with multiple Xcode projects
+
+**Solutions:**
+
+1. For Indexing Problems:
+
+- Restart Alex Sidebar
+- Clear Xcode's derived data
+- Check project permissions
+
+2. File Creation Issues:
+
+- Use menu options instead of + button
+- Verify write permissions
+- Check for path existence
+
+3. Multiple Projects:
+
+- Keep only one project active when possible
+- Verify correct project selection
+- Double-check file paths before modifications
+
+### UI and Window Management
+
+**Symptoms:**
+
+- Incorrect window resizing
+- Text truncation
+- Sidebar growing to full screen
+- Font size issues
+
+**Solutions:**
+
+1. Window Issues:
+
+- Use Cmd+ and Cmd- for font scaling
+- Restart app if window becomes unresponsive
+- Maintain minimum window width
+
+2. Display Problems:
+
+- Toggle fullscreen mode
+- Reset window position
+- Check display scaling settings
+
+## Performance Optimization
+
+### Model Selection and API Usage
+
+<Note>
+**Best Practices for API Usage:**
+
+- Use appropriate models for different tasks:
+
+  - GPT-4 for complex code generation
+  - Claude for documentation and explanations
+  - GPT-3.5 for quick queries
+
+- When using custom API keys:
+
+  - Verify correct model selection
+  - Monitor credit usage
+  - Check for rate limits
+
+</Note>
+
+### Keyboard and Input
+
+<AccordionGroup>
+  <Accordion title="Keyboard Shortcuts">
+    **Current Issues:**
+    - Escape key capture affecting Vim users
+    - Dvorak keyboard layout conflicts
+    - Some shortcuts may conflict with Xcode
+    
+    **Workarounds:**
+    - Use menu options instead of shortcuts
+    - Check for keyboard shortcut conflicts in System Preferences
+    - Wait for upcoming customizable shortcuts feature
+  </Accordion>
+
+  <Accordion title="Input and Paste Operations">
+    **Known Issues:**
+    - Crashes when pasting in input field
+    - Text loss in prompt inputs
+    - Duplicate text in inputs
+    
+    **Temporary Solutions:**
+    - Type text manually instead of pasting
+    - Break large pastes into smaller chunks
+    - Save important prompts externally
+  </Accordion>
+</AccordionGroup>
+
+## Reporting New Issues
+
+If you encounter issues not covered here:
+
+1. Check the version number
+2. Document the steps to reproduce
+3. Capture relevant screenshots/recordings
+4. Report through appropriate channels:
+   - Discord for quick help
+   - GitHub for bug tracking
+   - Email for account/license issues
+
+<Note>
+  For fastest resolution: - Include your system information - Provide clear
+  reproduction steps - Mention any recent changes or updates - Include relevant
+  error messages
+
+</Note>

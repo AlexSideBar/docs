@@ -55,7 +55,8 @@
       "group": "Support",
       "pages": [
         "support/getting-help",
-        "support/discord-channels"
+        "support/discord-channels",
+        "support/troubleshooting"
       ]
     }
   ],
