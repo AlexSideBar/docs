@@ -50,6 +50,13 @@
         "keyboard-bindings",
         "window-settings"
       ]
+    },
+    {
+      "group": "Support",
+      "pages": [
+        "support/getting-help",
+        "support/discord-channels"
+      ]
     }
   ],
   "footer": {
