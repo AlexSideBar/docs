@@ -36,9 +36,10 @@
       ]
     },
     {
-      "group": "Features",
+      "group": "Working withChat",
       "pages": [
-        "chat-interface"
+        "chat-interface",
+        "chat-commands"
       ]
     },
     {

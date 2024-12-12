@@ -1,15 +1,15 @@
 ---
 title: "Chat Interface"
-description: "Learn how to effectively use Alex Sidebar's chat capabilities for code assistance"
+description: "Learn how to use Alex Sidebar's chat for code assistance"
 ---
 
-Alex Sidebar's chat feature enables interactive code discussions and improvements directly within Xcode. By integrating natural language queries into your development workflow, you can accelerate your coding process and resolve issues efficiently.
+Alex Sidebar's chat feature enables code discussions and improvements in Xcode running on the side. By prompting your queries, you can assist your coding process and resolve issues more quickly.
 
 ## Quick Actions
 
 <CardGroup cols={2}>
   <Card title="Command + L" icon="message-bot">
-    Select code in Xcode and instantly start a chat about it. The selected code will be automatically added as context.
+    Select code in Xcode and start a **new chat**. The selected code will be automatically be added as a reference.
   </Card>
   
   <Card title="Command + Shift + L" icon="plus">
@@ -17,12 +17,12 @@ Alex Sidebar's chat feature enables interactive code discussions and improvement
   </Card>
 
 <Card title="Command + Enter" icon="code">
-  Start a chat with your entire codebase as context. Useful for high-level
-  questions about your project.
+  Start a chat with entire codebase as context. Useful for high-level questions
+  about your project.
 </Card>
 
   <Card title="@ Commands" icon="at">
-    Access documentation, trigger actions, and more using the @ menu in your chat.
+    Access documentation, add more files and more using the @ menu in your chat.
   </Card>
 </CardGroup>
 
@@ -117,23 +117,19 @@ Alex Sidebar's chat feature enables interactive code discussions and improvement
 
 ## Chat Commands
 
+Alex Sidebar provides various commands to help you work more efficiently. See our detailed [Chat Commands](/chat-commands) guide to learn about:
+
 <CardGroup cols={2}>
-  <Card title="Code Generation" icon="code">
-    Use `/generate` to create new code based on your description
+  <Card title="File Commands" icon="folder">
+    Access project files and documentation directly from chat
   </Card>
 
-<Card title="Code Review" icon="magnifying-glass">
-  Use `/review` to get feedback on your code
-</Card>
-
-<Card title="Documentation" icon="book">
-  Use `/docs` to generate documentation for your code
-</Card>
-
-  <Card title="Refactoring" icon="arrows-rotate">
-    Use `/refactor` to get refactoring suggestions
+  <Card title="Action Commands" icon="bolt">
+    Generate code, review, refactor, and more with quick commands
   </Card>
 </CardGroup>
+
+<Note>Use `/` in the chat interface to see all available commands.</Note>
 
 ## Best Practices
 
