@@ -36,6 +36,12 @@
       ]
     },
     {
+      "group": "Features",
+      "pages": [
+        "chat-interface"
+      ]
+    },
+    {
       "group": "Configuration",
       "pages": [
         "model-configuration"
