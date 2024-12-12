@@ -45,7 +45,8 @@
     {
       "group": "Configuration",
       "pages": [
-        "model-configuration"
+        "model-configuration",
+        "window-settings"
       ]
     }
   ],
