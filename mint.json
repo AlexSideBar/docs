@@ -53,9 +53,9 @@
     {
       "group": "Configuration",
       "pages": [
-        "model-configuration",
-        "keyboard-bindings",
-        "window-settings"
+        "configuration/model-configuration",
+        "configuration/keyboard-bindings",
+        "configuration/window-settings"
       ]
     },
     {
