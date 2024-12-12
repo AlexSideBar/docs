@@ -46,6 +46,7 @@
       "group": "Configuration",
       "pages": [
         "model-configuration",
+        "keyboard-bindings",
         "window-settings"
       ]
     }
