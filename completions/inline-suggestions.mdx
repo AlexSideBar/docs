@@ -1,0 +1,108 @@
+---
+title: "Inline Code Suggestions"
+description: "Learn how to use Alex Sidebar's intelligent code completion features"
+---
+
+## Quick Code Generation
+
+Alex Sidebar provides powerful inline code completion capabilities to help you write code faster and more efficiently.
+
+<CardGroup cols={2}>
+  <Card title="Command + K" icon="bolt">
+    Trigger in-file suggestions instantly. Get AI-powered completions based on
+    your current code context.
+  </Card>
+
+  <Card title="Tab Completion" icon="arrow-right">
+    Get real-time suggestions as you type. Press Tab to accept the highlighted
+    suggestion.
+  </Card>
+</CardGroup>
+
+## Using Inline Completions
+
+<Steps>
+  <Step title="Trigger Suggestions">
+    Position your cursor where you want to generate code and press **Command +
+    K**
+    <Note>
+      The AI analyzes your current file context to provide relevant suggestions
+    </Note>
+  </Step>
+
+  <Step title="Review Options">
+    - Use arrow keys to cycle through multiple suggestions - Press Enter to
+    accept the current suggestion - Press Esc to dismiss suggestions
+    <Frame>
+      <img
+        src="/images/inline-completion.png"
+        alt="Inline code completion in action"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+## Tab Completion
+
+<AccordionGroup>
+  <Accordion title="Real-time Suggestions">
+    As you type, Alex Sidebar provides intelligent code suggestions:
+    - Variable names based on context
+    - Method completions
+    - Import statements
+    - Common coding patterns
+  </Accordion>
+
+  <Accordion title="Using Tab Complete">
+    1. Start typing code normally
+    2. When suggestions appear:
+       - Press Tab to accept suggestion
+       - Continue typing to filter options
+       - Use arrow keys to select alternatives
+    3. Press Esc to dismiss suggestions
+  </Accordion>
+</AccordionGroup>
+
+## Error and Warning Resolution
+
+When Xcode displays errors or warnings, Alex Sidebar can help resolve them quickly:
+
+<Steps>
+  <Step title="Access Quick Fix">
+    Click the error/warning indicator in Xcode's gutter
+  </Step>
+
+{" "}
+<Step title="Review Solution">
+  Alex Sidebar automatically: - Captures the error context - Analyzes the error
+  message - Suggests relevant fixes
+</Step>
+
+  <Step title="Apply Fix">
+    Review the suggested solution and click "Apply" to implement the fix
+    <Note>
+      Always review suggested changes before applying them to ensure they align
+      with your codebase
+    </Note>
+  </Step>
+</Steps>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Context Awareness" icon="lightbulb">
+    - Keep file structure clean - Maintain consistent naming - Document complex
+    logic - Use clear variable names
+  </Card>
+
+  <Card title="Completion Tips" icon="wand-magic-sparkles">
+    - Use Command + K for larger completions - Tab complete for quick
+    suggestions - Review suggestions before accepting - Customize completion
+    settings as needed
+  </Card>
+</CardGroup>
+
+<Warning>
+  While AI suggestions are powerful, always review generated code to ensure it
+  meets your requirements and follows your project's conventions.
+</Warning>{" "}

@@ -1,0 +1,105 @@
+---
+title: "Error & Warning Resolution"
+description: "Learn how to use Alex Sidebar to quickly resolve Xcode errors and warnings"
+---
+
+## Quick Fix Integration
+
+Alex Sidebar seamlessly integrates with Xcode's diagnostic system to help resolve errors and warnings efficiently.
+
+<CardGroup cols={2}>
+  <Card title="One-Click Access" icon="bolt">
+    Click any error or warning indicator in Xcode's gutter to get instant
+    AI-powered solutions.
+  </Card>
+
+  <Card title="Smart Analysis" icon="brain">
+    Automatic context gathering and error analysis for targeted fixes.
+  </Card>
+</CardGroup>
+
+## Using Quick Fix
+
+<Steps>
+  <Step title="Trigger Quick Fix">
+    Click the red (error) or yellow (warning) indicator in Xcode's gutter
+    <Note>
+      Alex Sidebar automatically captures the relevant code context and error
+      message
+    </Note>
+  </Step>
+
+{" "}
+<Step title="Review Suggestions">
+  The sidebar will display: - Error analysis - Suggested fix - Explanation of
+  the solution - Alternative approaches (when applicable)
+  <Frame>
+    <img
+      src="/images/error-fix-suggestion.png"
+      alt="Error fix suggestion interface"
+    />
+  </Frame>
+</Step>
+
+  <Step title="Apply Solution">
+    Click "Apply Fix" to implement the suggested changes
+    <Warning>
+      Always review the proposed changes before applying them to ensure they
+      match your codebase requirements
+    </Warning>
+  </Step>
+</Steps>
+
+## Common Fixes
+
+<AccordionGroup>
+  <Accordion title="Build Errors">
+    Handles common build-time issues: - Missing imports - Type mismatches -
+    Protocol conformance - Initialization errors - Access control issues
+  </Accordion>
+
+{" "}
+<Accordion title="Runtime Warnings">
+  Addresses potential runtime problems: - Memory management - Thread safety -
+  Deprecated API usage - Performance optimizations - Best practice violations
+</Accordion>
+
+  <Accordion title="SwiftUI Previews">
+    Resolves preview-specific issues: - Missing preview providers - Environment
+    requirements - Device configuration - Preview context setup
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Error Prevention" icon="shield-check">
+    - Keep code well-formatted - Follow Swift style guidelines - Document
+    complex logic - Use strong types
+  </Card>
+
+  <Card title="Fix Verification" icon="magnifying-glass">
+    - Review changes before applying - Test affected functionality - Check for
+    side effects - Verify error resolution
+  </Card>
+</CardGroup>
+
+## Advanced Usage
+
+<AccordionGroup>
+  <Accordion title="Custom Error Handling">
+    For specialized error cases: 1. Select the problematic code 2. Use Command +
+    L to start a chat 3. Provide additional context 4. Get customized solutions
+  </Accordion>
+
+  <Accordion title="Batch Fixes">
+    When dealing with multiple related issues: - Group similar errors - Request
+    comprehensive solutions - Apply fixes systematically - Validate changes
+    incrementally
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Pro Tip: Use the chat interface for more complex error scenarios that might
+  require additional context or explanation.
+</Note>{" "}

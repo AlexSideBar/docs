@@ -44,6 +44,13 @@
       ]
     },
     {
+      "group": "Working with Completions",
+      "pages": [
+        "completions/inline-suggestions",
+        "completions/error-fixes"
+      ]
+    },
+    {
       "group": "Configuration",
       "pages": [
         "model-configuration",
