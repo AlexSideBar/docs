@@ -1,0 +1,201 @@
+---
+title: "Interface"
+description: "Learn how to use Alex Sidebar's chat for code assistance"
+---
+
+Alex Sidebar's chat feature enables code discussions and improvements in Xcode running on the side. By prompting your queries, you can assist your coding process and resolve issues more quickly.
+
+## Quick Actions
+
+<CardGroup cols={2}>
+  <Card title="Command + L" icon="message-bot">
+    Select code in Xcode and start a **new chat**. The selected code will be automatically be added as a reference.
+  </Card>
+  
+  <Card title="Command + Shift + L" icon="plus">
+    Add selected code to your existing chat without opening a new window. Perfect for building context incrementally.
+  </Card>
+
+<Card title="Command + Enter" icon="code">
+  Start a chat with entire codebase as context. Useful for high-level questions
+  about your project.
+</Card>
+
+  <Card title="@ Commands" icon="at">
+    Access documentation, add more files and more using the @ menu in your chat.
+  </Card>
+</CardGroup>
+
+## Getting Started
+
+<Steps>
+  <Step title="Select Code">
+    In Xcode's editor window, highlight the code you want to discuss or improve.
+    <Note>
+      Providing relevant code context helps the AI better understand your
+      question and provide more accurate responses.
+    </Note>
+  </Step>
+
+<Step title="Start Chat">
+  There are three main ways to start a chat: - Select code and press **Command +
+  L** - Click the chat icon in the sidebar - Use **Command + Enter** for a new
+  chat with full codebase context
+  <Frame>
+    <img
+      className="dark:hidden"
+      src="/images/screen-alex-light.png"
+      alt="Starting a new chat in Xcode"
+    />
+    <img
+      className="hidden dark:block"
+      src="/images/screen-alex-dark.png"
+      alt="Starting a new chat in Xcode"
+    />
+  </Frame>
+</Step>
+
+  <Step title="Add Context">
+    You can add context to your chat in multiple ways: - Select code and use
+    **Command + Shift + L** - Drag and drop files into the chat - Use the file
+    browser to select additional files
+    <Note>
+      The more relevant context you provide, the more accurate and helpful the
+      responses will be.
+    </Note>
+  </Step>
+</Steps>
+
+## Context Management
+
+<CardGroup cols={2}>
+  <Card title="Smart Context" icon="brain">
+    The AI automatically considers your project structure and related files for more informed responses.
+  </Card>
+
+<Card title="@ Commands Usage" icon="at">
+  Type @ in the chat to access quick actions: - @docs - Search documentation -
+  @file - Reference specific files - @model - Switch AI models - @clear - Clear
+  chat history
+</Card>
+
+<Card title="History Management" icon="clock-rotate-left">
+  - Chats are automatically saved - Access previous chats from history - Clear
+  individual or all history - Export chats for reference
+</Card>
+
+  <Card title="Multi-File Support" icon="folder-tree">
+    - Reference multiple files in one chat
+    - Compare code across files
+    - Generate changes for multiple files
+    - Navigate between references
+  </Card>
+</CardGroup>
+
+## Common Use Cases
+
+<AccordionGroup>
+  <Accordion title="Code Understanding">
+    - Select complex functions or blocks
+    - Press **Command + L**
+    - Ask for step-by-step explanations
+    - Get detailed breakdowns of code behavior
+  </Accordion>
+
+<Accordion title="Refactoring Assistance">
+  - Highlight code that needs improvement - Start a chat with **Command + L** -
+  Request refactoring suggestions - Apply changes directly from chat
+</Accordion>
+
+  <Accordion title="Bug Resolution">
+    - Select problematic code sections
+    - Include error messages if available
+    - Ask for debugging assistance
+    - Get targeted solutions and fixes
+  </Accordion>
+</AccordionGroup>
+
+## Applying Changes
+
+<CardGroup cols={2}>
+  <Card title="Fast Apply" icon="bolt">
+    - Ideal for small and incremental changes
+    - Fast, lightweight AI model
+    - Suitable for minor refactors and quick fixes
+    - Quick turnaround time for immediate feedback
+    <Note>
+      Best for everyday use and straightforward modifications
+    </Note>
+  </Card>
+
+  <Card title="Slow Apply" icon="play">
+    - Use for complex refactors and feature implementations
+    - Advanced AI model for greater accuracy
+    - Perfect for multi-file changes and architectural modifications
+    <Note>
+      Recommended for comprehensive changes and detailed analysis
+    </Note>
+  </Card>
+</CardGroup>
+<Note>
+  Select between the two options using the buttons: 
+  <span class="icon-bolt">⚡</span> represents Fast Apply, and 
+  <span class="icon-play">▶️</span> represents Slow Apply.
+</Note>
+
+## Chat Commands
+
+Alex Sidebar provides various commands to help you work more efficiently. See our detailed [Chat Commands](/chat-commands) guide to learn about:
+
+<CardGroup cols={2}>
+  <Card title="File Commands" icon="folder">
+    Access project files and documentation directly from chat
+  </Card>
+
+  <Card title="Action Commands" icon="bolt">
+    Generate code, review, refactor, and-magic-sparklesand more with quick commands
+  </Card>
+</CardGroup>
+
+<Note>Use `/` in the chat interface to see all available commands.</Note>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Writing Effective Prompts" icon="pencil">
+    - Be specific about what you want
+    - Provide necessary context
+    - Use appropriate commands
+    - Break complex questions into smaller parts
+  </Card>
+
+  <Card title="Managing Context" icon="layer-group">
+    - Keep context focused and relevant
+    - Remove unnecessary files
+    - Update context when switching tasks
+    - Clear context for new topics
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Common Issues">
+    - Chat not responding
+    - Context not updating
+    - Command shortcuts not working
+    - Model switching problems
+  </Accordion>
+
+  <Accordion title="Performance Tips">
+    - Clear chat history regularly
+    - Manage context size
+    - Use appropriate models
+    - Optimize prompt length
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Need more help? Join our [Discord community](https://discord.gg/T5zxfReEnd)
+  for support and tips from other developers.
+</Note>
