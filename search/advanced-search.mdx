@@ -1,0 +1,144 @@
+---
+title: "Advanced Semantic Search"
+description: "Learn how to use Alex Sidebar's powerful semantic code search capabilities"
+---
+
+## Overview
+
+Alex Sidebar's advanced semantic search allows you to find code using natural language queries. Instead of relying on exact matches or keywords, you can describe what you're looking for, and the AI will understand your intent.
+
+## Quick Access
+
+<CardGroup cols={2}>
+  <Card title="Command + P" icon="magnifying-glass">
+    Open the search panel from anywhere in Xcode. Start typing to see instant results.
+  </Card>
+
+  <Card title="Semantic Toggle" icon="brain">
+    Switch between traditional and AI-powered semantic search modes for more accurate results.
+  </Card>
+</CardGroup>
+
+## Using Semantic Search
+
+<Steps>
+  <Step title="Access Search">
+    Press **Command + P** to open the search panel
+    <Note>
+      The search panel can be accessed from any view in Xcode
+    </Note>
+  </Step>
+
+<Step title="Enable Semantic Mode">
+  Toggle the "Semantic" switch to enable AI-powered search
+  <Frame>
+    <img
+      src="/images/semantic-search.png"
+      alt="Semantic search toggle in Alex Sidebar"
+    />
+  </Frame>
+</Step>
+
+  <Step title="Enter Query">
+    Type your search query using natural language
+    Examples:
+    - "Where is my fix issues button?"
+    - "Find the code that handles user authentication"
+    - "Show me the main navigation setup"
+  </Step>
+</Steps>
+
+## Search Features
+
+<CardGroup cols={2}>
+  <Card title="Natural Language" icon="message-bot">
+    - Use everyday language
+    - Describe functionality
+    - Ask questions about code
+    - Search by purpose or intent
+  </Card>
+
+<Card title="Context Awareness" icon="sitemap">
+  - Project-wide understanding - Related file detection - Function relationships
+  - Code dependencies
+</Card>
+
+<Card title="Smart Results" icon="lightbulb">
+  - Relevance-based ordering - Code preview snippets - Highlighted matches -
+  Quick navigation
+</Card>
+
+  <Card title="File Support" icon="file-code">
+    - Swift files
+    - Source code
+    - Headers
+    - Project resources
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+### Writing Effective Queries
+
+<AccordionGroup>
+  <Accordion title="Be Descriptive">
+    Instead of searching for specific names, describe what you're looking for:
+    - ✅ "Find the code that handles user login"
+    - ❌ "loginViewController"
+  </Accordion>
+
+<Accordion title="Focus on Functionality">
+  Describe the behavior or purpose: - ✅ "Where do we process API responses?" -
+  ❌ "apiHandler class"
+</Accordion>
+
+  <Accordion title="Use Natural Language">
+    Frame your queries as you would explain to another developer:
+    - ✅ "Show me where we handle push notifications"
+    - ❌ "pushNotification implementation"
+  </Accordion>
+</AccordionGroup>
+
+## Tips for Better Results
+
+<CardGroup cols={2}>
+  <Card title="Query Refinement" icon="sliders">
+    - Start broad, then narrow down
+    - Use specific technical terms when needed
+    - Include relevant context
+    - Be explicit about what you're seeking
+  </Card>
+
+  <Card title="Context Understanding" icon="diagram-project">
+    - Consider project structure
+    - Think about related functionality
+    - Include architectural context
+    - Reference specific features
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="No Results Found">
+    If your search returns no results:
+    - Try rephrasing your query
+    - Use more general terms
+    - Check if semantic mode is enabled
+    - Verify file indexing is complete
+  </Accordion>
+
+  <Accordion title="Unexpected Results">
+    If results don't match expectations:
+    - Add more context to your query
+    - Be more specific about functionality
+    - Use technical terms if available
+    - Check file indexing status
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  The semantic search feature works best when your project is properly indexed.
+  If you've recently added new files, wait for indexing to complete for the most
+  accurate results.
+</Note>

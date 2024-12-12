@@ -44,6 +44,12 @@
       ]
     },
     {
+      "group": "Working with Search",
+      "pages": [
+        "search/advanced-search"
+      ]
+    },
+    {
       "group": "Working with Completions",
       "pages": [
         "completions/inline-suggestions",
@@ -54,7 +60,7 @@
       "group": "Configuration",
       "pages": [
         "configuration/model-configuration",
-        "configuration/keyboard-bindings",
+        "configuration/bindings",
         "configuration/window-settings"
       ]
     },
