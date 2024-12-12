@@ -1,0 +1,158 @@
+---
+title: "Image to Code"
+description: "Transform designs into code by dragging images into Alex Sidebar"
+---
+
+The Image-to-Code feature allows you to quickly convert design mockups, screenshots, or UI elements into code. Simply drag and drop any image into Alex Sidebar to generate corresponding code.
+
+## Getting Started
+
+<Steps>
+  <Step title="Prepare Your Image">
+    Supported formats: - PNG - JPEG - Screenshots directly from Xcode/Figma For
+    best results, ensure your image clearly shows the UI elements you want to
+    convert.
+  </Step>
+
+<Step title="Drag and Drop">
+  Drag your image directly into the chat interface. You can: - Drag from Finder
+  - Drag from browser - Drag from design tools - Paste from clipboard
+</Step>
+
+  <Step title="Review Generated Code">
+    Alex will analyze the image and generate corresponding code. You
+    can: - Copy the code directly - Request modifications - Ask for explanations
+    of specific parts
+  </Step>
+</Steps>
+
+## Features
+
+<CardGroup cols={2}>
+  <Card title="Component Detection" icon="puzzle-piece">
+    Automatically identifies common UI components like: - Buttons - Text fields
+    - Images - Layout containers
+  </Card>
+
+<Card title="Style Extraction" icon="paintbrush">
+  Accurately captures: - Colors - Fonts - Spacing - Shadows
+</Card>
+
+<Card title="Layout Analysis" icon="layer-group">
+  Determines: - Stack arrangements - Padding/margins - Alignment - Relative
+  positioning
+</Card>
+
+  <Card title="Code Optimization" icon="wand-magic-sparkles">
+    Generates: - Clean, maintainable code - Reusable components - Custom
+    modifiers - Responsive layouts
+  </Card>
+</CardGroup>
+
+## Best Practices
+
+### Image Preparation
+
+- Use high-resolution images for better accuracy
+- Crop to include only relevant UI elements
+- Ensure good contrast between elements
+- Include any specific styling details you want to capture
+
+### Code Generation
+
+- Start with simple components before complex layouts
+- Review generated code for customization needs
+- Use follow-up questions to refine the output
+- Consider breaking complex UIs into smaller pieces
+
+<Tip>
+  For complex designs, try generating code for individual components first, then
+  combine them into the final layout.
+</Tip>
+
+## Example Workflows
+
+### Basic UI Component
+
+<Steps>
+  <Step title="Capture Component">
+    Take a screenshot of a button or card design
+  </Step>
+  
+  <Step title="Generate Code">
+    Drag the image into Alex Sidebar
+  </Step>
+  
+  <Step title="Customize">    
+  ```swift
+    // Generated code example
+    struct CustomButton: View {
+      var body: some View {
+        Button(action: {}) {
+          Text("Get Started")
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding(.horizontal, 24)
+            .padding(.vertical, 12)
+            .background(Color.blue)
+            .cornerRadius(8)
+        }
+      }
+    }    
+    ```
+  </Step>
+</Steps>
+
+### Complex Layout
+
+<Steps>
+  <Step title="Break Down Design">Identify main components in your layout</Step>
+
+<Step title="Generate Components">Generate code for each major section</Step>
+
+  <Step title="Combine">
+    Ask Alex to help combine components into a cohesive layout
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+### Common Issues
+
+<AccordionGroup>
+  <Accordion title="Inaccurate Component Detection">
+    - Ensure image quality is high - Try cropping closer to the component - Use
+    screenshots rather than photos - Provide additional context in your prompt
+  </Accordion>
+
+<Accordion title="Style Matching Issues">
+  - Specify exact colors if known - Include style guide references - Ask for
+  specific modifications - Use follow-up questions for refinement
+</Accordion>
+
+  <Accordion title="Layout Problems">
+    - Break complex layouts into sections - Specify constraints explicitly - Ask
+    for alternative layout approaches - Provide reference screenshots
+  </Accordion>
+</AccordionGroup>
+
+## Limitations
+
+<Warning>
+  Current limitations of the Image-to-Code feature: - Complex gradients may need
+  manual adjustment - Custom animations require additional specification -
+  Platform-specific components may need modification - Some advanced SwiftUI
+  features may need manual implementation
+</Warning>
+
+## Tips for Success
+
+1. **Start Simple**: Begin with basic components before attempting complex layouts
+2. **Iterate**: Use follow-up questions to refine the generated code
+3. **Combine Methods**: Use both image and text descriptions for better results
+4. **Review Output**: Always review and test generated code in your project
+
+<Note>
+  Remember that Image-to-Code is a starting point. You can always ask Alex to
+  modify the generated code to better match your needs.
+</Note>

@@ -39,7 +39,8 @@
       "group": "Working with Chat",
       "pages": [
         "chat/interface",
-        "chat/commands"
+        "chat/commands",
+        "chat/image-to-code"
       ]
     },
     {

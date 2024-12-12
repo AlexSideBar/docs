@@ -48,16 +48,69 @@ description: "Available commands and shortcuts in Alex Sidebar's chat interface"
 ## Chat History
 
 Accessing your chat history is simple and convenient. Located at the top left of the interface, the chat history feature allows you to:
+
 <CardGroup cols={1}>
   <Card title="Review Conversations" icon="rectangle-history-circle-user">
     Review previous conversations for reference.
   </Card>
 
-  <Card title="Revisit Solutions" icon="rotate-right">
-    Revisit past solutions and suggestions.
-  </Card>
+{" "}
+<Card title="Revisit Solutions" icon="rotate-right">
+  Revisit past solutions and suggestions.
+</Card>
 
   <Card title="Continue Discussions" icon="comments">
     Continue discussions from where you left off.
   </Card>
 </CardGroup>
+
+## Command Reference
+
+<CardGroup cols={2}>
+  <Card title="@file" icon="file">
+    - Search and reference specific files
+    - Add files to current context
+    - View file contents inline
+  </Card>
+
+{" "}
+<Card title="@docs" icon="book">
+  - Search Apple documentation - Reference specific API docs - Browse
+  documentation categories
+</Card>
+
+{" "}
+<Card title="@model" icon="microchip">
+  - Switch between AI models - View model capabilities - Check model
+  status/credits
+</Card>
+
+  <Card title="@clear" icon="trash">
+    - Clear chat history
+    - Reset context
+    - Start fresh conversation
+  </Card>
+</CardGroup>
+
+## Command Examples
+
+<Steps>
+  <Step title="File Reference">
+    ```
+    @file MyViewController.swift
+    ```
+    References a specific file in your codebase
+  </Step>
+
+{" "}
+<Step title="Documentation Search">
+  ``` @docs UITableView ``` Searches Apple documentation for UITableView
+</Step>
+
+  <Step title="Model Switch">
+    ```
+    @model claude-3
+    ```
+    Switches to Claude 3 model
+  </Step>
+</Steps>
