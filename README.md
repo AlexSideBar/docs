@@ -72,8 +72,3 @@ We welcome contributions to Alex Sidebar! Here's how you can help:
 - Opt-out of all third-party training data
 - Minimal analytics collection (feature usage and diagnostics only)
 - Local storage prioritization
-- Secure API processing through https://api.alexcodes.app
-
-<Note>
-Currently free during beta period. Backed by Y Combinator - Building the future of iOS development.
-</Note>
