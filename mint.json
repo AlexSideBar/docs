@@ -71,6 +71,12 @@
         "support/discord-channels",
         "support/troubleshooting"
       ]
+    },
+    {
+      "group": "Other",
+      "pages": [
+        "other/release-notes"
+      ]
     }
   ],
   "footer": {
