@@ -3,121 +3,154 @@ title: "Release Notes"
 description: "History of Alex Sidebar's updates and improvements"
 ---
 
-### Version 1.3.x
+## Version 1.3 (Latest)
 
-- **1.3.10**
-  - Added browser integration features:
-    - CMD+L support for Chrome, Firefox, Arc, and Safari
-    - Add entire web pages to context
-    - Text selection support for Chrome and Arc
-  - Improved Cmd+K functionality:
-    - Added model selection (Claude 3.5 Sonnet, GPT-4o, Gemini Flash 2.0)
-    - Added retry generation option
-  - Added Gemini Flash 2.0:
-    - Available in Chat
-    - Available in Cmd+K
-  - Added image support:
-    - Copy-paste images into chat
-  - Fixed code apply functionality issues
+### 1.3.10
 
-- **1.3.7**
+#### New Features
 
-  - Added Cmd+N shortcut for creating new chat
-  - Fixed issue with first message contents persisting on new chat or Cmd+L
+- **Browser Integration**
+  - Added CMD+L support for multiple browsers (Chrome, Firefox, Arc, Safari)
+  - Enabled adding entire web pages to context
+  - Introduced text selection support for Chrome and Arc
+- **Enhanced Cmd+K Menu**
+  - Added model selection options:
+    - Claude 3.5 Sonnet
+    - GPT-4
+    - Gemini Flash 2.0
+  - Added retry generation option
+- **Image Support**
+  - Added ability to copy-paste images into chat
 
-- **1.3.6**
+#### Fixed
 
-  - Fixed "Fix Issue" button functionality
-  - Resolved critical crash issue
+- Resolved code apply functionality issues
 
-- **1.3.5**
+### 1.3.7
 
-  - Fixed crashes when sending messages
+#### Added
 
-- **1.3.4**
+- Implemented Cmd+N shortcut for creating new chat
 
-  - Fixed Cmd+K functionality
-  - Addressed beachballing issues
+#### Fixed
 
-- **1.3.2**
-  - Major performance improvements:
-    - Reduced lag in long chats
-    - Optimized context usage
-    - Fixed "Error connecting to LLM API"
-    - Fixed circle of death in @Menu
-  - Better Tab to Complete:
-    - Implemented smart suggestions with language server
-    - Added support for large files
-    - Improved caching and reduced popup frequency
-  - Fixed key press lag in Xcode
-  - General crash fixes
+- Resolved issue with first message contents persisting on new chat or Cmd+L
 
-### Version 1.2.x
+### 1.3.6 - 1.3.4
 
-- **1.2.0**
-  - Integrated Apple Developer Documentation (400,000 pages)
-  - Added @Apple Docs command
-  - Added search bar in chat history
-  - Improved file indexing for renamed and deleted files
-  - Added restart button for Xcode project focus issues
-  - Fixed window sizing in fullscreen mode
-  - Fixed textview pasting and undo/redo functionality
+#### Fixed
 
-### Version 1.1.x
+- Restored "Fix Issue" button functionality
+- Resolved critical crash issues
+- Fixed Cmd+K functionality
+- Addressed beachballing issues
 
-- **1.1.34**
+### 1.3.2
 
-  - Critical hotfix for launch failures
-  - Various crash fixes
+#### Performance Improvements
 
-- **1.1.31**
+- Optimized long chat performance
+- Enhanced context usage efficiency
+- Fixed "Error connecting to LLM API"
+- Resolved circle of death in @Menu
 
-  - Added custom keybindings
-  - Optimized file indexer for iOS projects
-  - Added stream cancellation
-  - Extended chat timeout to 3 minutes
-  - Fixed apply diff functionality
+#### Enhanced Tab to Complete
 
-- **1.1.28**
+- Implemented smart suggestions with language server
+- Added large file support
+- Improved caching system
+- Reduced popup frequency
 
-  - General stability improvements and crash fixes
+#### Fixed
 
-- **1.1.25**
+- Resolved key press lag in Xcode
+- General stability improvements
 
-  - Critical fix for Cmd+Enter and Codebase Search
+## Version 1.2
 
-- **1.1.24**
+### 1.2.0
 
-  - Fixed freezing issues with large projects
-  - Improved apply diff view
-  - Added project-specific custom prompts
-  - Better window resizing
+#### Added
 
-- **1.1.21**
+- Integrated Apple Developer Documentation (400,000 pages)
+- Implemented @Apple Docs command
+- Added search functionality in chat history
 
-  - Added bring-your-own-key support
-  - Custom chat model configuration
-  - Added China region support
-  - Fixed context updating issues
-  - Various code section display fixes
+#### Improved
 
-- **1.1.18**
+- Enhanced file indexing for renamed and deleted files
+- Added restart button for Xcode project focus issues
 
-  - Added diff chunk rejection
-  - Integrated Perplexity for web searches
-  - Added diff viewer for Cmd+K
-  - Added auto-resize window to Xcode
-  - Added pin text field feature
-  - Introduced @menu for codebase context
+#### Fixed
 
-- **1.1.12**
-  - Fixed scroll stuttering
-  - Resolved app freezing issues
-  - Fixed message editing glitches
-  - Added API error alerts
-  - Added chat deletion feature
-  - Better Cmd+L functionality
-  - Improved code-apply view
+- Window sizing issues in fullscreen mode
+- Textview pasting and undo/redo functionality
+
+## Version 1.1
+
+### 1.1.31 - 1.1.34
+
+#### Added
+
+- Custom keybindings support
+- Stream cancellation feature
+- Extended chat timeout to 3 minutes
+
+#### Improved
+
+- Optimized file indexer for iOS projects
+
+#### Fixed
+
+- Critical launch failure issues
+- Apply diff functionality problems
+
+### 1.1.24 - 1.1.28
+
+#### Added
+
+- Project-specific custom prompts
+- Improved apply diff view
+
+#### Fixed
+
+- Freezing issues with large projects
+- Window resizing behavior
+- Critical issues with Cmd+Enter and Codebase Search
+
+### 1.1.18 - 1.1.21
+
+#### Added
+
+- Bring-your-own-key support
+- Custom chat model configuration
+- China region support
+- Diff chunk rejection
+- Perplexity integration for web searches
+- Diff viewer for Cmd+K
+- Auto-resize window to Xcode
+- Pin text field feature
+- @menu for codebase context
+
+#### Fixed
+
+- Context updating issues
+- Code section display problems
+
+### 1.1.12
+
+#### Added
+
+- API error alerts
+- Chat deletion feature
+- Enhanced Cmd+L functionality
+- Improved code-apply view
+
+#### Fixed
+
+- Scroll stuttering
+- App freezing issues
+- Message editing glitches
 
 <Note>
   For support and feature requests, visit our [GitHub
