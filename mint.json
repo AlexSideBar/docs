@@ -60,8 +60,17 @@
       "group": "Configuration",
       "pages": [
         "configuration/model-configuration",
-        "configuration/bindings",
-        "configuration/window-settings"
+        "configuration/bindings"
+      ]
+    },
+    {
+      "group": "Window Settings",
+      "pages": [
+        "windows/overview",
+        "windows/activation",
+        "windows/positioning",
+        "windows/dimensions",
+        "windows/chat-interface"
       ]
     },
     {
