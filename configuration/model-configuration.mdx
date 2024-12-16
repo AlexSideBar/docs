@@ -12,29 +12,40 @@ Alex Sidebar supports multiple AI models to suit different development needs and
     Anthropic's model with a 200,000-token context window, offering exceptional code understanding and generation. Best for handling large codebases, complex tasks, and detailed explanations.
   </Card>
 
-  <Card title="Claude Haiku 3.5" icon="bolt">
-    A streamlined version of Claude optimized for fast response times and efficient code completions. Ideal for real-time coding assistance and quick iterative development.
-  </Card>
+<Card title="Claude Haiku 3.5" icon="bolt">
+  A streamlined version of Claude optimized for fast response times and
+  efficient code completions. Ideal for real-time coding assistance and quick
+  iterative development.
+</Card>
 
-  <Card title="Gemini Flash 2.0" icon="bolt">
-    Google's latest optimized model designed for speed and efficiency. Available in both chat and Cmd+K interfaces, perfect for quick code completions and rapid prototyping.
-  </Card>
+<Card title="Gemini Flash 2.0" icon="bolt">
+  Google's latest optimized model designed for speed and efficiency. Available
+  in both chat and Cmd+K interfaces, perfect for quick code completions and
+  rapid prototyping.
+</Card>
 
-  <Card title="Perplexity AI" icon="searchengin">
-    A conversational search engine providing real-time, sourced answers. While not tailored for coding, it's great for accessing coding documentation, examples, and swift explanations.
-  </Card>
+<Card title="Perplexity AI" icon="searchengin">
+  A conversational search engine providing real-time, sourced answers. While not
+  tailored for coding, it's great for accessing coding documentation, examples,
+  and swift explanations.
+</Card>
 
-  <Card title="GPT-4" icon="code">
-    OpenAI's model known for versatile code generation and reliable outputs. Excellent for general coding tasks, debugging, and refactoring.
-  </Card>
+<Card title="GPT-4" icon="code">
+  OpenAI's model known for versatile code generation and reliable outputs.
+  Excellent for general coding tasks, debugging, and refactoring.
+</Card>
 
-  <Card title="GPT-4 Mini" icon="rocket">
-    A compact version of GPT-4, optimized for speed while retaining the core capabilities of the main model. Perfect for faster responses in routine coding tasks.
-  </Card>
+<Card title="GPT-4 Mini" icon="rocket">
+  A compact version of GPT-4, optimized for speed while retaining the core
+  capabilities of the main model. Perfect for faster responses in routine coding
+  tasks.
+</Card>
 
-  <Card title="o1 Preview" icon="lightbulb">
-    Designed for advanced reasoning in coding, math, and science. With a 128,000-token context window, it excels in maintaining extensive context and solving intricate problems.
-  </Card>
+<Card title="o1 Preview" icon="lightbulb">
+  Designed for advanced reasoning in coding, math, and science. With a
+  128,000-token context window, it excels in maintaining extensive context and
+  solving intricate problems.
+</Card>
 
   <Card title="o1 Mini" icon="clock">
     A lightweight version of O1, optimized for speed and cost-`effectiveness. Ideal for quick code completions and everyday coding tasks with fast responses.
@@ -43,14 +54,21 @@ Alex Sidebar supports multiple AI models to suit different development needs and
 
 ## Model Selection
 
-You can switch between models in the Alex Sidebar settings:
+You can switch between models in two ways:
 
-1. Click on the settings icon on the top right corner of the sidebar
-2. Navigate to the "Settings" section, and select "Model Settings"
-3. Under "Chat Models", checkmark the model(s) that you want to use
+### Model Selector Menu
+
+1. Click on the default model on the bottom left corner of the chat input view
+2. Select the model you want to use from the dropdown menu
+
+### Keyboard Shortcut
+
+Press `Command` + `/` to quickly cycle through your enabled models during a chat session.
 
 <Note>
-Note that o1 model is limited to 50 credits - to purchase additional credits, join our Discord community and message @DanielEdrisian on our [Discord server](https://discord.gg/T5zxfReEnd).
+  Note that o1 model is limited to 50 credits - to purchase additional credits,
+  join our Discord community and message @DanielEdrisian on our [Discord
+  server](https://discord.gg/T5zxfReEnd).
 </Note>
 
 ## API Key Configuration
@@ -65,12 +83,11 @@ You can add your API keys directly in the Model Settings screen. Simply click th
     4. Enter your API key in the input box
   </Accordion>
 
-  <Accordion title="Anthropic API Key">
-    To use Claude models:
-    1. Obtain an API key from [Anthropic's console](https://console.anthropic.com)
-    3. Find the "Anthropic Key" field
-    4. Enter your API key in the input box
-  </Accordion>
+<Accordion title="Anthropic API Key">
+  To use Claude models: 1. Obtain an API key from [Anthropic's
+  console](https://console.anthropic.com) 3. Find the "Anthropic Key" field 4.
+  Enter your API key in the input box
+</Accordion>
 
   <Accordion title="Other Providers">
     Additional model providers like Perplexity and VoyageAI can also be configured:
@@ -81,7 +98,9 @@ You can add your API keys directly in the Model Settings screen. Simply click th
 </AccordionGroup>
 
 <Note>
-Your API keys are stored securely and only used to authenticate with the respective AI providers. You can update or remove them at any time from the settings screen.
+  Your API keys are stored securely and only used to authenticate with the
+  respective AI providers. You can update or remove them at any time from the
+  settings screen.
 </Note>
 
 ## Custom Model Setup
@@ -90,27 +109,29 @@ You can add custom models that comply with the OpenAI API scheme. Follow these s
 
 <Steps>
   <Step title="Add Custom Model">
-    1. Navigate to "Settings" by selecting the gear icon on the top right corner of the sidebar 
-    2. Select "Model Settings" and scroll to the "Custom Models" section
-    3. Click the "Add New Model" button to create a new custom model configuration
+    1. Navigate to "Settings" by selecting the gear icon on the top right corner
+    of the sidebar 2. Select "Model Settings" and scroll to the "Custom Models"
+    section 3. Click the "Add New Model" button to create a new custom model
+    configuration
   </Step>
-  
-  <Step title="Configure Model Details">
-    1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`, `llama-3.3-70b-instruct`)
-    2. Provide the Base URL for your model's API endpoint
-    3. Add your API Key for authentication
-    4. (Optional) Specify if the model supports image inputs
-  </Step>
-  
-  <Step title="Example: Qwen 2.5 32B Coder Model">
-    To run the Qwen 2.5 32B Coder model:
-    - Model ID: `qwen2.5-coder-32b-instruct`
-    - Base URL: `https://openrouter.ai/api/v1`
-    - Enter your API Key in the provided field
-  </Step>
-  
+
+<Step title="Configure Model Details">
+  1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`,
+  `llama-3.3-70b-instruct`) 2. Provide the Base URL for your model's API
+  endpoint 3. Add your API Key for authentication 4. (Optional) Specify if the
+  model supports image inputs
+</Step>
+
+<Step title="Example: Qwen 2.5 32B Coder Model">
+  To run the Qwen 2.5 32B Coder model: - Model ID: `qwen2.5-coder-32b-instruct`
+  - Base URL: `https://openrouter.ai/api/v1` - Enter your API Key in the
+  provided field
+</Step>
+
   <Step title="Finalize Setup">
-    Go back to the chat screen by clicking on the closs icon on the top right corner of the sidebar and you will see the custom model in the model selection options.
+    Go back to the chat screen by clicking on the closs icon on the top right
+    corner of the sidebar and you will see the custom model in the model
+    selection options.
   </Step>
 </Steps>
 
@@ -124,7 +145,7 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
     2. Install ngrok for creating a secure tunnel (temporary requirement until direct localhost support)
     3. Create a free ngrok account at [ngrok.com](https://ngrok.com) to get an authentication token
   </Step>
-  
+   
   <Step title="Set Up the Model">
     ```bash
     # Pull the Qwen2.5-Coder model
@@ -134,7 +155,7 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
     ollama serve
     ```
   </Step>
-  
+
   <Step title="Configure ngrok">
     ```bash
     # Install ngrok
@@ -147,7 +168,7 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
     ngrok http 11434 --host-header="localhost:11434"
     ```
   </Step>
-  
+
   <Step title="Configure in Alex Sidebar">
     Add a custom model with these settings:
     - Model ID: `qwen2.5-coder:32b`
@@ -157,11 +178,14 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
 </Steps>
 
 <Note>
-Direct localhost support is coming soon to Alex Sidebar, which will eliminate the need for ngrok tunneling.
+  Direct localhost support is coming soon to Alex Sidebar, which will eliminate
+  the need for ngrok tunneling.
 </Note>
 
 <Warning>
-Local models may run slower than cloud-based alternatives, especially on less powerful hardware. Consider your performance requirements when choosing between local and cloud models.
+  Local models may run slower than cloud-based alternatives, especially on less
+  powerful hardware. Consider your performance requirements when choosing
+  between local and cloud models.
 </Warning>
 
 Credit: This setup process was documented by [Daniel Raffel](https://danielraffel.me/til/2024/11/13/how-to-set-up-a-local-ai-model-with-xcode-ollama-qwen2-5-coder-alex-sidebar/) who tested and validated the local model configuration with Alex Sidebar.
@@ -191,5 +215,6 @@ If you encounter issues with model responses:
 5. Restart Alex Sidebar if issues persist
 
 <Note>
-Need help? Join our [Discord community](https://discord.gg/T5zxfReEnd) for support and tips from other developers.
-</Note> 
+  Need help? Join our [Discord community](https://discord.gg/T5zxfReEnd) for
+  support and tips from other developers.
+</Note>
