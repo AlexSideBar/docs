@@ -22,26 +22,39 @@ Alex Sidebar seamlessly integrates with Xcode's diagnostic system to help resolv
 
 <Steps>
   <Step title="Trigger Quick Fix">
-    Click the red (error) or yellow (warning) indicator in Xcode's gutter
-    <Note>
-      Alex Sidebar automatically captures the relevant code context and error
-      message
-    </Note>
+    Hover over the line containing the red (error) or yellow (warning) indicator in Xcode's, then click the indicator
+
+    <Frame>
+      <img
+        src="/images/warning-xcode.png"
+        alt="Xcode error indicator in the gutter that can be clicked to trigger quick fix"
+      />
+    </Frame>
   </Step>
 
 <Step title="Review Suggestions">
-  The sidebar will display: - Error analysis - Suggested fix - Explanation of
-  the solution - Alternative approaches (when applicable)
+  Alex Sidebar starts a new chat with the warning and error message and code context.
+
   <Frame>
     <img
-      src="/images/error-fix-suggestion.png"
-      alt="Error fix suggestion interface"
+      src="/images/warning-fix-chat.png"
+      alt="Alex Sidebar chat interface with warning context and suggestions"
     />
   </Frame>
 </Step>
 
   <Step title="Apply Solution">
-    Click "Apply Fix" to implement the suggested changes
+    Click "Apply" to implement the suggested changes:
+    - "Fast Apply (Bolt icon)" for simple changes like missing imports or typos
+    - "Slow Apply (Play icon)" for complex changes that requires more accurate diffing
+
+    <Frame>
+      <img
+        src="/images/warning-solution-chat.png"
+        alt="Alex Sidebar quick fix apply interface with fast and slow apply options"
+      />
+    </Frame>
+
     <Warning>
       Always review the proposed changes before applying them to ensure they
       match your codebase requirements
