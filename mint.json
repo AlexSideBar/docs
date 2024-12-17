@@ -61,13 +61,7 @@
       "pages": [
         "configuration/model-configuration",
         "configuration/bindings",
-        {
-          "group": "Custom Prompts",
-          "pages": [
-            "configuration/prompts/overview",
-            "configuration/prompts/examples"
-          ]
-        }
+        "configuration/custom-prompts"
       ]
     },
     {
