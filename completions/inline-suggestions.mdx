@@ -5,7 +5,7 @@ description: "Learn how to use Alex Sidebar's intelligent code completion featur
 
 ## Quick Code Generation
 
-Alex Sidebar provides powerful inline code completion capabilities to help you write code faster and more efficiently.
+Alex Sidebar provides inline code completion capabilities **directly in Xcode** to help you write code faster.
 
 <CardGroup cols={2}>
   <Card title="Command + K" icon="bolt">
@@ -21,9 +21,16 @@ Alex Sidebar provides powerful inline code completion capabilities to help you w
 
 ## Using Inline Completions
 
+<Frame>
+  <img 
+    src="/images/inline-completion.png" 
+    alt="Example showing inline code completion with ghost text suggestions appearing as you type"
+  />
+</Frame>
+
 <Steps>
   <Step title="Trigger Suggestions">
-    Position your cursor where you want to generate code and press **Command +
+    Position your cursor where you want to generate code (or select existing code) in **Xcode** and press **Command + K**
     K**
     <Note>
       The AI analyzes your current file context to provide relevant suggestions
@@ -35,7 +42,24 @@ Alex Sidebar provides powerful inline code completion capabilities to help you w
     - Claude 3.5 Sonnet: Advanced model for complex completions
     - GPT-4: Balanced performance and accuracy
     - Gemini Flash 2.0: Fast, lightweight completions
+
+    <Note>
+      You can add additional models through the Model Settings, including:
+      - Local models via Ollama integration
+      - Custom API-compatible models
+      - Other OpenAI-compatible endpoints
+      
+      See the [Model Configuration](/configuration/model-configuration) section for detailed setup instructions.
+    </Note>
+
+    <Frame>
+      <img 
+        src="/images/inline-completion-models.png" 
+        alt="Example showing inline code completion with ghost text suggestions appearing as you type"
+      />
+    </Frame>
   </Step>
+  
 
   <Step title="Review Options">
     - Press Enter to accept the current suggestion
@@ -43,7 +67,7 @@ Alex Sidebar provides powerful inline code completion capabilities to help you w
     - Click retry button to generate new suggestions
     <Frame>
       <img
-        src="/images/inline-completion.png"
+        src="/images/inline-completion-suggestions.png"
         alt="Inline code completion in action"
       />
     </Frame>
