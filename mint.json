@@ -36,11 +36,12 @@
       ]
     },
     {
-      "group": "Working with Chat",
+      "group": "Chat",
       "pages": [
         "chat/interface",
         "chat/commands",
-        "chat/image-to-code"
+        "chat/image-to-code",
+        "chat/settings"
       ]
     },
     {
@@ -70,8 +71,7 @@
         "windows/overview",
         "windows/activation",
         "windows/positioning",
-        "windows/dimensions",
-        "windows/chat-interface"
+        "windows/dimensions"
       ]
     },
     {
