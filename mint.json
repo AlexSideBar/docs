@@ -60,7 +60,14 @@
       "group": "Configuration",
       "pages": [
         "configuration/model-configuration",
-        "configuration/bindings"
+        "configuration/bindings",
+        {
+          "group": "Custom Prompts",
+          "pages": [
+            "configuration/prompts/overview",
+            "configuration/prompts/examples"
+          ]
+        }
       ]
     },
     {

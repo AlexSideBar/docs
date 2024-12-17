@@ -1,0 +1,150 @@
+---
+title: "Custom Prompts Overview"
+description: "Learn how to enhance AI interactions with custom prompts"
+---
+
+## Understanding Prompts
+
+Alex Sidebar uses a two-level prompt system to provide contextual AI assistance:
+
+<CardGroup cols={2}>
+  <Card title="System Prompts" icon="gear">
+    Global prompts that apply across all projects. These define your general preferences and expertise requirements.
+  </Card>
+  
+  <Card title="Project Prompts" icon="code">
+    Specific prompts that apply only to the current project, working in combination with system prompts.
+  </Card>
+</CardGroup>
+
+## Prompt Configuration Interface
+
+<Frame>
+  <img
+    src="/images/prompts/configuration.png"
+    alt="Prompt configuration interface showing system and project prompts"
+  />
+</Frame>
+
+### Key Components
+
+1. **System Prompt Section**
+   - Text area for global prompt configuration
+   - Dropdown menu to select active prompt
+   - "Add New Prompt +" button for creating additional prompts
+
+2. **Project-Specific Section**
+   - Dedicated prompt area for current project
+   - Project identifier display
+   - Automatic combination with system prompt
+
+<Note>
+  Changes to prompts take effect immediately and persist across sessions.
+</Note>
+
+## SwiftUI Project Example
+
+Here's a complete example of how to configure prompts for a SwiftUI project:
+
+### System Prompt: SwiftUI Expert
+```swift
+You are a SwiftUI and iOS development expert. For all interactions:
+ARCHITECTURE:
+Recommend MVVM pattern implementation
+Ensure proper view composition
+Follow SwiftUI best practices
+Consider performance implications
+CODE STYLE:
+Use modern Swift syntax
+Implement proper property wrappers
+Follow Swift naming conventions
+Write clear documentation comments
+REQUIREMENTS:
+Consider accessibility
+Follow Apple HIG
+Include SwiftUI previews
+Handle error cases
+```
+
+
+### Project Prompt: Custom App
+
+```swift
+Project: MLXFasting (Intermittent Fasting App)
+ARCHITECTURE:
+Uses MVVM + Coordinator pattern
+CoreData for persistence
+Combine for data flow
+HealthKit integration
+CUSTOM COMPONENTS:
+TimerView: Custom circular progress
+FastingCell: Reusable fasting period cell
+StatsView: Charts and statistics display
+DESIGN SYSTEM:
+Colors defined in Theme.swift
+Typography in Typography.swift
+Custom modifiers in ViewModifiers.swift
+When providing code:
+Use existing design system components
+Follow established patterns
+Consider offline-first approach
+4. Include HealthKit permissions
+
+### API Integration
+
+```swift
+
+### API Integration
+
+swift
+API Guidelines:
+Use URLSession with async/await
+Implement proper error handling
+Cache responses when appropriate
+Follow RESTful conventions
+Include request timeout handling
+
+### Performance Focus
+
+```swift
+Performance Requirements:
+Implement lazy loading for lists
+Use proper image caching
+Optimize CoreData queries
+Profile memory usage
+Consider background task handling
+```
+
+## Best Practices
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Keep It Focused" icon="bullseye">
+    - One primary goal per prompt
+    - Clear, specific instructions
+    - Avoid redundant information
+  </Card>
+
+  <Card title="Maintain Context" icon="sitemap">
+    - Reference existing patterns
+    - Include architecture details
+    - Specify dependencies
+  </Card>
+
+  <Card title="Regular Updates" icon="arrows-rotate">
+    - Update as project evolves
+    - Reflect new requirements
+    - Remove obsolete patterns
+  </Card>
+
+  <Card title="Team Alignment" icon="users">
+    - Share effective prompts
+    - Standardize across team
+    - Document prompt purposes
+  </Card>
+</CardGroup>
+
+<Warning>
+  Avoid including sensitive information like API keys, credentials, or internal business logic in your prompts.
+</Warning>
