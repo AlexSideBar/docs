@@ -30,17 +30,29 @@
       "url": "mailto:daniel@alexcodes.app"
     }
   ],
+  "rounded": "default",
+  "topbar": {
+    "style": "default"
+  },
+  "search": {
+    "location": "top"
+  },
   "modeToggle": {
     "default": "dark",
     "isHidden": false
   },
   "topbarCtaButton": {
+    "type": "link",
+    "style": "roundedRectangle",
+    "arrow": true,
     "name": "Discord Community",
     "url": "https://discord.gg/T5zxfReEnd"
   },
   "navigation": [
     {
       "group": "Get Started",
+      "icon": "rocket",
+      "iconType": "solid",
       "pages": [
         "introduction",
         "getting-started",
@@ -49,6 +61,8 @@
     },
     {
       "group": "Chat",
+      "icon": "message",
+      "iconType": "solid",
       "pages": [
         "chat/interface",
         "chat/commands",
@@ -58,12 +72,16 @@
     },
     {
       "group": "Working with Search",
+      "icon": "magnifying-glass",
+      "iconType": "solid",
       "pages": [
         "search/advanced-search"
       ]
     },
     {
       "group": "Working with Completions",
+      "icon": "sparkles",
+      "iconType": "solid",
       "pages": [
         "completions/inline-suggestions",
         "completions/error-fixes"
@@ -71,6 +89,8 @@
     },
     {
       "group": "Configuration",
+      "icon": "cog",
+      "iconType": "solid",
       "pages": [
         "configuration/model-configuration",
         "configuration/bindings",
@@ -79,6 +99,8 @@
     },
     {
       "group": "Window Settings",
+      "icon": "window",
+      "iconType": "solid",
       "pages": [
         "windows/overview",
         "windows/activation",
@@ -88,6 +110,8 @@
     },
     {
       "group": "Support",
+      "icon": "life-ring",
+      "iconType": "solid",
       "pages": [
         "support/getting-help",
         "support/discord-channels",
@@ -96,6 +120,8 @@
     },
     {
       "group": "Other",
+      "icon": "ellipsis",
+      "iconType": "solid",
       "pages": [
         "other/release-notes"
       ]
@@ -107,5 +133,10 @@
       "discord": "https://discord.gg/T5zxfReEnd",
       "linkedin": "https://www.linkedin.com/company/alex-sidebar/"
     }
+  },
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
   }
 }
