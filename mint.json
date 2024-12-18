@@ -6,6 +6,7 @@
     "dark": "/logo/alex_logo.png",
     "light": "/logo/alex_logo.png"
   },
+  "layout": "sidenav",
   "favicon": "/logo/alex_logo.png",
   "colors": {
     "primary": "#6ED511",
