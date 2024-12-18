@@ -13,6 +13,14 @@
     "light": "#6ED511",
     "dark": "#6ED511"
   },
+  "font": {
+    "headings": {
+      "family": "Inter"
+    },
+    "body": {
+      "family": "Open Sans"
+    }
+  },
   "topbarLinks": [
     {
       "name": "Support",
