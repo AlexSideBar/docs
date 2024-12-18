@@ -94,7 +94,8 @@
       "pages": [
         "configuration/model-configuration",
         "configuration/bindings",
-        "configuration/custom-prompts"
+        "configuration/custom-prompts",
+        "configuration/codebase-indexing"
       ]
     },
     {
