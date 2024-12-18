@@ -21,6 +21,9 @@
       "family": "Open Sans"
     }
   },
+  "sidebar": {
+    "items": "border"
+  },
   "topbarLinks": [
     {
       "name": "Support",
