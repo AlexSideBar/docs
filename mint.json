@@ -68,7 +68,8 @@
         "chat/commands",
         "chat/history",
         "chat/image-to-code",
-        "chat/settings"
+        "chat/settings",
+        "chat/best-practices"
       ]
     },
     {
