@@ -68,7 +68,7 @@
         "chat/commands",
         "chat/history",
         "chat/image-to-code",
-        "chat/settings",
+        "chat/pin-chat",
         "chat/best-practices"
       ]
     },
@@ -107,7 +107,8 @@
       "pages": [
         "windows/overview",
         "windows/activation",
-        "windows/positioning"
+        "windows/positioning",
+        "windows/interface-hints"
       ]
     },
     {
