@@ -66,6 +66,7 @@
       "pages": [
         "chat/interface",
         "chat/commands",
+        "chat/history",
         "chat/image-to-code",
         "chat/settings"
       ]
