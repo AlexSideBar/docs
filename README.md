@@ -72,3 +72,32 @@ We welcome contributions to Alex Sidebar! Here's how you can help:
 - Opt-out of all third-party training data
 - Minimal analytics collection (feature usage and diagnostics only)
 - Local storage prioritization
+
+## Folder Access Permissions
+
+Before using Alex Sidebar with your exported projects, you'll need to grant access to specific folders where your projects are stored. This ensures Alex Sidebar can properly analyze and provide context for your files.
+
+### Granting Folder Access
+
+When you first attempt to open a project, Alex Sidebar will request permission to access folders like Desktop, Downloads, or Documents. 
+
+> **Note**: If you accidentally dismiss the permission prompt, you can manually enable access through System Settings.
+
+### Manual Permission Settings
+
+If you need to update folder permissions later:
+
+1. Click the Apple menu () in the top-left corner
+2. Select **System Settings**
+3. Click **Privacy & Security** in the sidebar
+4. Scroll to **Files and Folders**
+5. Locate **Alex Sidebar** in the list
+6. Enable access for the folders you want Alex Sidebar to access:
+   - Desktop
+   - Documents
+   - Downloads
+
+[Image: folder_permissions_light.png]
+[Image: folder_permissions_dark.png]
+
+> **Important**: Without proper folder access, Alex Sidebar won't be able to analyze your project files or provide relevant context during your development workflow.
