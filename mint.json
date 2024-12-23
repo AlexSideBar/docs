@@ -54,10 +54,10 @@
       "icon": "rocket",
       "iconType": "solid",
       "pages": [
-        "introduction",
-        "getting-started",
-        "configuration/cheatsheet",
-        "data-usage"
+        "get-started/introduction",
+        "get-started/getting-started",
+        "get-started/cheatsheet",
+        "get-started/data-usage"
       ]
     },
     {
