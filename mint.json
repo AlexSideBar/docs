@@ -95,7 +95,13 @@
       "iconType": "solid",
       "pages": [
         "configuration/model-configuration",
-        "configuration/bindings",
+        {
+          "group": "Keyboard Shortcuts",
+          "pages": [
+            "configuration/code-context-shortcuts",
+            "configuration/navigation-shortcuts"
+          ]
+        },
         "configuration/custom-prompts",
         "configuration/codebase-indexing"
       ]
