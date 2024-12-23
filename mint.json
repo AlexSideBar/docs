@@ -56,6 +56,7 @@
       "pages": [
         "introduction",
         "getting-started",
+        "configuration/cheatsheet",
         "data-usage"
       ]
     },
