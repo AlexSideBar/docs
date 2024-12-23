@@ -6,51 +6,42 @@ description: "A guide to Alex Sidebar's features, shortcuts, and best practices"
 ## Essential Keyboard Shortcuts
 | Shortcut | Action | Description |
 |----------|--------|-------------|
-| ⌘ + L | New Chat with Code | Start a new AI chat with your selected code |
-| ⌘ + K | Inline Completions | Get quick inline code suggestions |
-| ⌘ + / | Switch AI Models | Toggle between different AI models |
-| ⌘ + N | New Empty Chat | Create a fresh chat without code context |
-| ⌘ + ⇧ + L | Add to Current Chat | Append selected code to current chat |
-| ⌘ + ⌫ | Stop Generation | Immediately stop the current AI response |
-| ⌘ + P | Advanced Search | Open the advanced search panel |
-| ESC | Close Panel | Universal close button for any open panel |
+| ⌘ + L | New Chat with code | Start a new AI chat with your selected code |
+| ⌘ + K | Inline completions | Get quick inline code suggestions |
+| ⌘ + / | Switch AI models | Toggle between different AI models |
+| ⌘ + N | New empty chat | Create a fresh chat without code context |
+| ⌘ + ⇧ + L | Add to current chat | Append selected code to current chat |
+| ⌘ + ⌫ | Stop generation | Immediately stop the current AI response |
+| ⌘ + P | Advanced search | Open the advanced search panel |
+| esc | Close panel | Universal close button for any open panel |
+
 ## AI Models & Their Strengths
-| Model | Best For | Notes |
-|-------|----------|--------|
-| Claude Sonnet 3.5 | Large codebases, complex tasks | Exceptional code understanding and generation |
-| Claude Haiku 3.5 | Real-time coding assistance | Fast response times and efficient code completions |
-| Gemini Flash 2.0 | Quick code completions, rapid prototyping | Optimized for speed and efficiency |
-| Grok Beta | Chat, coding, reasoning tasks | State-of-the-art reasoning capabilities |
-| Perplexity | Accessing coding documentation, examples | Real-time, sourced answers |
-| GPT-4 | General coding tasks, debugging, refactoring | Versatile code generation and reliable outputs |
-| GPT-4 Mini | Routine coding tasks | Faster responses while retaining core capabilities |
-| o1 Preview | Advanced reasoning in coding, math, science | Maintains extensive context and solves intricate problems |
-| o1 Mini | Quick code completions, everyday coding tasks | Optimized for speed and cost-effectiveness |
+| Model | Best For |
+|-------|----------|
+| Claude Sonnet 3.5 | Large codebases and complex tasks |
+| Grok Beta | Chat and coding tasks |
+| Perplexity | Coding documentation and examples from internet |
+| GPT-4o | General coding and chat tasks |
+| o1 | Advanced reasoning in coding and mathematics |
+
+<Note>
+  These model recommendations are opinionated and based on general use cases. You should experiment with different models to find which ones work best for your specific needs and coding style. Each developer may have different preferences based on their workflow and the types of problems they are solving.
+</Note>
 
 ## Search Features
 - **Advanced Search (⌘ + P)**
   - Search through codebase
   - Filter by file type
-  - Search chat history
   - Jump to specific files
 
 ## Best Practices
 1. **Code Context**
    - Select relevant code before starting chat
    - Include imports and related types
-   - Provide clear, specific questions
+   - Provide clear and **specific** questions
 
 2. **Model Selection**
-   - Use Claude for explanations
-   - Use GPT-4 for complex refactoring
-   - Try Gemini/Grok for SwiftUI
    - Switch models if not getting desired results
-
-3. **Chat Organization**
-   - Pin important chats
-   - Use clear titles
-   - Group related questions
-   - Save useful prompts
 
 ## Common Use Cases & Workflows
 
@@ -58,41 +49,30 @@ description: "A guide to Alex Sidebar's features, shortcuts, and best practices"
 1. Select code → ⌘ + L
 2. Ask for review
 3. Add context with ⌘ + ⇧ + L if needed
-4. Use /copy to save suggestions
+4. Use ▶️ to apply suggestions
 
 ### Quick Fixes
-1. Place cursor at error
+1. Place cursor where you want to fix
 2. ⌘ + K for suggestions
-3. Use ESC to dismiss if needed
-4. /retry if suggestion isn't perfect
+3. Use **esc** to dismiss if needed
 
-### Documentation
-1. Select function/class
-2. ⌘ + L
-3. Ask for documentation
-4. Specify format (DocC, inline, etc.)
+### Warnings and Errors
+1. Click error/warning indicator in Xcode's editor near line number
+2. Review AI-suggested fixes
+3. Click ▶️ to implement changes
+4. For complex cases:
+   - Select problematic code and copy error/warning
+   - Use ⌘ + L for detailed help
+   - Add context as needed
+
+Common fixes include:
+- Build errors (imports, types)
+- Deprecated API usage
 
 ## Configuration Tips
 - Customize shortcuts in Settings
-- Set default AI model
-- Configure auto-completion behavior
-- Set up custom prompts for repeated tasks
+- Set up system and custom prompts for repeated tasks
 
 ## Common Pitfalls to Avoid
-- Don't provide too little context
-- Don't ignore error messages
-- Don't forget to include necessary imports
-- Don't stick with one model if struggling
-
-## Window Management
-- Drag to resize
-- Double-click title to maximize
-- Pin window position in settings
-
-## Pro Tips
-- Use ESC as universal "close"
-- Combine shortcuts for efficiency
-- Save frequently used prompts
-- Keep chat context focused
-- Use image-to-code for UI replication
-- Leverage advanced search for codebase understanding
+- Do not provide too little context
+- Do not stick with one model if struggling
