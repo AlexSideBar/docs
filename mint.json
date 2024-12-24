@@ -50,7 +50,7 @@
   },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Alex Sidebar",
       "icon": "rocket",
       "iconType": "solid",
       "pages": [
@@ -65,41 +65,14 @@
       "icon": "message",
       "iconType": "solid",
       "pages": [
-        {
-          "group": "Context",
-          "pages": [
-            "chat/context/memory",
-            "chat/context/commands"
-          ]
-        },
-        {
-          "group": "Input Modes",
-          "pages": [
-            "chat/input-modes/image-to-code",
-            "chat/input-modes/voice-mode"
-          ]
-        },
-        {
-          "group": "UI",
-          "pages": [
-            "chat/ui/pin-chat"
-          ]
-        },
+        "chat/context/agents",
+        "chat/context/memory",
+        "chat/context/commands",
+        "chat/input-modes/image-to-code",
+        "chat/input-modes/voice-mode",
+        "chat/ui/pin-chat",
         "chat/best-practices",
         "chat/overview"
-      ]
-    },
-    {
-      "group": "Agents",
-      "icon": "robot",
-      "iconType": "solid",
-      "pages": [
-        "agents/overview",
-        "agents/code-review",
-        "agents/documentation",
-        "agents/architecture",
-        "agents/testing",
-        "agents/configuration"
       ]
     },
     {
