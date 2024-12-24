@@ -65,13 +65,36 @@
       "icon": "message",
       "iconType": "solid",
       "pages": [
-        "chat/interface",
-        "chat/commands",
-        "chat/voice-mode",
-        "chat/history",
-        "chat/image-to-code",
-        "chat/pin-chat",
-        "chat/best-practices"
+        {
+          "group": "Core",
+          "pages": [
+            "chat/core/overview",
+            "chat/core/getting-started",
+            "chat/core/history"
+          ]
+        },
+        {
+          "group": "Context",
+          "pages": [
+            "chat/context/context-management",
+            "chat/context/commands"
+          ]
+        },
+        {
+          "group": "Input Modes",
+          "pages": [
+            "chat/input-modes/image-to-code",
+            "chat/input-modes/voice-mode"
+          ]
+        },
+        {
+          "group": "UI",
+          "pages": [
+            "chat/ui/pin-chat",
+            "chat/ui/interface"
+          ]
+        },
+        "chat/usage/best-practices"
       ]
     },
     {
