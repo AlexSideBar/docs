@@ -67,6 +67,7 @@
       "pages": [
         "chat/interface",
         "chat/commands",
+        "chat/voice-mode",
         "chat/history",
         "chat/image-to-code",
         "chat/pin-chat",
