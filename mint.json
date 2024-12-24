@@ -75,6 +75,19 @@
       ]
     },
     {
+      "group": "Agents",
+      "icon": "robot",
+      "iconType": "solid",
+      "pages": [
+        "agents/overview",
+        "agents/code-review",
+        "agents/documentation",
+        "agents/architecture",
+        "agents/testing",
+        "agents/configuration"
+      ]
+    },
+    {
       "group": "Working with Search",
       "icon": "magnifying-glass",
       "iconType": "solid",
