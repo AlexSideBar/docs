@@ -65,14 +65,14 @@
       "icon": "message",
       "iconType": "solid",
       "pages": [
+        "chat/overview",
         "chat/context/agents",
         "chat/context/memory",
         "chat/context/commands",
         "chat/input-modes/image-to-code",
         "chat/input-modes/voice-mode",
         "chat/ui/pin-chat",
-        "chat/best-practices",
-        "chat/overview"
+        "chat/best-practices"
       ]
     },
     {
