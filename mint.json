@@ -50,7 +50,7 @@
   },
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Alex Sidebar",
       "icon": "rocket",
       "iconType": "solid",
       "pages": [
@@ -65,11 +65,13 @@
       "icon": "message",
       "iconType": "solid",
       "pages": [
-        "chat/interface",
-        "chat/commands",
-        "chat/history",
-        "chat/image-to-code",
-        "chat/pin-chat",
+        "chat/overview",
+        "chat/context/agents",
+        "chat/context/memory",
+        "chat/context/commands",
+        "chat/input-modes/image-to-code",
+        "chat/input-modes/voice-mode",
+        "chat/ui/pin-chat",
         "chat/best-practices"
       ]
     },
