@@ -131,34 +131,39 @@ You can add your API keys directly in the Model Settings screen. Simply click th
 </Frame>
 
 You can add custom models that comply with the OpenAI API scheme. Follow these steps to configure a custom model:
-
 <Steps>
   <Step title="Add Custom Model">
-    1. Navigate to "Settings" by selecting the gear icon on the top right corner
-    of the sidebar 2. Select "Model Settings" and scroll to the "Custom Models"
-    section 3. Click the "Add New Model" button to create a new custom model
-    configuration
+    1. Navigate to "Settings" by selecting the gear icon on the top right corner of the sidebar
+    2. Select "Models" and you will find the section on "Custom Models" section
+    3. Click the "Add New Model" button to create a new custom model configuration
   </Step>
 
-<Step title="Configure Model Details">
-  1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`,
-  `llama-3.3-70b-instruct`) 2. Provide the Base URL for your model's API
-  endpoint 3. Add your API Key for authentication 4. (Optional) Specify if the
-  model supports image inputs
-</Step>
+  <Step title="Configure Model Details">
+    1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`, `deepseek-chat`)
+    2. Provide the Base URL for your model's API endpoint
+    3. Add your API Key for authentication
+    4. (Optional) Specify if the model supports image inputs
+  </Step>
 
-<Step title="Example: Qwen 2.5 32B Coder Model">
-  To run the Qwen 2.5 32B Coder model: - Model ID: `qwen2.5-coder-32b-instruct`
-  - Base URL: `https://openrouter.ai/api/v1` - Enter your API Key in the
-  provided field
+<Step title="Example: DeepSeek V3 Model">
+  To run the DeepSeek V3 model:
+  - Model ID: `deepseek-chat`
+  - Base URL: `https://api.deepseek.com/v1`
+  - Enter your DeepSeek API Key in the provided field
 </Step>
 
   <Step title="Finalize Setup">
-    Go back to the chat screen by clicking on the closs icon on the top right
+    Go back to the chat screen by clicking on the close icon on the top right
     corner of the sidebar and you will see the custom model in the model
     selection options.
   </Step>
 </Steps>
+
+<Note>
+  Custom model selection is currently only available in normal chat mode, not in agent mode.
+  
+  You can toggle between modes using Command + Shift + A.
+</Note>
 
 ## Running Local Models
 
