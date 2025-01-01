@@ -106,6 +106,7 @@
             "configuration/navigation-shortcuts"
           ]
         },
+        "configuration/git-integration",
         "configuration/custom-prompts",
         "configuration/codebase-indexing"
       ]
