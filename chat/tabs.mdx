@@ -1,29 +1,52 @@
 ---
 title: "Chat Tabs"
-description: "Work with multiple concurrent chat sessions efficiently"
+description: "Manage multiple concurrent chat sessions"
 ---
 
-## Overview
+Chat Tabs enable parallel chat sessions, each maintaining independent context and history. This allows you to work on multiple tasks or components within your project.
 
-Chat Tabs allow you to maintain multiple concurrent chat sessions, making it easier to work on different tasks or contexts simultaneously. Each tab represents an independent chat session with its own context and history.
+<Frame>
+  <img src="/images/chat-tabs.png" alt="Chat Tabs interface showing multiple concurrent chat sessions" />
+</Frame>
 
-## Key Features
+## Core Functionality
 
-### Managing Tabs
+Chat Tabs provide:
+- Isolated chat contexts per tab
+- Persistent session history
+- Independent memory and context management
+- Easycontext switching between tasks
 
-- Create a new tab: `CMD+T`
-- Close current tab: `CMD+W`
-- Navigate between tabs: `Ctrl+Tab`
+## Keyboard Controls
 
-### Use Cases
+<CardGroup cols={3}>
+  <Card title="Create Tab" icon="plus">
+    `CMD+T`
+    Create new session
+  </Card>
+  <Card title="Close Tab" icon="xmark">
+    `CMD+W`
+    Terminate current session
+  </Card>
+  <Card title="Navigate" icon="arrows-rotate">
+    `Ctrl+Tab`
+    Switch between sessions
+  </Card>
+</CardGroup>
 
-- Maintain separate conversations for different parts of your codebase
-- Work on multiple features simultaneously
-- Keep reference documentation open in one tab while coding in another
-- Isolate different debugging sessions
+## Best Practices
 
-## Tips
+1. **Resource Management**
+   - Close inactive sessions to optimize performance
+   - Maintain focused contexts per tab
+   - Limit concurrent sessions based on workflow needs
 
-- Each tab maintains its own context, so you can switch between different tasks without losing context
-- Use tabs to organize your work by feature, component, or task type
-- Close unused tabs to keep your workspace clean and focused 
+2. **Context Organization**
+   - Dedicate tabs to specific components or features
+   - Separate research and implementation sessions
+   - Maintain distinct contexts for debugging and development
+
+3. **Workflow Optimization**
+   - Use tabs for parallel documentation reference
+   - Separate long-running tasks from quick queries
+   - Maintain dedicated tabs for recurring operations 
