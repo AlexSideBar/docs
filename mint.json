@@ -131,14 +131,6 @@
         "support/discord-channels",
         "support/troubleshooting"
       ]
-    },
-    {
-      "group": "Other",
-      "icon": "ellipsis",
-      "iconType": "solid",
-      "pages": [
-        "other/release-notes"
-      ]
     }
   ],
   "footer": {
