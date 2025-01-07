@@ -72,7 +72,7 @@
         "chat/context/commands",
         "chat/input-modes/image-to-code",
         "chat/input-modes/voice-mode",
-        "chat/ui/pin-chat",
+        "chat/ui/customization",
         "chat/best-practices"
       ]
     },
@@ -130,14 +130,6 @@
         "support/getting-help",
         "support/discord-channels",
         "support/troubleshooting"
-      ]
-    },
-    {
-      "group": "Other",
-      "icon": "ellipsis",
-      "iconType": "solid",
-      "pages": [
-        "other/release-notes"
       ]
     }
   ],
