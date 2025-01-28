@@ -57,7 +57,8 @@
         "get-started/introduction",
         "get-started/getting-started",
         "get-started/cheatsheet",
-        "get-started/data-usage"
+        "get-started/data-usage",
+        "get-started/introduction"
       ]
     },
     {
@@ -73,7 +74,10 @@
         "chat/input-modes/image-to-code",
         "chat/input-modes/voice-mode",
         "chat/ui/customization",
-        "chat/best-practices"
+        "chat/best-practices",
+        "chat/best-practices",
+        "chat/context/commands",
+        "chat/context/agents"
       ]
     },
     {
@@ -108,7 +112,8 @@
         },
         "configuration/git-integration",
         "configuration/custom-prompts",
-        "configuration/codebase-indexing"
+        "configuration/codebase-indexing",
+        "configuration/model-configuration"
       ]
     },
     {
@@ -129,7 +134,8 @@
       "pages": [
         "support/getting-help",
         "support/discord-channels",
-        "support/troubleshooting"
+        "support/troubleshooting",
+        "support/getting-help"
       ]
     }
   ],

@@ -15,29 +15,29 @@ Alex Sidebar supports multiple AI models to suit different development needs and
 </Frame>
 
 <CardGroup cols={2}>
-  <Card title="Claude Sonnet 3.5" icon="brain">
+  <Card title="Claude 3.5 Sonnet" icon="brain">
     Anthropic's model with a 200,000-token context window, offering exceptional code understanding and generation. Best for handling large codebases, complex tasks, and detailed explanations.
   </Card>
 
-<Card title="Claude Haiku 3.5" icon="bolt">
-  A streamlined version of Claude optimized for fast response times and
+<Card title="Claude 3.5 Haiku" icon="bolt">
+  A streamlined version of Claude, optimized for fast response times and
   efficient code completions. Ideal for real-time coding assistance and quick
   iterative development.
 </Card>
 
 <Card title="Gemini Flash 2.0" icon="bolt">
-  Google's latest optimized model designed for speed and efficiency. Available
-  in both chat and Cmd+K interfaces, perfect for quick code completions and
+  Google's latest optimized model, designed for speed and efficiency. Available
+  in both chat and Command + K interfaces. Perfect for quick code completions and
   rapid prototyping.
 </Card>
 
  <Card title="Grok Beta" icon="robot">
-    Grok Beta is a frontier language model with state-of-the-art reasoning capabilities. It is suitable for chat, coding, and reasoning tasks.
+    A frontier language model with state-of-the-art reasoning capabilities. Suitable for chat, coding, and reasoning tasks.
   </Card>
 
 <Card title="Perplexity" icon="searchengin">
   A conversational search engine providing real-time, sourced answers. While not
-  tailored for coding, it's great for accessing coding documentation, examples,
+  tailored for coding, it excels at accessing coding documentation, examples,
   and swift explanations.
 </Card>
 
@@ -52,14 +52,14 @@ Alex Sidebar supports multiple AI models to suit different development needs and
   tasks.
 </Card>
 
-<Card title="o1 Preview" icon="lightbulb">
+<Card title="O1 Preview" icon="lightbulb">
   Designed for advanced reasoning in coding, math, and science. With a
   128,000-token context window, it excels in maintaining extensive context and
   solving intricate problems.
 </Card>
 
-  <Card title="o1 Mini" icon="clock">
-    A lightweight version of O1, optimized for speed and cost-`effectiveness. Ideal for quick code completions and everyday coding tasks with fast responses.
+  <Card title="O1 Mini" icon="clock">
+    A lightweight version of O1, optimized for speed and cost-effectiveness. Ideal for quick code completions and everyday coding tasks with fast responses.
   </Card>
 </CardGroup>
 
@@ -69,22 +69,22 @@ You can switch between models in two ways:
 
 ### Model Selector Menu
 
-1. Click on the default model on the bottom left corner of the chat input view
-2. Select the model you want to use from the dropdown menu
+1. Click on the default model on the bottom left corner of the chat input view.
+2. Select the model you want to use from the dropdown menu.
 
 ### Keyboard Shortcut
 
 Press `Command` + `/` to quickly cycle through your enabled models during a chat session.
 
 <Note>
-  Note that o1 model is limited to 50 credits - to purchase additional credits,
+  The O1 model is limited to 50 credits. To purchase additional credits,
   join our Discord community and message @DanielEdrisian on our [Discord
   server](https://discord.gg/T5zxfReEnd).
 </Note>
 
 ## API Key Configuration
 
-You can add your API keys directly in the Model Settings screen. Simply click the settings icon on the top right corner of the sidebar and look for the API key input fields for each provider under the section "Model Settings".
+You can add your API keys directly in the Model Settings screen. Click the settings icon in the top right corner of the sidebar, and look for the API key input fields for each provider under the "Model Settings" section.
 
 <Frame>
   <img
@@ -96,22 +96,23 @@ You can add your API keys directly in the Model Settings screen. Simply click th
 <AccordionGroup>
   <Accordion title="OpenAI API Key">
     To use GPT-4 or OpenAI models:
-    1. Get an API key from [OpenAI's platform](https://platform.openai.com)
-    3. Find the "OpenAI Key" field
-    4. Enter your API key in the input box
+    1. Get an API key from [OpenAI's platform](https://platform.openai.com).
+    2. Find the "OpenAI Key" field.
+    3. Enter your API key in the input box.
   </Accordion>
 
 <Accordion title="Anthropic API Key">
-  To use Claude models: 1. Obtain an API key from [Anthropic's
-  console](https://console.anthropic.com) 3. Find the "Anthropic Key" field 4.
-  Enter your API key in the input box
+  To use Claude models:
+  1. Obtain an API key from [Anthropic's console](https://console.anthropic.com).
+  2. Find the "Anthropic Key" field.
+  3. Enter your API key in the input box.
 </Accordion>
 
   <Accordion title="Other Providers">
     Additional model providers like Perplexity and VoyageAI can also be configured:
-    1. Obtain the appropriate API key from the provider's website
-    2. Find the corresponding key field in settings
-    3. Enter your API key
+    1. Obtain the appropriate API key from the provider's website.
+    2. Find the corresponding key field in settings.
+    3. Enter your API key.
   </Accordion>
 </AccordionGroup>
 
@@ -131,18 +132,19 @@ You can add your API keys directly in the Model Settings screen. Simply click th
 </Frame>
 
 You can add custom models that comply with the OpenAI API scheme. Follow these steps to configure a custom model:
+
 <Steps>
   <Step title="Add Custom Model">
-    1. Navigate to "Settings" by selecting the gear icon on the top right corner of the sidebar
-    2. Select "Models" and you will find the section on "Custom Models" section
-    3. Click the "Add New Model" button to create a new custom model configuration
+    1. Navigate to "Settings" by selecting the gear icon in the top right corner of the sidebar.
+    2. Select "Models" to find the "Custom Models" section.
+    3. Click the "Add New Model" button to create a new custom model configuration.
   </Step>
 
   <Step title="Configure Model Details">
-    1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`, `deepseek-chat`)
-    2. Provide the Base URL for your model's API endpoint
-    3. Add your API Key for authentication
-    4. (Optional) Specify if the model supports image inputs
+    1. Enter the Model ID (e.g., `qwen2.5-coder-32b-instruct`, `deepseek-chat`).
+    2. Provide the Base URL for your model's API endpoint.
+    3. Add your API Key for authentication.
+    4. (Optional) Specify if the model supports image inputs.
   </Step>
 
 <Step title="Example: DeepSeek V3 Model">
@@ -153,8 +155,8 @@ You can add custom models that comply with the OpenAI API scheme. Follow these s
 </Step>
 
   <Step title="Finalize Setup">
-    Go back to the chat screen by clicking on the close icon on the top right
-    corner of the sidebar and you will see the custom model in the model
+    Return to the chat screen by clicking the close icon in the top right
+    corner of the sidebar. You will see the custom model in the model
     selection options.
   </Step>
 </Steps>
@@ -167,13 +169,13 @@ You can add custom models that comply with the OpenAI API scheme. Follow these s
 
 ## Running Local Models
 
-Alex Sidebar supports running local AI models through Ollama, providing a free and privacy-focused alternative to cloud-based models. Here is an example of how to set up a local powerful model like Qwen2.5-Coder:
+Alex Sidebar supports running local AI models through Ollama, providing a free and privacy-focused alternative to cloud-based models. Here is an example of setting up a local powerful model like Qwen2.5-Coder:
 
 <Steps>
   <Step title="Install Prerequisites">
-    1. Install Ollama to manage and serve the local model
-    2. Install ngrok for creating a secure tunnel (temporary requirement until direct localhost support)
-    3. Create a free ngrok account at [ngrok.com](https://ngrok.com) to get an authentication token
+    1. Install Ollama to manage and serve the local model.
+    2. Install ngrok for creating a secure tunnel (temporary requirement until direct localhost support).
+    3. Create a free ngrok account at [ngrok.com](https://ngrok.com) to get an authentication token.
   </Step>
    
   <Step title="Set Up the Model">
@@ -218,19 +220,19 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
   between local and cloud models.
 </Warning>
 
-Credit: This setup process was documented by [Daniel Raffel](https://danielraffel.me/til/2024/11/13/how-to-set-up-a-local-ai-model-with-xcode-ollama-qwen2-5-coder-alex-sidebar/) who tested and validated the local model configuration with Alex Sidebar.
+Credit: This setup process was documented by [Daniel Raffel](https://danielraffel.me/til/2024/11/13/how-to-set-up-a-local-ai-model-with-xcode-ollama-qwen2-5-coder-alex-sidebar/), who tested and validated the local model configuration with Alex Sidebar.
 
 ## Best Practices
 
 <CardGroup cols={2}>
   <Card title="Model Selection Tips" icon="lightbulb">
-    • Use Claude 3.5 Sonnet or GPT-4 for complex architectural decisions  
-    • Claude 3.5 Haiku or GPT-4 Mini for quick code completions
+    • Use Claude 3.5 Sonnet or GPT-4 for complex architectural decisions.  
+    • Use Claude 3.5 Haiku or GPT-4 Mini for quick code completions.
   </Card>
 
   <Card title="Performance Optimization" icon="gauge">
-    • Start new chats for long conversations to maintain accuracy  
-    • Match model capabilities to task complexity
+    • Start new chats for long conversations to maintain accuracy.  
+    • Match model capabilities to task complexity.
   </Card>
 </CardGroup>
 
@@ -238,11 +240,11 @@ Credit: This setup process was documented by [Daniel Raffel](https://danielraffe
 
 If you encounter issues with model responses:
 
-1. Check your API key configuration
-2. Verify your internet connection
-3. Ensure you're within the model's context limit
-4. Try switching to a different model
-5. Restart Alex Sidebar if issues persist
+1. Check your API key configuration.
+2. Verify your internet connection.
+3. Ensure you're within the model's context limit.
+4. Try switching to a different model.
+5. Restart Alex Sidebar if issues persist.
 
 <Note>
   Need help? Join our [Discord community](https://discord.gg/T5zxfReEnd) for

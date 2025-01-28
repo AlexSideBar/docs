@@ -22,28 +22,28 @@ description: "Guidelines for effective code assistance and documentation usage i
 ### Examples
 
 <Note>
-  ❌ **Ineffective**: `My code isn't working. Can you help?`
+  ❌ **Ineffective**: "My code isn't working. Can you help?"
 </Note>
 
 <Note>
-  ✅ **Effective**: `I'm getting a 'Thread 1: Fatal error: Unexpectedly found nil' when trying to unwrap an optional UIImage in my custom UICollectionViewCell. Here's my cellForItemAt implementation...`
+  ✅ **Effective**: "I'm getting a 'Thread 1: Fatal error: Unexpectedly found nil' when trying to unwrap an optional UIImage in my custom UICollectionViewCell. Here's my cellForItemAt implementation..."
 </Note>
 
 <Note>
-  ✅ **Feature Request**: `I need to implement a custom tab bar in SwiftUI that shows a circular progress indicator around the selected tab icon. The progress should be animated. Here's my current TabView implementation...`
+  ✅ **Feature Request**: "I need to implement a custom tab bar in SwiftUI that shows a circular progress indicator around the selected tab icon. The progress should be animated. Here's my current TabView implementation..."
 </Note>
 
 ## Managing Context
 
 <CardGroup cols={2}>
   <Card title="File Context" icon="folder">
-    - Use @ Files to add specific files
+    - Use @Files to add specific files
     - Include related dependencies
     - Share configuration files
   </Card>
 
   <Card title="Codebase Context" icon="code">
-    - Use @ Codebase for framework-level questions
+    - Use @Codebase for framework-level questions
     - Reference specific components
     - Share relevant modules
   </Card>
@@ -52,28 +52,28 @@ description: "Guidelines for effective code assistance and documentation usage i
 ### Examples
 
 <Note>
-  ❌ **Limited**: `How do I update this delegate method?`
+  ❌ **Limited**: "How do I update this delegate method?"
 </Note>
 
 <Note>
-  ✅ **Complete**: `I need to update this UITableViewDelegate method to handle custom swipe actions. Here's my current implementation (@Files TableViewController.swift) and the custom SwipeActionView (@Files Views/SwipeActionView.swift) I want to integrate.`
+  ✅ **Complete**: "I need to update this UITableViewDelegate method to handle custom swipe actions. Here's my current implementation (@Files TableViewController.swift) and the custom SwipeActionView (@Files Views/SwipeActionView.swift) I want to integrate."
 </Note>
 
 <Note>
-  ✅ **Framework**: `I'm building a custom networking layer (@Codebase Networking/*). Can you help me implement proper retry logic with exponential backoff?`
+  ✅ **Framework**: "I'm building a custom networking layer (@Codebase Networking/*). Can you help me implement proper retry logic with exponential backoff?"
 </Note>
 
 ## Using Documentation
 
 <CardGroup cols={2}>
   <Card title="Apple Documentation" icon="apple">
-    - Use @ Apple Docs for framework reference
+    - Use @Apple Docs for framework reference
     - Reference specific APIs
     - Include version information
   </Card>
 
   <Card title="Individual Docs" icon="book">
-    - Use @ Apple Docs (Individual) for specific methods
+    - Use @Apple Docs (Individual) for specific methods
     - Reference specific classes
     - Include parameter details
   </Card>
@@ -82,15 +82,15 @@ description: "Guidelines for effective code assistance and documentation usage i
 ### Examples
 
 <Note>
-  ❌ **Vague**: `How do I use Core Data?`
+  ❌ **Vague**: "How do I use Core Data?"
 </Note>
 
 <Note>
-  ✅ **Specific**: `I need help implementing NSFetchedResultsController (@Apple Docs NSFetchedResultsController) with multiple sections based on dates. Here's my current Core Data model (@Files Model.xcdatamodeld)...`
+  ✅ **Specific**: "I need help implementing NSFetchedResultsController (@Apple Docs NSFetchedResultsController) with multiple sections based on dates. Here's my current Core Data model (@Files Model.xcdatamodeld)..."
 </Note>
 
 <Note>
-  ✅ **API Reference**: `Can you explain how to use URLSession's (@Apple Docs URLSession) background download tasks with proper delegate handling (@Apple Docs URLSessionDownloadDelegate)?`
+  ✅ **API Reference**: "Can you explain how to use URLSession's (@Apple Docs URLSession) background download tasks with proper delegate handling (@Apple Docs URLSessionDownloadDelegate)?"
 </Note>
 
 ## Platform-Specific Best Practices
@@ -112,15 +112,15 @@ description: "Guidelines for effective code assistance and documentation usage i
 ### Examples
 
 <Note>
-  ❌ **Ambiguous**: `How do I create a button?`
+  ❌ **Ambiguous**: "How do I create a button?"
 </Note>
 
 <Note>
-  ✅ **SwiftUI**: `I'm using SwiftUI (iOS 16+) and need to create a custom button with a gradient background, dynamic shadow, and haptic feedback. Here's my current Button implementation...`
+  ✅ **SwiftUI**: "I'm using SwiftUI (iOS 16+) and need to create a custom button with a gradient background, dynamic shadow, and haptic feedback. Here's my current Button implementation..."
 </Note>
 
 <Note>
-  ✅ **UIKit Integration**: `I need to embed this SwiftUI view (@Files CustomView.swift) into my existing UIKit navigation stack. Here's my current UIHostingController setup...`
+  ✅ **UIKit Integration**: "I need to embed this SwiftUI view (@Files CustomView.swift) into my existing UIKit navigation stack. Here's my current UIHostingController setup..."
 </Note>
 
 ## Common Scenarios
@@ -142,37 +142,36 @@ description: "Guidelines for effective code assistance and documentation usage i
 ### Examples
 
 <Note>
-  ❌ **Unclear**: `The app crashes sometimes.`
+  ❌ **Unclear**: "The app crashes sometimes."
 </Note>
 
 <Note>
-  ✅ **Detailed**: `The app crashes when switching between tabs while a network request is in progress. Here's the crash log and relevant networking code (@Files NetworkManager.swift). The issue started after implementing async/await...`
+  ✅ **Detailed**: "The app crashes when switching between tabs while a network request is in progress. Here's the crash log and relevant networking code (@Files NetworkManager.swift). The issue started after implementing async/await..."
 </Note>
 
 <Note>
-  ✅ **Refactoring**: `I want to refactor this massive view controller (@Files ProfileViewController.swift) into smaller components using MVVM. Here's my planned architecture diagram...`
+  ✅ **Refactoring**: "I want to refactor this massive view controller (@Files ProfileViewController.swift) into smaller components using MVVM. Here's my planned architecture diagram..."
 </Note>
 
-### Examples
+### Additional Tips
 
 <Note>
-  ❌ **Too Much**: `Sharing entire project files for a simple UI fix`
-</Note>
-
-<Note>
-  ✅ **Just Right**: `Continuing from our previous chat about the networking layer (see chat history), I need to add request caching. Here's the specific RequestCaching protocol I want to implement...`
+  ❌ **Too Much**: "Sharing entire project files for a simple UI fix."
 </Note>
 
 <Note>
-  ✅ **Breaking Down**: `I need to migrate this UIKit project to SwiftUI. Let's break it down:
+  ✅ **Just Right**: "Continuing from our previous chat about the networking layer (see chat history), I need to add request caching. Here's the specific RequestCaching protocol I want to implement..."
+</Note>
+
+<Note>
+  ✅ **Breaking Down**: "I need to migrate this UIKit project to SwiftUI. Let's break it down:
   1. First, let's handle the navigation structure
   2. Then, convert each view controller individually
-  3. Finally, implement the data flow with @StateObject and ObservableObject`
+  3. Finally, implement the data flow with @StateObject and ObservableObject"
 </Note>
 
 ## Community Resources
 
 <Note>
-  Need more help? Join the [Discord community](https://discord.gg/T5zxfReEnd)
-  for support and tips from other developers.
+  Need more help? Join the [Discord community](https://discord.gg/T5zxfReEnd) for support and tips from other developers.
 </Note>
