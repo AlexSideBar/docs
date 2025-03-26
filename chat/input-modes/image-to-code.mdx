@@ -3,7 +3,70 @@ title: "Image to Code"
 description: "Transform designs into code by dragging images into Alex Sidebar"
 ---
 
-The Image-to-Code feature allows you to quickly convert design mockups, screenshots, or UI elements into code. Simply drag and drop one or multiple images into Alex Sidebar to generate corresponding code.
+The Image-to-Code feature allows you to quickly convert design mockups, screenshots, or UI elements into code. You can input images through multiple methods:
+
+## Input Methods
+
+<CardGroup cols={2}>
+  <Card title="Screenshot Tool" icon="camera">
+    Use **Command + Shift + 6** to:
+    - Take window screenshots
+    - Capture specific UI selections
+    - Perfect for quick UI component captures
+  </Card>
+
+  <Card title="Drag & Drop" icon="image">
+    Drag images directly into the chat interface from:
+    - Finder
+    - Browser
+    - Design tools
+  </Card>
+</CardGroup>
+
+## Screenshot Tool (⌘ + ⇧ + 6)
+
+The built-in screenshot tool provides a quick way to capture UI elements and convert them to code. You can customize its behavior in the settings to match your workflow.
+
+### Capture Options
+
+<CardGroup cols={2}>
+  <Card title="Window Capture" icon="window">
+    Capture entire windows with a single click. Perfect for:
+    - Full screen interfaces
+    - Complete view hierarchies
+    - Dialog boxes and alerts
+  </Card>
+
+  <Card title="Selection Capture" icon="crop">
+    Select specific areas to capture. Ideal for:
+    - Individual UI components
+    - Specific sections of an interface
+    - Custom-sized regions
+  </Card>
+</CardGroup>
+
+### Settings Customization
+
+<Frame>
+  ![Screenshot settings showing capture options](../images/screenshot-settings.png)
+</Frame>
+
+You can customize the default screenshot behavior in settings:
+- **Capture window**: Automatically capture the entire window
+- **Capture selection**: Draw a selection box around the desired area
+- **Attach file**: Choose a file from your system instead
+
+### Best Practices for Screenshots
+
+1. **Clean Captures**
+   - Close unnecessary windows or tabs
+   - Hide sensitive information
+   - Ensure the UI is in its final state
+
+2. **Component Focus**
+   - Zoom in for small components
+   - Include padding for context
+   - Capture in the correct state (hover, active, etc.)
 
 ## Getting Started
 <Steps>
@@ -16,12 +79,11 @@ The Image-to-Code feature allows you to quickly convert design mockups, screensh
     For best results, ensure your images clearly show the UI elements you want to convert.
   </Step>
 
-  <Step title="Drag and Drop">
-    Drag your images directly into the chat interface. You can:
-    - Drag single or multiple images at once
-    - Drag from Finder
-    - Drag from browser
-    - Drag from design tools
+  <Step title="Input Your Image">
+    Choose your preferred method:
+    1. Use **Command + Shift + 6** to take a screenshot
+    2. Drag and drop images into the chat
+    3. Copy-paste images directly
   </Step>
 
   <Step title="Review Generated Code">
