@@ -27,6 +27,26 @@ This indexing helps Alex:
 - Find relevant code examples from your own project
 - Make smarter recommendations based on your actual codebase
 
+## Code Maps
+
+Building on top of basic indexing, Alex now automatically parses your Swift project and constructs a "Code Map" for the files you are chatting about. This means Alex has an understanding of how files interact with each other, resulting in better code generation.
+
+When you start a chat, Alex:
+- Analyzes file dependencies and imports
+- Maps class and type relationships
+- Understands protocol conformances
+- Tracks function calls between files
+
+This deeper understanding helps Alex:
+- Generate more accurate code suggestions
+- Provide better refactoring recommendations
+- Maintain consistency across related files
+- Respect your project's architecture
+
+<Note>
+  Code Maps are enabled by default for all chats, so you don't need to do anything extra to get these benefits!
+</Note>
+
 ## Managing Indexes
 
 <Steps>

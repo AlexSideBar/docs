@@ -6,18 +6,27 @@ description: "AI agents specialized for development tasks"
 Alex Sidebar's agents are specialized AI assistants, each trained for specific development tasks. Alex automatically selects the right agent for your workflow for autonomously handling your development tasks!
 
 <Note>
-Claude 3.5 Sonnet is used by default in agent mode because it is the best model for code generation. You can switch to a different model by disabling agent mode in the Agent Settings dropdown.
+Agent mode is now always on! Claude 3.5 Sonnet remains the default model for its superior code generation capabilities, but you can now use other supported models including:
+- DeepSeek R1
+- DeepSeek V3
+- Claude 3.7 Sonnet
+- o3-mini
+- GPT-4o
+- o1
+- Gemini 2.0 Flash
+
+Choose your preferred model from the model selector while maintaining all agent capabilities.
 </Note>
 
 ## Quick Actions
 
 <CardGroup cols={2}>
-  <Card title="Command + Shift + A" icon="robot">
-    Start agent mode for your current project. Option to use current context or not.
-  </Card>
-
   <Card title="Smart Automation" icon="wand-magic-sparkles">
     Let agents handle repetitive tasks while you focus on core development work.
+  </Card>
+
+  <Card title="Multi-Model Support" icon="robot">
+    Switch between different AI models while maintaining agent capabilities and context.
   </Card>
 </CardGroup>
 
