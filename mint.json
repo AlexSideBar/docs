@@ -61,6 +61,18 @@
       ]
     },
     {
+      "group": "API Keys",
+      "icon": "key",
+      "iconType": "solid",
+      "pages": [
+        "keys/adding-claude-anthropic-api-key",
+        "keys/adding-fireworks-ai-api-key",
+        "keys/adding-gemini-api-key",
+        "keys/adding-openai-api-key",
+        "keys/adding-voyage-ai-api-key"
+      ]
+    },
+    {
       "group": "Chat",
       "icon": "message",
       "iconType": "solid",
