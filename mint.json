@@ -38,7 +38,7 @@
     "location": "top"
   },
   "modeToggle": {
-    "default": "dark",
+    "default": "light",
     "isHidden": false
   },
   "topbarCtaButton": {
