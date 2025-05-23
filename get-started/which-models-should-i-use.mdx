@@ -1,0 +1,52 @@
+---
+title: "Which models should I use?"
+description: "A guide to picking models"
+---
+
+Models have different levels of quality and speed. Here's a list of our recommendations:
+
+
+### Best Models (in General)
+
+Pick between `Gemini 2.5 Pro` and `Claude Sonnet 4`. They are both the best, currently.
+
+If one isn't giving you good results, try the other. Sometimes one model is good at a thing that the other model is bad at.
+
+> Note: Claude Sonnet 4 is a very eager model, and tries to run lots of actions.
+
+### OpenAI o3
+
+OpenAI's o3 model is the best thinking model. It takes a while to think, but its results are often perfect.
+
+It's also very expensive to run, so we charge separately for o3 credits. o3 credits are $12.5 / 25 messages. Or, you could use your own OpenAI API Key for it.
+
+o3 does not have access to tools in Alex, in order to keep the output quality high. So make sure to pass all the files it needs into its context first.
+
+### Middle-Tier Models
+
+For whatever reason, if you don't have access to Gemini 2.5 Pro and Claude Sonnet 4, here's the ranking of all models:
+
+1. Gemini 2.5 Pro
+2. Claude Sonnet 4
+3. Claude 3.5 Sonnet
+4. Claude 3.7 Sonnet
+5. OpenAI GPT 4.1
+6. OpenAI o4-Mini
+7. DeepSeek R1
+8. Gemini 2.5 Flash (Very Cheap) 
+9. DeepSeek V3
+
+These are just our rankings, based on our experience with general iOS/Swift development. For general SWE rankings, see Aider's Leaderboard: https://aider.chat/docs/leaderboards/
+
+### Local Models
+
+If you'd like to use local models, here's our ranking:
+
+1. Qwen2.5 Coder 32B (Best, but slowest to run)
+2. Qwen2.5 Coder 14B
+3. Gemma3 27b QAT
+4. Gemma3 12b QAT
+
+We generally don't recommend running local models, due to their poor performance compared to hosted models.
+
+
