@@ -124,3 +124,17 @@ If you'd like to disable these actions, go to `Settings > Tools` and uncheck the
 ### 17. What happened to Gemini 2.5 Pro Exp (Free Gemini)
 
 The Gemini team has discontinued their free model. It's no longer supported.
+
+### 18. Alex is stuck on "Waiting for model..." but nothing is happening
+
+Please update to version 3.1.11 to fix this issue. (Same for if git commit generation is stuck.)
+
+### 19. How does image pricing work?
+
+Generating any image will cost 2 chat messages. Each additional image (on top of the first) will cost an additional chat message (e.g. if alex generates 2 images, that would be 3 chat messages).
+
+This is because OpenAI's image generation API costs $0.04 per image.
+
+### 20. Can I use image generation with my own API Key?
+
+Yes! It requires an OpenAI key. Here's a guide: https://alexcodes.app/docs/keys/adding-openai-api-key
