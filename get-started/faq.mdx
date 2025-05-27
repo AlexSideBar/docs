@@ -138,3 +138,33 @@ This is because OpenAI's image generation API costs $0.04 per image.
 ### 20. Can I use image generation with my own API Key?
 
 Yes! It requires an OpenAI key. Here's a guide: https://alexcodes.app/docs/keys/adding-openai-api-key
+
+### 21. Why does Alex tell me I have like 300 messages remaining, but the chat says I've used 140k of 150k tokens used?
+
+> TLDR; The context bar is only useful for knowing when to start a new chat. It's not used for our billing.
+
+Long answer:
+
+The Context Bar (tokens) is entirely different than the message system. It shows how much of the context limit you've used up in the chat.
+
+AI systems work based on "Context". Every time we send a message, we have to construct the whole chat into one large request to send to the AI.
+
+Naturally, this becomes very expensive. e.g. if you used Claude Sonnet 4 with 200k tokens (or approximately 1 million characters of text), you would need to spend $0.60 *every time you send a message*. This includes any time the agent takes an action.
+
+This is why we limit the amount of context is sent to the chat model. And when we limit it, that means only a certain length of conversation can be passed in.
+
+What determines how much context is used?
+
+The total text inside the chat. This includes:
+
+- The system prompt we provide
+- Each file you attach (this can take up a lot of context!)
+- Each message you've sent in the chat (including images)
+- Each response the AI has given to you, including any of the code it has written
+
+This can add up quickly, so it's important to keep tabs on your context bar.
+
+Also: Generally, as you use up more tokens, AI systems get more "confused". It's like if you passed a whole book to some and asked them to find a single word! This is why limiting context, keeping chats short, and passing only required files, helps actually *improve* your results.
+
+Now, back to the point of confusion: The amount of tokens you use has no effect on the # of Alex messages you've consumed from a billing perspective. We simplify things by counting each request to the AI model as 1 "message". Some messages could be cheaper, some more expensive, but we average it so that you spend less time counting tokens and prices.
+
