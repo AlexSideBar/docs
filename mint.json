@@ -71,7 +71,8 @@
         "keys/adding-fireworks-ai-api-key",
         "keys/adding-gemini-api-key",
         "keys/adding-openai-api-key",
-        "keys/adding-voyage-ai-api-key"
+        "keys/adding-voyage-ai-api-key",
+        "keys/adding-openrouter-api-key"
       ]
     },
     {
