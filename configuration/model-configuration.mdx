@@ -5,76 +5,6 @@ description: "Configure and customize AI models in Alex Sidebar"
 
 Alex Sidebar supports multiple AI models to suit different development needs and preferences. This guide explains the available models and how to configure them.
 
-## Available Models
-
-<Frame>
-  <img
-    src="/images/all-models-settings.png"
-    alt="Available AI models configuration in Alex Sidebar"
-  />
-</Frame>
-
-<CardGroup cols={2}>
-  <Card title="Claude Sonnet 3.5" icon="brain">
-    Anthropic's model with a 200,000-token context window, offering exceptional code understanding and generation. Best for handling large codebases, complex tasks, and detailed explanations.
-  </Card>
-
-  <Card title="DeepSeek R1" icon="microchip">
-    A powerful reasoning model optimized for code generation and analysis. Available with unlimited messages. 
-    
-    Particularly effective for iOS/Swift code generation, complex refactoring tasks, and architecture suggestions.
-  </Card>
-
-  <Card title="DeepSeek V3" icon="rocket">
-    The latest update to DeepSeek's V3 model is optimized for speed and efficiency.
-    
-    Perfect for rapid development in large files.
-  </Card>
-
-<Card title="Claude Haiku 3.5" icon="bolt">
-  A streamlined version of Claude optimized for fast response times and
-  efficient code completions. Ideal for real-time coding assistance and quick
-  iterative development.
-</Card>
-
-<Card title="Gemini Flash 2.0" icon="bolt">
-  Google's latest optimized model designed for speed and efficiency. Available
-  in both chat and Cmd+K interfaces, perfect for quick code completions and
-  rapid prototyping.
-</Card>
-
- <Card title="Grok Beta" icon="robot">
-    Grok Beta is a frontier language model with state-of-the-art reasoning capabilities. It is suitable for chat, coding, and reasoning tasks.
-  </Card>
-
-<Card title="Perplexity" icon="searchengin">
-  A conversational search engine providing real-time, sourced answers. While not
-  tailored for coding, it's great for accessing coding documentation, examples,
-  and swift explanations.
-</Card>
-
-<Card title="GPT-4" icon="code">
-  OpenAI's model known for versatile code generation and reliable outputs.
-  Excellent for general coding tasks, debugging, and refactoring.
-</Card>
-
-<Card title="GPT-4 Mini" icon="rocket">
-  A compact version of GPT-4, optimized for speed while retaining the core
-  capabilities of the main model. Perfect for faster responses in routine coding
-  tasks.
-</Card>
-
-<Card title="o1 Preview" icon="lightbulb">
-  Designed for advanced reasoning in coding, math, and science. With a
-  128,000-token context window, it excels in maintaining extensive context and
-  solving intricate problems.
-</Card>
-
-  <Card title="o1 Mini" icon="clock">
-    A lightweight version of O1, optimized for speed and cost-`effectiveness. Ideal for quick code completions and everyday coding tasks with fast responses.
-  </Card>
-</CardGroup>
-
 ## Model Selection
 
 You can switch between models in two ways:
@@ -171,12 +101,6 @@ You can add custom models that comply with the OpenAI API scheme. Follow these s
   </Step>
 </Steps>
 
-<Note>
-  Custom model selection is currently only available in normal chat mode, not in agent mode.
-  
-  You can toggle between modes using Command + Shift + A.
-</Note>
-
 ## Running Local Models
 
 Alex Sidebar supports running local AI models through Ollama, providing a free and privacy-focused alternative to cloud-based models. Here is an example of how to set up a local powerful model like Qwen2.5-Coder:
@@ -184,8 +108,6 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
 <Steps>
   <Step title="Install Prerequisites">
     1. Install Ollama to manage and serve the local model
-    2. Install ngrok for creating a secure tunnel (temporary requirement until direct localhost support)
-    3. Create a free ngrok account at [ngrok.com](https://ngrok.com) to get an authentication token
   </Step>
    
   <Step title="Set Up the Model">
@@ -198,39 +120,18 @@ Alex Sidebar supports running local AI models through Ollama, providing a free a
     ```
   </Step>
 
-  <Step title="Configure ngrok">
-    ```bash
-    # Install ngrok
-    brew install ngrok
-    
-    # Authenticate with your token
-    ngrok config add-authtoken YOUR_AUTH_TOKEN
-    
-    # Create tunnel to Ollama server
-    ngrok http 11434 --host-header="localhost:11434"
-    ```
-  </Step>
-
   <Step title="Configure in Alex Sidebar">
     Add a custom model with these settings:
     - Model ID: `qwen2.5-coder:32b`
-    - Base URL: Your ngrok URL + `/v1` (e.g., `https://your-subdomain.ngrok-free.app/v1`)
-    - API Key: Your ngrok authentication token
+    - Base URL: Your ollama URL + `/v1` (e.g., `http://localhost:1234/v1`)
   </Step>
 </Steps>
-
-<Note>
-  Direct localhost support is coming soon to Alex Sidebar, which will eliminate
-  the need for ngrok tunneling.
-</Note>
 
 <Warning>
   Local models may run slower than cloud-based alternatives, especially on less
   powerful hardware. Consider your performance requirements when choosing
   between local and cloud models.
 </Warning>
-
-Credit: This setup process was documented by [Daniel Raffel](https://danielraffel.me/til/2024/11/13/how-to-set-up-a-local-ai-model-with-xcode-ollama-qwen2-5-coder-alex-sidebar/) who tested and validated the local model configuration with Alex Sidebar.
 
 ## Best Practices
 
