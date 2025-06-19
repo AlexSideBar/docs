@@ -81,7 +81,6 @@
       "iconType": "solid",
       "pages": [
         "chat/overview",
-        "chat/tabs",
         "chat/context/agents",
         "chat/context/memory",
         "chat/context/commands",
