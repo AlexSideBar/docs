@@ -81,7 +81,6 @@
       "iconType": "solid",
       "pages": [
         "chat/overview",
-        "chat/tabs",
         "chat/context/agents",
         "chat/context/memory",
         "chat/context/commands",
@@ -89,14 +88,6 @@
         "chat/input-modes/voice-mode",
         "chat/ui/customization",
         "chat/best-practices"
-      ]
-    },
-    {
-      "group": "Working with Search",
-      "icon": "magnifying-glass",
-      "iconType": "solid",
-      "pages": [
-        "search/advanced-search"
       ]
     },
     {
