@@ -91,14 +91,6 @@
       ]
     },
     {
-      "group": "Working with Search",
-      "icon": "magnifying-glass",
-      "iconType": "solid",
-      "pages": [
-        "search/advanced-search"
-      ]
-    },
-    {
       "group": "Working with Completions",
       "icon": "sparkles",
       "iconType": "solid",
