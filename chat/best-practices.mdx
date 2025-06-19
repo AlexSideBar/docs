@@ -194,6 +194,48 @@ description: "Guidelines for effective code assistance and documentation usage i
   3. Finally, implement the data flow with @StateObject and ObservableObject`
 </Note>
 
+## Working with Build Errors
+
+<CardGroup cols={2}>
+  <Card title="Build & Fix Errors Button" icon="hammer">
+    - Use for automatic error resolution
+    - Alex handles the entire build-fix cycle by using Xcode's build system
+    - No manual intervention needed
+    - Continues until build succeeds
+  </Card>
+</CardGroup>
+
+### When to Use Automatic Build & Fix
+
+<AccordionGroup>
+  <Accordion title="Ideal Scenarios">
+    - Multiple compilation errors
+    - Missing imports or protocols
+    - Type mismatches
+    - Initialization errors
+    - Access control issues
+  </Accordion>
+  
+  <Accordion title="Manual Intervention Needed">
+    - Complex architectural decisions
+    - Business logic errors
+    - Performance optimizations
+    - Custom framework integration
+  </Accordion>
+</AccordionGroup>
+
+### Examples
+
+<Note>
+  ✅ **Automatic Fix**: `Click "Build & Fix Errors" when you see multiple red errors in Xcode. Alex will handle missing imports, protocol conformance, and type issues automatically one by one until the build succeeds.`
+</Note>
+
+### Build Error Best Practices
+
+1. **Let Alex Work**: Do not interrupt the build-fix loop unless necessary
+2. **Review Changes**: Always review the final working code
+3. **Save Progress**: Use checkpoints after successful builds
+
 ## Community Resources
 
 <Note>
