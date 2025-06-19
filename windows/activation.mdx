@@ -1,42 +1,44 @@
 ---
 title: "Activation"
-description: "Configure how Alex Sidebar activates and interacts with your Xcode workspace"
+description: "Control when and how Alex Sidebar becomes active"
 ---
 
-Control how Alex Sidebar becomes active and responds to your workflow.
+Activation settings determine how Alex Sidebar responds to your interactions with Xcode and maintains focus during your development workflow.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsInline
-  src="/videos/auto-hover.mp4"
-  alt="Demonstration of Alex Sidebar auto-activating when hovering over the window"
-  title="Alex Sidebar Auto-hover Activation Demo"
-></video>
+## Activation Settings
 
-## Auto-activate on Hover
+### Bring Alex to front when Xcode is clicked
 
-When enabled, Alex Sidebar automatically becomes active when you move your mouse cursor over its window. This provides quick access without requiring clicks, ideal for reference-heavy development sessions.
+When enabled, Alex Sidebar automatically comes to the foreground whenever you click on or activate your Xcode window. This ensures your AI assistant is always readily accessible alongside your code editor.
+
+**Benefits:**
+- Seamless workflow between code and AI assistance
+- No manual window switching required
+- Maintains context awareness as you code
+
+### Stay on top
+
+This setting keeps Alex Sidebar floating above all other windows on your screen, ensuring it remains visible and accessible at all times.
+
+**Use cases:**
+- Multi-monitor setups where you want Alex always visible
+- When working with multiple applications
+- During live coding or presentations
+
+## How to Configure
+
+1. Open Settings (gear icon in the top right)
+2. Navigate to **Workspace Configuration** → **Window Management**
+3. Toggle the desired activation options:
+   - **Bring Alex to front when Xcode is clicked** - For automatic focus management
+   - **Stay on top** - For persistent visibility
 
 <Note>
-  This setting is particularly useful when you frequently switch between Xcode
-  and Alex Sidebar during development.
+  These settings work together with positioning options to create your ideal development environment. Consider your workflow and screen setup when choosing which options to enable.
 </Note>
 
-**To enable Auto-activate on Hover:**
+## Best Practices
 
-1. Click the gear icon located at the top right corner of the Alex Sidebar.
-2. Navigate to **Settings**.
-3. Under **Window Management**, check the option **Auto-activate sidebar on hover**.
-
-<Frame>
-  <img
-    src="/images/auto-hover-settings.png"
-    alt="Settings panel showing the auto-activate on hover option under Window Management settings"
-  />
-</Frame>
-
-## Auto-activate with Xcode
-
-Automatically brings Alex Sidebar to focus whenever Xcode becomes the active application. This ensures your AI assistant is always ready when you switch back to coding. 
+- **For focused coding**: Enable "Bring Alex to front" for seamless transitions
+- **For reference work**: Enable "Stay on top" when you need constant AI assistance
+- **For presentations**: Use "Stay on top" to keep Alex visible during demos 

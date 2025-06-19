@@ -1,28 +1,60 @@
 ---
 title: "Positioning"
-description: "Configure how Alex Sidebar positions itself in your workspace"
+description: "Configure automatic positioning and sizing of Alex Sidebar"
 ---
 
-Control how Alex Sidebar positions and arranges itself relative to your Xcode window.
+Positioning settings help you create an optimal layout between Alex Sidebar and Xcode, maximizing your screen real estate and workflow efficiency.
 
-<video
-  autoPlay
-  muted
-  loop
-  playsInline
-  src="/videos/window-positioning.mp4"
-  alt="Demonstration of window positioning features in Alex Sidebar"
-  title="Alex Sidebar Window Positioning Demo"
-></video>
+## Positioning Settings
 
-## Auto-position Next to Xcode
+### Auto-Snap Alex next to Xcode
 
-When enabled, Alex Sidebar automatically positions itself adjacent to your Xcode window. This creates an efficient side-by-side workflow where:
+Automatically positions Alex Sidebar adjacent to your Xcode window, creating a seamless side-by-side development environment.
 
-- The sidebar docks to the most right edge of Xcode
-- Window positioning updates when Xcode moves
+**Features:**
+- Snaps to the right edge of Xcode
+- Maintains position when Xcode moves
+- Adjusts automatically when switching between Xcode windows
 
-<Tip>
-  This feature works best with "Match height with Xcode" enabled for a perfectly
-  aligned development environment.
-</Tip>
+### Let Alex fill rest of the screen
+
+When enabled, Alex Sidebar expands to use all available horizontal screen space not occupied by Xcode.
+
+**Benefits:**
+- Maximizes chat area for better readability
+- Uses screen space efficiently
+- Automatically adjusts when Xcode is resized
+
+### Match height with Xcode
+
+Synchronizes Alex Sidebar's height with your Xcode window for a clean, professional appearance.
+
+**Results in:**
+- Perfectly aligned top and bottom edges
+- Consistent visual layout
+- Unified workspace appearance
+
+## How to Configure
+
+1. Open Settings (gear icon in the top right)
+2. Navigate to **Workspace Configuration** → **Window Management**
+3. Enable your preferred positioning options:
+   - **Auto-Snap Alex next to Xcode** - For automatic side-by-side placement
+   - **Let Alex fill rest of the screen** - For maximum workspace utilization
+   - **Match height with Xcode** - For aligned window heights
+
+<Note>
+  These settings work best when used together. Enable all three for the best integration with Xcode.
+</Note>
+
+## Recommended Configurations
+
+<CardGroup cols={2}>
+  <Card title="Full Integration" icon="maximize">
+    Enable all positioning options for a fully integrated development environment where Alex Sidebar perfectly complements your Xcode window.
+  </Card>
+  
+  <Card title="Manual Control" icon="hand">
+    Disable auto-positioning if you prefer to manually arrange windows or work with multiple monitors.
+  </Card>
+</CardGroup>
