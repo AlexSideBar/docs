@@ -1,0 +1,107 @@
+---
+title: "Think Mode"
+description: "Toggle AI thinking process visibility for better insight into responses"
+---
+
+![Alex Sidebar with Think Mode enabled, showing the reasoning process.](/images/think-mode-demo.png)
+
+## Overview
+
+Think Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
+
+## Supported Models
+
+Think Mode is available for:
+- **Claude Sonnet 4** (optional think mode)
+- **Gemini 2.5 Flash** (optional think mode)
+- **Gemini 2.5 Pro** (mandatory think mode)
+- **DeepSeek R1** (mandatory think mode)
+- **OpenAI o4 Mini** (optional think mode with high thinking budget)
+
+## How to Use
+
+### Toggle Think Mode
+
+<Keyboard shortcut="⌘T" />
+
+**Two ways to enable Think Mode:**
+
+1. **Keyboard Shortcut**: Press **Command + T** to toggle Think Mode on or off during any conversation
+2. **UI Button**: Use the **Think** button under each message input for individual messages
+
+### Visual Indicators
+
+When Think Mode is enabled:
+- A dedicated thinking section appears in the chat
+- Thinking blocks are separated into their own section (except OpenAI o4 Mini)
+- The AI's reasoning process is displayed before the final response
+- You can see how the AI breaks down problems and considers different approaches
+
+**Note**: Some models (Gemini 2.5 Pro, DeepSeek R1) have mandatory think mode, while others (Claude Sonnet 4, Gemini 2.5 Flash, o4 Mini) allow you to toggle it on/off.
+
+## Benefits
+
+<CardGroup cols={2}>
+  <Card title="Transparency" icon="eye">
+    Understand how the AI analyzes your code and arrives at solutions
+  </Card>
+  
+  <Card title="Learning" icon="graduation-cap">
+    Learn problem-solving approaches by observing the AI's reasoning process
+  </Card>
+  
+  <Card title="Debugging" icon="bug">
+    Better understand why certain suggestions are made or why specific approaches are chosen
+  </Card>
+  
+  <Card title="Complex Problems" icon="puzzle-piece">
+    Particularly useful for complex refactoring or architectural decisions
+  </Card>
+</CardGroup>
+
+## When to Use Think Mode
+
+### Recommended For:
+- **Complex Problem Solving**: Multi-step problems requiring deep analysis
+- **Hard Bugs**: Difficult debugging scenarios that need systematic investigation
+- **Architecture Decisions**: System design and complex refactoring choices
+- **Learning**: Understanding the reasoning behind AI suggestions
+- **Code Reviews**: Evaluating code quality with detailed analysis
+- **Business Logic**: Complex workflows requiring careful consideration
+
+### Not Necessary For:
+- Simple code completions
+- Quick syntax questions
+- Straightforward refactoring tasks
+- High-volume, repetitive tasks
+- When you need fast responses without detailed reasoning
+- Everyday coding tasks
+
+## Best Practices
+
+<Steps>
+  <Step title="Start with Complex Tasks">
+    Enable Think Mode for problems involving multiple reasoning steps or complex business logic
+  </Step>
+  
+  <Step title="Toggle for Efficiency">
+    Switch between modes based on task complexity - use normal mode for everyday tasks and Think Mode for challenging problems
+  </Step>
+  
+  <Step title="Learn from the Process">
+    Review the thinking process to understand problem-solving approaches and improve your own reasoning
+  </Step>
+</Steps>
+
+## Performance Considerations
+
+<Warning>
+  Think Mode may increase response time as the AI performs deeper analysis. The trade-off is more accurate and well-reasoned solutions for complex problems.
+</Warning>
+
+<Tip>
+  For the best balance:
+  - Use normal mode for quick edits and simple tasks
+  - Enable Think Mode with **Command + T** only when you need deep reasoning
+  - The longer the model thinks, the better the results for complex problems
+</Tip>
