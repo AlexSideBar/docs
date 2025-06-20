@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.alexcodes.app)",
+      "Bash(rm:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(mv:*)",
+      "Bash(git add:*)",
+      "Bash(git reset:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(git checkout:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(mkdir:*)",
+      "Bash(mintlify upgrade:*)",
+      "Bash(git commit:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(git restore:*)",
+      "Bash(git merge:*)",
+      "Bash(git rm:*)",
+      "Bash(clear)",
+      "Bash(true)"
+    ],
+    "deny": [],
+    "includeCoAuthoredBy": false
+  }
+}
