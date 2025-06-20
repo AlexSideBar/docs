@@ -5,18 +5,16 @@ description: "Toggle AI thinking process visibility for better insight into resp
 
 ## Overview
 
-Thinking Mode allows you to see the AI's reasoning process in real-time as it formulates responses. When enabled, the AI engages in step-by-step reasoning, building logical chains of thought similar to how human experts approach complex problems. This feature provides transparency into how the AI arrives at its solutions and can be particularly helpful for complex problem-solving, debugging, and learning.
+Thinking Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
 
 ## Supported Models
 
 Thinking Mode is available for:
-- **Claude Sonnet 4**
-- **Gemini 2.5 Flash**
-- **Gemini 2.5 Pro** (displays thinking blocks separately)
-
-<Note>
-  Claude Sonnet 4 may not stream thinking tokens in real-time due to backend limitations, but the thinking process is still happening even if not immediately visible.
-</Note>
+- **Claude Sonnet 4** (optional thinking mode)
+- **Gemini 2.5 Flash** (optional thinking mode)
+- **Gemini 2.5 Pro** (mandatory thinking mode)
+- **DeepSeek R1** (mandatory thinking mode)
+- **OpenAI o4 Mini** (optional thinking mode with high thinking budget)
 
 ## How to Use
 
@@ -24,23 +22,20 @@ Thinking Mode is available for:
 
 <Keyboard shortcut="⌘T" />
 
-Press **Command + T** to toggle Thinking Mode on or off during any conversation.
+**Two ways to enable Thinking Mode:**
+
+1. **Keyboard Shortcut**: Press **Command + T** to toggle Thinking Mode on or off during any conversation
+2. **UI Button**: Use the **Think** option under each message input for individual messages
 
 ### Visual Indicators
 
-When Thinking Mode is enabled:
+When Think Mode is enabled:
 - A dedicated thinking section appears in the chat
-- For Gemini 2.5 Pro, thinking blocks are separated into their own section
+- Thinking blocks are separated into their own section (except OpenAI o4 Mini)
 - The AI's reasoning process is displayed before the final response
 - You can see how the AI breaks down problems and considers different approaches
 
-### How It Works
-
-Thinking Mode enables models to:
-1. **Engage in internal dialogue** - Explore various approaches before settling on a solution
-2. **Build chains of thought** - Connect reasoning steps logically like human experts
-3. **Self-correct** - Examine their own reasoning and fix errors
-4. **Improve with time** - The longer the model thinks, the better the results
+**Note**: Some models (Gemini 2.5 Pro, DeepSeek R1) have mandatory thinking mode, while others (Claude Sonnet 4, Gemini 2.5 Flash, o4 Mini) allow you to toggle it on/off.
 
 ## Benefits
 
@@ -50,7 +45,7 @@ Thinking Mode enables models to:
   </Card>
   
   <Card title="Learning" icon="graduation-cap">
-    Learn problem-solving approaches by observing the AI's thought process
+    Learn problem-solving approaches by observing the AI's reasoning process
   </Card>
   
   <Card title="Debugging" icon="bug">
@@ -79,18 +74,6 @@ Thinking Mode enables models to:
 - High-volume, repetitive tasks
 - When you need fast responses without detailed reasoning
 - Everyday coding tasks
-
-## Example Use Case
-
-```swift
-// When asking about optimizing a complex algorithm
-// Enable Thinking Mode with Cmd+T to see:
-// 1. How the AI analyzes the current implementation
-// 2. What performance considerations it evaluates
-// 3. Why it suggests specific optimizations
-// 4. Trade-offs between different approaches
-```
-
 ## Best Practices
 
 <Steps>
