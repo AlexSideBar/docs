@@ -1,0 +1,191 @@
+---
+title: "WWDC 2025 Modes"
+description: "Use the latest WWDC 2025 features and commands in Alex Sidebar"
+---
+
+Alex Sidebar now supports the features announced at WWDC 2025, including the Liquid Glass design system, new commands, and the latest APIs. This guide shows you how to use these new capabilities in your development workflow.
+
+## WWDC 2025 Highlights
+
+<Note>
+  Apple has transitioned to year-based naming: iOS 26, macOS 26, and visionOS 26 replace the traditional version numbers. Alex Sidebar is fully updated to support all new APIs and design patterns.
+</Note>
+
+### Key Announcements
+
+<CardGroup cols={2}>
+  <Card title="Liquid Glass Design" icon="sparkles">
+    A new UI system with translucent, adaptive interfaces
+  </Card>
+
+  <Card title="Foundation Models" icon="brain">
+    Access Apple Intelligence's foundation model on-device with just 3 lines of code
+  </Card>
+
+  <Card title="SpeechAnalyzer API" icon="microphone">
+    55% faster speech recognition with improved accuracy
+  </Card>
+
+  <Card title="SwiftUI Performance" icon="gauge">
+    6x faster list loading and 16x faster updates on macOS
+  </Card>
+</CardGroup>
+
+## Commands in Alex Sidebar
+
+Alex Sidebar has new commands to help you implement the latest Apple design and work with the latest APIs. Use these command tags to access specific capabilities:
+
+### @WWDC25 Mode
+
+Access the latest Apple technologies by prefixing your requests with `@WWDC25`:
+
+```
+@WWDC25 Implement the new SpeechAnalyzer API for real-time transcription
+```
+
+This mode gives Alex specialized knowledge of:
+- All iOS 26, macOS 26, and visionOS 26 APIs
+- Liquid Glass design implementation
+- New SwiftUI features like Rich Text Editor and 3D Charts
+- Performance optimizations and best practices
+
+**Example Uses:**
+```
+@WWDC25 Create a 3D chart in the given view with the new Charts API
+@WWDC25 Implement the new WebKit APIs for in-app browsers
+```
+
+### @Foundation Models Command
+
+Use Apple's privacy-focused AI models directly in your apps:
+
+```
+@FoundationModel Create a suggestion system using the new Foundation Models API for generating name recommendations
+```
+
+**Capabilities:**
+- On-device AI inference with no cost and offline functionality
+- Guided generation for consistent, structured outputs
+- Tool calling and function integration
+- Privacy-focused processing that never leaves the device
+- Native Swift support with async/await patterns
+
+**Example Implementation:**
+```swift
+@Foundation Models
+import FoundationModels
+
+// Access Apple's on-device foundation model with just a few lines
+let model = try await FoundationModel()
+
+// Generate structured data from natural language
+let prompt = "Create a daily journal entry from these notes: \(userNotes)"
+let response = try await model.generate(
+    prompt: prompt,
+    options: GenerationOptions(
+        guidedGeneration: true,
+        structuredOutput: JournalEntry.self
+    )
+)
+
+// The model runs entirely on-device, protecting user privacy
+let journalEntry = response.structuredResult
+```
+
+### @Liquid Glass Command
+
+Update your UI with the new Liquid Glass design system:
+
+```
+@Liquid Glass Update the custom button to use the new Liquid Glass effect
+```
+
+**Features:**
+- Use the new Liquid Glass API to create translucent, adaptive interfaces
+
+## Combining Commands
+
+Use multiple commands together for additional capabilities:
+
+```
+@WWDC25 @Liquid Glass @Foundation Models 
+Create an AI-powered notes app with speech transcription and the new design system
+```
+
+This combination:
+1. Uses SpeechAnalyzer for transcription (@WWDC25)
+2. Applies Liquid Glass UI throughout (@Liquid Glass)
+3. Uses Foundation Models for summarization (@Foundation Models)
+
+## Migration Guide
+
+### Updating Existing Apps
+
+<Steps>
+  <Step title="Enable WWDC25 Mode">
+    Start your migration with:
+    ```
+    @WWDC25 Analyze my app for iOS 26 compatibility
+    ```
+  </Step>
+
+  <Step title="Apply Liquid Glass">
+    Transform your UI incrementally:
+    ```
+    @Liquid Glass Update my main navigation with the new design
+    ```
+  </Step>
+
+  <Step title="Integrate AI Features">
+    Add intelligence thoughtfully:
+    ```
+    @Foundation Models Suggest AI improvements for my app
+    ```
+  </Step>
+</Steps>
+
+## Best Practices
+
+<AccordionGroup>
+  <Accordion title="Performance First">
+    - Leverage the 6x faster list performance automatically
+    - Use on-device Foundation Models when possible
+    - Profile with the new SwiftUI Instruments template
+  </Accordion>
+
+  <Accordion title="Design Consistency">
+    - Adopt Liquid Glass gradually across your app
+    - Ensure accessibility with reduced transparency options
+    - Test on all platforms for consistent experience
+  </Accordion>
+
+  <Accordion title="Privacy by Design">
+    - Prefer on-device processing with Foundation Models
+    - Implement proper consent for AI features
+    - Use differential privacy for analytics
+  </Accordion>
+</AccordionGroup>
+
+## Quick Reference
+
+| Feature | Command | Example Usage |
+|---------|---------|---------------|
+| SpeechAnalyzer | @WWDC25 | `@WWDC25 Add real-time transcription` |
+| Liquid Glass UI | @Liquid Glass | `@Liquid Glass Apply glass effects to my cards` |
+| On-device AI | @Foundation Models | `@Foundation Models Generate text summaries locally` |
+| 3D Charts | @WWDC25 | `@WWDC25 Create volumetric data visualizations` |
+| Rich Text | @WWDC25 | `@WWDC25 Add rich text editing to my app` |
+
+<Note>
+  Remember to update to Xcode 26 beta and ensure your deployment targets are set appropriately for these new features. Alex Sidebar will automatically handle availability checks when generating code.
+</Note>
+
+## Get Started
+
+Ready to build with the future? Try these commands:
+
+1. **Modern UI**: `@Liquid Glass Update my app with the new design system`
+2. **AI Features**: `@Foundation Models Add intelligent features to my app`
+3. **Latest APIs**: `@WWDC25 Show me what's new for my use case`
+
+Alex Sidebar makes it simple to adopt Apple's latest features while maintaining code quality and best practices.
