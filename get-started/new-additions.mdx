@@ -72,24 +72,20 @@ Use Apple's privacy-focused AI models directly in your apps:
 
 **Example Implementation:**
 ```swift
-@Foundation Models
 import FoundationModels
 
 // Access Apple's on-device foundation model with just a few lines
-let model = try await FoundationModel()
+let session = try await LanguageModelSession()
 
 // Generate structured data from natural language
 let prompt = "Create a daily journal entry from these notes: \(userNotes)"
-let response = try await model.generate(
-    prompt: prompt,
-    options: GenerationOptions(
-        guidedGeneration: true,
-        structuredOutput: JournalEntry.self
-    )
+let response = try await session.respond(
+    to: prompt,
+    generating: JournalEntry.self
 )
 
 // The model runs entirely on-device, protecting user privacy
-let journalEntry = response.structuredResult
+let journalEntry = response.content
 ```
 
 ### @Liquid Glass Command
