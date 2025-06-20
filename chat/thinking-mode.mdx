@@ -5,7 +5,7 @@ description: "Toggle AI thinking process visibility for better insight into resp
 
 ## Overview
 
-Thinking Mode allows you to see the AI's reasoning process in real-time as it formulates responses. This feature provides transparency into how the AI arrives at its solutions and can be particularly helpful for complex problem-solving.
+Thinking Mode allows you to see the AI's reasoning process in real-time as it formulates responses. When enabled, the AI engages in step-by-step reasoning, building logical chains of thought similar to how human experts approach complex problems. This feature provides transparency into how the AI arrives at its solutions and can be particularly helpful for complex problem-solving, debugging, and learning.
 
 ## Supported Models
 
@@ -34,6 +34,14 @@ When Thinking Mode is enabled:
 - The AI's reasoning process is displayed before the final response
 - You can see how the AI breaks down problems and considers different approaches
 
+### How It Works
+
+Thinking Mode enables models to:
+1. **Engage in internal dialogue** - Explore various approaches before settling on a solution
+2. **Build chains of thought** - Connect reasoning steps logically like human experts
+3. **Self-correct** - Examine their own reasoning and fix errors
+4. **Improve with time** - The longer the model thinks, the better the results
+
 ## Benefits
 
 <CardGroup cols={2}>
@@ -57,16 +65,20 @@ When Thinking Mode is enabled:
 ## When to Use Thinking Mode
 
 ### Recommended For:
-- **Complex Problem Solving**: When tackling difficult bugs or architectural decisions
-- **Learning**: When you want to understand the reasoning behind suggestions
-- **Code Reviews**: To see how the AI evaluates code quality and improvements
-- **Debugging AI Responses**: If you receive unexpected suggestions
+- **Complex Problem Solving**: Multi-step problems requiring deep analysis
+- **Hard Bugs**: Difficult debugging scenarios that need systematic investigation
+- **Architecture Decisions**: System design and complex refactoring choices
+- **Learning**: Understanding the reasoning behind AI suggestions
+- **Code Reviews**: Evaluating code quality with detailed analysis
+- **Business Logic**: Complex workflows requiring careful consideration
 
 ### Not Necessary For:
 - Simple code completions
 - Quick syntax questions
 - Straightforward refactoring tasks
+- High-volume, repetitive tasks
 - When you need fast responses without detailed reasoning
+- Everyday coding tasks
 
 ## Example Use Case
 
@@ -79,22 +91,35 @@ When Thinking Mode is enabled:
 // 4. Trade-offs between different approaches
 ```
 
-## Tips
+## Best Practices
 
 <Steps>
-  <Step title="Enable for Complex Tasks">
-    Turn on Thinking Mode when dealing with architectural decisions or complex debugging scenarios
+  <Step title="Start with Complex Tasks">
+    Enable Thinking Mode for problems involving multiple reasoning steps or complex business logic
   </Step>
   
-  <Step title="Toggle as Needed">
-    You can enable or disable Thinking Mode at any point in the conversation
+  <Step title="Use as a Precision Tool">
+    Reserve Thinking Mode for critical decision points rather than routine coding tasks
   </Step>
   
-  <Step title="Review the Process">
-    Take time to read through the thinking process to understand the AI's approach
+  <Step title="Toggle for Efficiency">
+    Switch between modes based on task complexity - use normal mode for everyday tasks and Thinking Mode for challenging problems
+  </Step>
+  
+  <Step title="Learn from the Process">
+    Review the thinking process to understand problem-solving approaches and improve your own reasoning
   </Step>
 </Steps>
 
-<Note>
-  Thinking Mode may slightly increase response time as the full reasoning process is displayed. Toggle it off with **Command + T** when you need faster responses.
-</Note>
+## Performance Considerations
+
+<Warning>
+  Thinking Mode may increase response time as the AI performs deeper analysis. The trade-off is more accurate and well-reasoned solutions for complex problems.
+</Warning>
+
+<Tip>
+  For the best balance:
+  - Use normal mode for quick edits and simple tasks
+  - Enable Thinking Mode with **Command + T** only when you need deep reasoning
+  - The longer the model thinks, the better the results for complex problems
+</Tip>
