@@ -1,0 +1,100 @@
+---
+title: "Thinking Mode"
+description: "Toggle AI thinking process visibility for better insight into responses"
+---
+
+## Overview
+
+Thinking Mode allows you to see the AI's reasoning process in real-time as it formulates responses. This feature provides transparency into how the AI arrives at its solutions and can be particularly helpful for complex problem-solving.
+
+## Supported Models
+
+Thinking Mode is available for:
+- **Claude Sonnet 4**
+- **Gemini 2.5 Flash**
+- **Gemini 2.5 Pro** (displays thinking blocks separately)
+
+<Note>
+  Claude Sonnet 4 may not stream thinking tokens in real-time due to backend limitations, but the thinking process is still happening even if not immediately visible.
+</Note>
+
+## How to Use
+
+### Toggle Thinking Mode
+
+<Keyboard shortcut="⌘T" />
+
+Press **Command + T** to toggle Thinking Mode on or off during any conversation.
+
+### Visual Indicators
+
+When Thinking Mode is enabled:
+- A dedicated thinking section appears in the chat
+- For Gemini 2.5 Pro, thinking blocks are separated into their own section
+- The AI's reasoning process is displayed before the final response
+- You can see how the AI breaks down problems and considers different approaches
+
+## Benefits
+
+<CardGroup cols={2}>
+  <Card title="Transparency" icon="eye">
+    Understand how the AI analyzes your code and arrives at solutions
+  </Card>
+  
+  <Card title="Learning" icon="graduation-cap">
+    Learn problem-solving approaches by observing the AI's thought process
+  </Card>
+  
+  <Card title="Debugging" icon="bug">
+    Better understand why certain suggestions are made or why specific approaches are chosen
+  </Card>
+  
+  <Card title="Complex Problems" icon="puzzle-piece">
+    Particularly useful for complex refactoring or architectural decisions
+  </Card>
+</CardGroup>
+
+## When to Use Thinking Mode
+
+### Recommended For:
+- **Complex Problem Solving**: When tackling difficult bugs or architectural decisions
+- **Learning**: When you want to understand the reasoning behind suggestions
+- **Code Reviews**: To see how the AI evaluates code quality and improvements
+- **Debugging AI Responses**: If you receive unexpected suggestions
+
+### Not Necessary For:
+- Simple code completions
+- Quick syntax questions
+- Straightforward refactoring tasks
+- When you need fast responses without detailed reasoning
+
+## Example Use Case
+
+```swift
+// When asking about optimizing a complex algorithm
+// Enable Thinking Mode with Cmd+T to see:
+// 1. How the AI analyzes the current implementation
+// 2. What performance considerations it evaluates
+// 3. Why it suggests specific optimizations
+// 4. Trade-offs between different approaches
+```
+
+## Tips
+
+<Steps>
+  <Step title="Enable for Complex Tasks">
+    Turn on Thinking Mode when dealing with architectural decisions or complex debugging scenarios
+  </Step>
+  
+  <Step title="Toggle as Needed">
+    You can enable or disable Thinking Mode at any point in the conversation
+  </Step>
+  
+  <Step title="Review the Process">
+    Take time to read through the thinking process to understand the AI's approach
+  </Step>
+</Steps>
+
+<Note>
+  Thinking Mode may slightly increase response time as the full reasoning process is displayed. Toggle it off with **Command + T** when you need faster responses.
+</Note>
