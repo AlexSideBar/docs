@@ -5,17 +5,17 @@ description: "Use the latest WWDC 2025 features and commands in Alex Sidebar"
 
 ![WWDC 2025 features in Alex Sidebar - Foundation Models, Liquid Glass design, and new APIs](/images/wwdc-2025-features-hero.png)
 
-Alex Sidebar now supports the features announced at WWDC 2025, including the Liquid Glass design system, and the latest APIs. This guide shows you how to use these new features in your apps.
+Alex Sidebar now supports the contexts for the features announced at WWDC 2025, including the Liquid Glass design system, and the latest APIs. This guide shows you how to use these new features in your apps.
 
 ### Key Announcements
 
 <CardGroup cols={2}>
   <Card title="Liquid Glass Design" icon="sparkles">
-    A new UI system with translucent, adaptive interfaces
+    A new design system with translucent, adaptive interfaces
   </Card>
 
   <Card title="Foundation Models" icon="brain">
-    Access Apple Intelligence's foundation model on-device with just a few lines of code
+    Access Apple Intelligence's language model on-device with just a few lines of code
   </Card>
 
   <Card title="SpeechAnalyzer API" icon="microphone">
@@ -29,11 +29,11 @@ Alex Sidebar now supports the features announced at WWDC 2025, including the Liq
 
 ## Commands in Alex Sidebar
 
-Alex Sidebar has new commands to help you implement the latest design and work with the latest APIs. Use these command tags to access specific capabilities:
+There are new commands to help you implement the new design and work with the latest APIs. Use these command tags to access specific capabilities:
 
 ### @WWDC25 Mode
 
-Access the latest Apple technologies by prefixing your requests with `@WWDC25`:
+Access the latest Apple documentation related to WWDC 2025 by prefixing your requests with `@WWDC25`. For example, to get the context for the latest documentation for the SpeechAnalyzer API, you can use the following command:
 
 ```
 @WWDC25 Implement the new SpeechAnalyzer API for real-time transcription
@@ -53,18 +53,11 @@ This mode gives Alex the context of:
 
 ### @Foundation Models Command
 
-Use Apple's privacy-focused AI models directly in your apps:
+Use Apple's language model directly in your apps. Here is an example of how to use the `@Foundation Models` command:
 
 ```
 @FoundationModel Create a suggestion system using the new Foundation Models API for generating name recommendations
 ```
-
-**Capabilities:**
-- On-device AI inference with no cost and offline functionality
-- Guided generation for consistent, structured outputs
-- Tool calling and function integration
-- Privacy-focused processing that never leaves the device
-- Native Swift support with async/await patterns
 
 **Example Implementation:**
 ```swift
@@ -87,7 +80,7 @@ let journalEntry = response.content
 
 ### @Liquid Glass Command
 
-Update your UI with the new Liquid Glass design system:
+Update your UI with the new Liquid Glass design system. Here is an example of how to use the `@Liquid Glass` command:
 
 ```
 @Liquid Glass Update the custom button to use the new Liquid Glass design
@@ -95,7 +88,7 @@ Update your UI with the new Liquid Glass design system:
 
 ## Combining Commands
 
-Use multiple commands together for better results:
+Use multiple commands together for better results. Here is an example of how to use the `@WWDC25`, `@Liquid Glass`, and `@Foundation Models` commands together:
 
 ```
 @WWDC25 @Liquid Glass @Foundation Models 
@@ -106,26 +99,6 @@ This combination:
 1. Uses SpeechAnalyzer for transcription (@WWDC25)
 2. Applies Liquid Glass design throughout the app (@Liquid Glass)
 3. Uses Foundation Models for summarization (@Foundation Models)
-
-## Migration Guide
-
-### Updating Existing Apps
-
-<Steps>
-  <Step title="Apply Liquid Glass">
-    Transform your UI incrementally:
-    ```
-    @Liquid Glass Update the navigation buttons to use the glass modifiers
-    ```
-  </Step>
-
-  <Step title="Integrate AI Features">
-    Add intelligence thoughtfully:
-    ```
-    @Foundation Models Suggest AI features and improvements for my app to use the new Foundation Models framework
-    ```
-  </Step>
-</Steps>
 
 ## Quick Reference
 
