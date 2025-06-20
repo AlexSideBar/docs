@@ -3,6 +3,8 @@ title: "Think Mode"
 description: "Toggle AI thinking process visibility for better insight into responses"
 ---
 
+![Alex Sidebar with Think Mode enabled, showing the reasoning process.](/images/think-mode-demo.png)
+
 ## Overview
 
 Think Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
@@ -15,10 +17,6 @@ Think Mode is available for:
 - **Gemini 2.5 Pro** (mandatory think mode)
 - **DeepSeek R1** (mandatory think mode)
 - **OpenAI o4 Mini** (optional think mode with high thinking budget)
-
-<Note>
-  Claude Sonnet 4 may not stream thinking tokens in real-time due to backend limitations, but the thinking process is still happening even if not immediately visible.
-</Note>
 
 ## How to Use
 
@@ -84,10 +82,6 @@ When Think Mode is enabled:
 <Steps>
   <Step title="Start with Complex Tasks">
     Enable Think Mode for problems involving multiple reasoning steps or complex business logic
-  </Step>
-  
-  <Step title="Use as a Precision Tool">
-    Reserve Think Mode for critical decision points rather than routine coding tasks
   </Step>
   
   <Step title="Toggle for Efficiency">
