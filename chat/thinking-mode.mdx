@@ -1,31 +1,35 @@
 ---
-title: "Thinking Mode"
+title: "Think Mode"
 description: "Toggle AI thinking process visibility for better insight into responses"
 ---
 
 ## Overview
 
-Thinking Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
+Think Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
 
 ## Supported Models
 
-Thinking Mode is available for:
-- **Claude Sonnet 4** (optional thinking mode)
-- **Gemini 2.5 Flash** (optional thinking mode)
-- **Gemini 2.5 Pro** (mandatory thinking mode)
-- **DeepSeek R1** (mandatory thinking mode)
-- **OpenAI o4 Mini** (optional thinking mode with high thinking budget)
+Think Mode is available for:
+- **Claude Sonnet 4** (optional think mode)
+- **Gemini 2.5 Flash** (optional think mode)
+- **Gemini 2.5 Pro** (mandatory think mode)
+- **DeepSeek R1** (mandatory think mode)
+- **OpenAI o4 Mini** (optional think mode with high thinking budget)
+
+<Note>
+  Claude Sonnet 4 may not stream thinking tokens in real-time due to backend limitations, but the thinking process is still happening even if not immediately visible.
+</Note>
 
 ## How to Use
 
-### Toggle Thinking Mode
+### Toggle Think Mode
 
 <Keyboard shortcut="⌘T" />
 
-**Two ways to enable Thinking Mode:**
+**Two ways to enable Think Mode:**
 
-1. **Keyboard Shortcut**: Press **Command + T** to toggle Thinking Mode on or off during any conversation
-2. **UI Button**: Use the **Think** option under each message input for individual messages
+1. **Keyboard Shortcut**: Press **Command + T** to toggle Think Mode on or off during any conversation
+2. **UI Button**: Use the **Think** button under each message input for individual messages
 
 ### Visual Indicators
 
@@ -35,7 +39,7 @@ When Think Mode is enabled:
 - The AI's reasoning process is displayed before the final response
 - You can see how the AI breaks down problems and considers different approaches
 
-**Note**: Some models (Gemini 2.5 Pro, DeepSeek R1) have mandatory thinking mode, while others (Claude Sonnet 4, Gemini 2.5 Flash, o4 Mini) allow you to toggle it on/off.
+**Note**: Some models (Gemini 2.5 Pro, DeepSeek R1) have mandatory think mode, while others (Claude Sonnet 4, Gemini 2.5 Flash, o4 Mini) allow you to toggle it on/off.
 
 ## Benefits
 
@@ -57,7 +61,7 @@ When Think Mode is enabled:
   </Card>
 </CardGroup>
 
-## When to Use Thinking Mode
+## When to Use Think Mode
 
 ### Recommended For:
 - **Complex Problem Solving**: Multi-step problems requiring deep analysis
@@ -74,19 +78,20 @@ When Think Mode is enabled:
 - High-volume, repetitive tasks
 - When you need fast responses without detailed reasoning
 - Everyday coding tasks
+
 ## Best Practices
 
 <Steps>
   <Step title="Start with Complex Tasks">
-    Enable Thinking Mode for problems involving multiple reasoning steps or complex business logic
+    Enable Think Mode for problems involving multiple reasoning steps or complex business logic
   </Step>
   
   <Step title="Use as a Precision Tool">
-    Reserve Thinking Mode for critical decision points rather than routine coding tasks
+    Reserve Think Mode for critical decision points rather than routine coding tasks
   </Step>
   
   <Step title="Toggle for Efficiency">
-    Switch between modes based on task complexity - use normal mode for everyday tasks and Thinking Mode for challenging problems
+    Switch between modes based on task complexity - use normal mode for everyday tasks and Think Mode for challenging problems
   </Step>
   
   <Step title="Learn from the Process">
@@ -97,12 +102,12 @@ When Think Mode is enabled:
 ## Performance Considerations
 
 <Warning>
-  Thinking Mode may increase response time as the AI performs deeper analysis. The trade-off is more accurate and well-reasoned solutions for complex problems.
+  Think Mode may increase response time as the AI performs deeper analysis. The trade-off is more accurate and well-reasoned solutions for complex problems.
 </Warning>
 
 <Tip>
   For the best balance:
   - Use normal mode for quick edits and simple tasks
-  - Enable Thinking Mode with **Command + T** only when you need deep reasoning
+  - Enable Think Mode with **Command + T** only when you need deep reasoning
   - The longer the model thinks, the better the results for complex problems
 </Tip>
