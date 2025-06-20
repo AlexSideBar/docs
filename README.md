@@ -58,7 +58,7 @@ We welcome contributions to Alex Sidebar! Here's how you can help:
 - [X](https://x.com/alexcodes_ai): Follow for updates
 - [GitHub Issues](https://github.com/DanielEdrisian/AlexSideBar-Public/issues): Report bugs and request features
 - Email: Contact daniel@alexcodes.app for direct support
-- [Documentation Portal](https://docs.alexsidebar.app): Access comprehensive guides
+- [Documentation Portal](https://www.alexcodes.app/docs): Access comprehensive guides
 
 ## Troubleshooting
 
