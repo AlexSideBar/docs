@@ -90,6 +90,7 @@
       "pages": [
         "chat/overview",
         "chat/thinking-mode",
+        "chat/image-generation",
         "chat/context/agents",
         "chat/context/memory",
         "chat/context/commands",
