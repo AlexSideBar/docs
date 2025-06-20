@@ -63,6 +63,14 @@
       ]
     },
     {
+      "group": "New Additions",
+      "icon": "sparkles",
+      "iconType": "solid",
+      "pages": [
+        "get-started/new-additions"
+      ]
+    },
+    {
       "group": "API Keys",
       "icon": "key",
       "iconType": "solid",
