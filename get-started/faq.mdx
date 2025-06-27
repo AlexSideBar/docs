@@ -168,3 +168,26 @@ Also: Generally, as you use up more tokens, AI systems get more "confused". It's
 
 Now, back to the point of confusion: The amount of tokens you use has no effect on the # of Alex messages you've consumed from a billing perspective. We simplify things by counting each request to the AI model as 1 "message". Some messages could be cheaper, some more expensive, but we average it so that you spend less time counting tokens and prices.
 
+### 22. Pricing Updates (June 27th, 2025)
+
+1. We're adding a new **unlimited** plan! Lots of you asked for a fully unlimited plan after we held our 7-day-free promotion for WWDC. With this plan, you don't have to worry about chat credits & top-ups anymore. It's $200/mo for one device, with no rate limits.
+
+(The unlimited plan replaces Premium. Current Premium subscribers are grandfathered—you keep your plan until you choose to switch or cancel.)
+
+2. We're adding 100 chat credits to the Pro plan! It's upgraded from 500 -> 600 / mo, at the same price of $30/mo.
+
+- If you're on the $30/mo sub, you'll see an extra 100 messages added to your account.
+- If your $30/mo sub is set to cancel, you will not see the extra 100 messages added (this is because our billing migrator doesn't support migrating plans that are set to cancel. Please let us know if you change your cancellation status, and we will attempt to migrate your plan again.)
+- If you are on the old $20/mo sub, you will still have access to it until cancelled. It will remain at 500 credits / mo.
+
+3. Starting version 3.3 next monday (June 30th), **all users** will have access to GitHub Issues & Linear integrations! It's no longer gated to premium.
+
+4. We are renaming "Chat Messages" to "Chat Credits" to better reflect what it means. Nothing logically has changed, just naming.
+
+To re-iterate, a chat credit is deducted when:
+
+- You send a message
+- The agent does a follow-up action (e.g., if it does 3 action calls autonomously, that's 3 credits).
+- The agent requests images generated (1 credit per image, and 1 credit for the request). e.g. 3 credits for generating 2 images.
+
+5. Mini plan ($12/mo) remains the same. Old mini plan ($10/mo) is also grandfathered.
