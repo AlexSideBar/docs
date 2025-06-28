@@ -80,9 +80,9 @@ Each provider measures limits differently:
 ## Quick Fixes When You're Rate Limited
 
 ### 1. Switch Models Temporarily
-Each model has separate limits. If Claude Sonnet is rate limited, try:
-- Claude 3.5 Sonnet (older version)
-- Switch to OpenAI or Gemini
+Each model has separate limits. If one model is rate limited, try:
+- A different model from the same provider
+- Switch to another provider (OpenAI, Anthropic, Gemini)
 - Use Alex's built-in credits instead
 
 ### 2. Wait Before Retrying
@@ -115,28 +115,23 @@ Consider using Alex Sidebar's built-in credits. You won't have to worry about:
 
 ## Best Practices
 
-1. **Monitor usage proactively** - Don't wait for errors
-2. **Set up billing alerts** - Know before you hit limits
-3. **Use multiple API keys** - Rotate between them
-4. **Implement caching** - Don't make the same request twice
-5. **Log rate limit errors** - Track patterns and adjust
+1. **Monitor usage proactively** - Check your provider's dashboard regularly
+2. **Set up billing alerts** - Know before you hit spending limits
+3. **Track when you hit limits** - Notice patterns in your usage
 
 ## Provider-Specific Tips
 
 ### Anthropic
 - Workspaces let you set custom limits per project
-- Prompt caching is free from rate limits (for cached portions)
-- Different models have different limits - use this strategically
+- Different models have different limits
 
 ### OpenAI  
-- o1 models have special limits even at higher tiers
-- GPT-4 has lower limits than GPT-3.5
-- Batch API has separate, higher limits
+- Different models have different rate limits
+- Some models may have special restrictions
 
 ### Gemini
-- Gemini 1.5 Pro has 3x higher limits than before (as of Sept 2024)
-- Vertex AI quotas are separate from AI Studio quotas
-- Location matters - some regions have higher limits
+- Vertex AI and AI Studio have separate quotas
+- Location can affect your limits
 
 ## Still Stuck?
 
