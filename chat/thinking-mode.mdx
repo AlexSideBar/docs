@@ -1,43 +1,44 @@
 ---
-title: "Think Mode"
-description: "Toggle AI thinking process visibility for better insight into responses"
+title: "Thought Process"
+description: "View the AI's reasoning process in real-time for better insight into responses"
 ---
 
-![Alex Sidebar with Think Mode enabled, showing the reasoning process.](/images/think-mode-demo.png)
+![Alex Sidebar showing the AI's thought process in real-time.](/images/think-mode-demo.png)
 
 ## Overview
 
-Think Mode allows you to see the AI's reasoning process as it formulates responses. When enabled, the model does step-by-step reasoning, building logical chains to approach problems. This is helpful for complex problem-solving, debugging, and learning.
+The Thought Process feature shows the AI's reasoning in real-time as it works through your requests. Unlike a simple response, you can see the AI's internal dialogue - how it analyzes problems, considers different approaches, and even corrects itself. This transparency helps you understand exactly how the AI arrives at its solutions.
+
+## How It Works
+
+The thought process is always visible for supported models. As the AI processes your request, you'll see its reasoning appear in real-time, including:
+
+- Problem analysis and understanding
+- Exploration of different approaches
+- Self-corrections when it identifies mistakes
+- Step-by-step logical reasoning
+- Consideration of edge cases and potential issues
 
 ## Supported Models
 
-Think Mode is available for:
-- **Claude Sonnet 4** (optional think mode)
-- **Gemini 2.5 Flash** (optional think mode)
-- **Gemini 2.5 Pro** (mandatory think mode)
-- **DeepSeek R1** (mandatory think mode)
-- **OpenAI o4 Mini** (optional think mode with high thinking budget)
+Thought process visibility varies by model:
+- **Claude Sonnet 4** - Shows thinking process
+- **Gemini 2.5 Flash** - Shows thinking process
+- **Gemini 2.5 Pro** - Always shows extensive thinking
+- **DeepSeek R1** - Always shows thinking process
+- **OpenAI o4 Mini** - Shows thinking with high thinking budget
 
-## How to Use
+## Visual Indicators
 
-### Toggle Think Mode
+When using a model that shows thinking:
+- The thought process appears in a dedicated section
+- You can watch the AI's reasoning unfold in real-time
+- Thinking content is visually separated from the final response
+- The AI may revise its thinking as it discovers better approaches
 
-<Keyboard shortcut="⌘T" />
-
-**Two ways to enable Think Mode:**
-
-1. **Keyboard Shortcut**: Press **Command + T** to toggle Think Mode on or off during any conversation
-2. **UI Button**: Use the **Think** button under each message input for individual messages
-
-### Visual Indicators
-
-When Think Mode is enabled:
-- A dedicated thinking section appears in the chat
-- Thinking blocks are separated into their own section (except OpenAI o4 Mini)
-- The AI's reasoning process is displayed before the final response
-- You can see how the AI breaks down problems and considers different approaches
-
-**Note**: Some models (Gemini 2.5 Pro, DeepSeek R1) have mandatory think mode, while others (Claude Sonnet 4, Gemini 2.5 Flash, o4 Mini) allow you to toggle it on/off.
+<Note>
+The thought process is automatically shown for all supported models. There's no need to enable or toggle this feature - it's always active to provide maximum transparency.
+</Note>
 
 ## Benefits
 
@@ -59,49 +60,61 @@ When Think Mode is enabled:
   </Card>
 </CardGroup>
 
-## When to Use Think Mode
+## Example Thought Process
 
-### Recommended For:
-- **Complex Problem Solving**: Multi-step problems requiring deep analysis
-- **Hard Bugs**: Difficult debugging scenarios that need systematic investigation
-- **Architecture Decisions**: System design and complex refactoring choices
-- **Learning**: Understanding the reasoning behind AI suggestions
-- **Code Reviews**: Evaluating code quality with detailed analysis
-- **Business Logic**: Complex workflows requiring careful consideration
+Here's what you might see when the AI works through a problem:
 
-### Not Necessary For:
-- Simple code completions
-- Quick syntax questions
-- Straightforward refactoring tasks
-- High-volume, repetitive tasks
-- When you need fast responses without detailed reasoning
-- Everyday coding tasks
+```
+Thinking...
+The user is asking about a memory leak in their Swift code. Let me analyze the code they've shared...
 
-## Best Practices
+I can see they're creating a strong reference cycle between the view controller and the closure. The closure captures 'self' strongly, and the view controller holds the closure, creating a retain cycle.
+
+Actually, wait - I need to look more carefully at this. The closure is being used in a completion handler... 
+
+Yes, this is definitely a retain cycle. The solution would be to use [weak self] or [unowned self] in the closure to break the cycle.
+```
+
+## When It's Most Valuable
+
+### Complex Problem Solving
+Watch the AI break down multi-step problems, evaluate different solutions, and choose the best approach.
+
+### Debugging
+See how the AI systematically investigates issues, identifies root causes, and proposes fixes.
+
+### Learning
+Understand the reasoning behind suggestions and learn problem-solving patterns.
+
+### Architecture Decisions
+Observe how the AI weighs trade-offs and considers different design patterns.
+
+## What to Expect
 
 <Steps>
-  <Step title="Start with Complex Tasks">
-    Enable Think Mode for problems involving multiple reasoning steps or complex business logic
+  <Step title="Real-Time Updates">
+    The thought process appears as the AI works, not after it's done thinking
   </Step>
   
-  <Step title="Toggle for Efficiency">
-    Switch between modes based on task complexity - use normal mode for everyday tasks and Think Mode for challenging problems
+  <Step title="Self-Correction">
+    You may see the AI identify and fix its own mistakes during the thinking process
   </Step>
   
-  <Step title="Learn from the Process">
-    Review the thinking process to understand problem-solving approaches and improve your own reasoning
+  <Step title="Iterative Refinement">
+    The AI might explore multiple approaches before settling on the best solution
   </Step>
 </Steps>
 
 ## Performance Considerations
 
-<Warning>
-  Think Mode may increase response time as the AI performs deeper analysis. The trade-off is more accurate and well-reasoned solutions for complex problems.
-</Warning>
+<Info>
+  Models that show their thought process may take slightly longer to respond as they work through problems systematically. This deeper analysis often leads to more accurate and well-reasoned solutions.
+</Info>
 
 <Tip>
-  For the best balance:
-  - Use normal mode for quick edits and simple tasks
-  - Enable Think Mode with **Command + T** only when you need deep reasoning
-  - The longer the model thinks, the better the results for complex problems
+  The thought process is particularly valuable for:
+  - Understanding why the AI made specific suggestions
+  - Learning new problem-solving approaches
+  - Catching potential issues before they become problems
+  - Building trust through transparency
 </Tip>
