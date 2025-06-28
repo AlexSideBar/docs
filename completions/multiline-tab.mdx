@@ -3,7 +3,7 @@ title: "Tab Completions"
 description: "Write code faster with intelligent, context-aware completions that span multiple lines"
 ---
 
-Tab completions in Alex Sidebar go beyond simple autocomplete. They understand your code's context and can suggest entire blocks, complete functions, and even refactor existing code across multiple lines.
+Tab completions in Alex Sidebar go beyond simple autocomplete. They understand your code's context and can suggest entire blocks and complete functions based on what you're writing.
 
 ## How Tab Works
 
@@ -14,10 +14,14 @@ Tab completions in Alex Sidebar go beyond simple autocomplete. They understand y
   playsInline
   alt="Multiline tab completions in action"
   title="Tab through complex code changes"
-  src="/videos/multiline-tab-demo.mp4"
+  src="/videos/tab-tab-tab.mp4"
 />
 
-As you type, Alex Sidebar analyzes your code and suggests completions that appear as ghost text. Press **Tab** to accept the suggestion and watch as it intelligently fills in multiple lines at once.
+As you type, Alex Sidebar analyzes your code and suggests completions that appear as completion text. Press **Tab** to accept the suggestion and watch as it intelligently fills in multiple lines at once.
+
+<Note>
+For optimal Tab completion performance, disable Apple's predictive code completion in Xcode → Settings → Text Editing → Editing → uncheck "Use code completion".
+</Note>
 
 ## Key Features
 
@@ -30,12 +34,12 @@ As you type, Alex Sidebar analyzes your code and suggests completions that appea
     Suggests complete code blocks, not just single lines
   </Card>
   
-  <Card title="Smart Refactoring" icon="arrows-rotate">
-    Detects patterns and applies similar changes across your code
+  <Card title="Project Context" icon="files">
+    Considers other files in your project when making suggestions
   </Card>
   
-  <Card title="Cross-File Intelligence" icon="files">
-    Uses context from other files in your project for better suggestions
+  <Card title="Fast & Responsive" icon="bolt">
+    Low-latency suggestions that keep up with your typing speed
   </Card>
 </CardGroup>
 
@@ -49,29 +53,23 @@ As you type, Alex Sidebar analyzes your code and suggests completions that appea
   </Step>
   
   <Step title="See suggestions">
-    Ghost text appears showing what Alex suggests. This could be:
+    Completion text appears showing what Alex suggests. This could be:
     - Completing the current line
     - Adding multiple lines to finish a function
-    - Refactoring existing code above or below
   </Step>
   
   <Step title="Accept or reject">
     - **Tab**: Accept the entire suggestion
     - **Esc**: Dismiss the suggestion
-    - **Command + →**: Accept word by word
     - Keep typing to ignore and get new suggestions
   </Step>
 </Steps>
 
 ### Advanced Features
 
-#### Pattern Recognition
+#### Learning from Context
 
-When you make a change in one place, Tab recognizes the pattern and suggests similar changes elsewhere. For example:
-
-- Change one variable name, Tab suggests updating all references
-- Update one SwiftUI modifier, Tab suggests the same change for similar views
-- Fix one error, Tab knows how to fix similar errors throughout your file
+Tab uses your recent edits and previous tab acceptances to provide more relevant suggestions.
 
 #### Contextual Understanding
 
@@ -82,27 +80,10 @@ Tab completions consider:
 - Your coding style and naming conventions
 - Xcode's build errors and warnings
 
-## Multiline Magic
+<Note>
+Tab remembers your previous accepts across different files. When you accept a suggestion in one file, it learns from that pattern and applies similar suggestions in other files you work on.
+</Note>
 
-Unlike basic autocomplete, Tab can suggest complex, multi-line changes:
-
-<AccordionGroup>
-  <Accordion title="Complete implementations">
-    Start typing a function signature and Tab completes the entire implementation based on context
-  </Accordion>
-  
-  <Accordion title="Protocol conformance">
-    Add a protocol to your class and Tab suggests all required method implementations
-  </Accordion>
-  
-  <Accordion title="Error fixes">
-    Tab sees compiler errors and suggests multi-line fixes that resolve the issue
-  </Accordion>
-  
-  <Accordion title="Boilerplate code">
-    Generate common patterns like table view data sources, SwiftUI views, or test cases
-  </Accordion>
-</AccordionGroup>
 
 ## Configuration
 
@@ -110,67 +91,18 @@ Unlike basic autocomplete, Tab can suggest complex, multi-line changes:
 
 Toggle Tab completions in Settings → Features & Keybindings → Enable Autocomplete under the "Editor Features" section.
 
-### Completion Behavior
-
-Configure when Tab suggestions appear:
-- **Always**: Show suggestions continuously as you type
-- **Manual**: Only show when you press Tab
-- **Smart**: Show based on context (recommended)
-
-### Performance Settings
-
-For larger projects, you can adjust:
-- Context window size
-- Suggestion delay
-- File analysis depth
-
 <Note>
 Tab completions work best when codebase indexing is enabled. This helps Alex understand your project structure and provide more accurate suggestions.
 </Note>
 
-## Tips for Better Completions
 
-1. **Write descriptive comments** - Tab uses comments to understand your intent
-2. **Use consistent naming** - Helps Tab learn your patterns
-3. **Keep files organized** - Better project structure means better suggestions
-4. **Let Tab see errors** - Build your project so Tab can see and fix compiler errors
-
-## Common Use Cases
-
-### SwiftUI Development
-Tab excels at SwiftUI's declarative syntax, suggesting entire view hierarchies and modifier chains.
-
-### Async/Await
-Writing async code? Tab suggests proper error handling and await patterns.
-
-### Testing
-Start a test function and Tab suggests the arrange-act-assert structure with relevant test data.
-
-### Refactoring
-Select code and Tab suggests cleaner implementations or modern Swift patterns.
 
 ## Troubleshooting
 
 ### Suggestions not appearing?
 - Check that Tab completions are enabled in settings
-- Ensure codebase indexing has completed
 - Try manually triggering with Tab key
 
 ### Poor quality suggestions?
-- Let indexing complete for your project
 - Make sure you're using a model with good code understanding
 - Consider switching to a more powerful model for complex code
-
-### Tab interfering with regular tabs?
-- You can still insert regular tabs by pressing Shift + Tab
-- Or temporarily disable Tab completions when not needed
-
-<Warning>
-Tab completions use your selected AI model and consume credits based on the model's pricing. Monitor your usage if you're on a limited plan.
-</Warning>
-
-## The Future of Coding
-
-Multiline Tab completions represent a shift in how we write code. Instead of typing every character, you guide the AI with your intent and let it handle the implementation details. It's like having a senior developer looking over your shoulder, ready to finish your thoughts.
-
-Ready to code faster? Start typing and let Tab do the heavy lifting.
