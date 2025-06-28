@@ -64,50 +64,18 @@ Each provider measures limits differently:
 
 ## How to Increase Your Limits
 
-### Anthropic: Progress Through Usage Tiers
+### Anthropic
+- Spend more to automatically get higher limits
+- Contact sales for enterprise needs
 
-Anthropic uses automatic tier progression based on spending:
+### OpenAI  
+- Increase limits by spending (not just depositing) money
+- Multiple tiers available with different requirements
+- Check [platform.openai.com/account/limits](https://platform.openai.com/account/limits) for current tier info
 
-1. **Add credits to your account** - The more you spend, the higher your tier
-2. **Contact sales** for enterprise limits via the Console
-3. **Use prompt caching** - Cached tokens don't count against ITPM for Claude 3.5 Sonnet
-4. **Set workspace limits** - Prevent one project from using all your quota
-
-<Note>
-Anthropic measures limits separately per model. You can use different models up to their respective limits simultaneously.
-</Note>
-
-### OpenAI: Climb the Tiers
-
-OpenAI has 6 usage tiers with specific requirements:
-
-| Tier | Requirement | Time Wait |
-|------|------------|-----------|
-| Free | Default | - |
-| Tier 1 | $5 paid | Immediate |
-| Tier 2 | $50 paid | 7+ days |
-| Tier 3 | $250 paid | 7+ days |
-| Tier 4 | $500 paid | 14+ days |
-| Tier 5 | $1,000 paid | 30+ days |
-
-**Important**: The requirement is based on amount spent, not just deposited. Tier upgrades can take up to 7 days to process.
-
-For higher limits, apply for Scale Tier at [openai.com/api-scale-tier](https://openai.com/api-scale-tier).
-
-### Gemini: Request Increases
-
-Gemini allows manual quota increases:
-
-1. Go to [Google Cloud Console](https://console.cloud.google.com)
-2. Navigate to "IAM & Admin" → "Quotas"
-3. Search for `aiplatform.googleapis.com/generate_content_requests`
-4. Click the three dots → "Edit quota"
-5. Enter new limit and submit request
-
-For Firebase users:
-1. Go to Firebase Console → AI Logic API
-2. Click "Manage" → "Quotas & System Limits"  
-3. Select "Edit quota" and submit request
+### Gemini
+- Request increases through Google Cloud Console
+- Manual approval required
 
 ## Quick Fixes When You're Rate Limited
 
@@ -117,51 +85,25 @@ Each model has separate limits. If Claude Sonnet is rate limited, try:
 - Switch to OpenAI or Gemini
 - Use Alex's built-in credits instead
 
-### 2. Implement Smart Retries
-```python
-# Don't do this:
-while error == 429:
-    retry()  # Bad! Burns through your limit
+### 2. Wait Before Retrying
+If you hit a rate limit, wait a bit before trying again. The error message might tell you how long to wait.
 
-# Do this instead:
-wait_time = 1
-while error == 429:
-    sleep(wait_time)
-    wait_time *= 2  # Exponential backoff
-    retry()
-```
-
-### 3. Optimize Your Requests
-- Reduce `max_tokens` to match expected output
-- Batch similar requests together
-- Cache responses to avoid duplicate calls
-- Use streaming for long responses
-
-### 4. Check the Headers
-Most APIs return helpful headers:
-```
-retry-after: 30  # Wait 30 seconds
-x-ratelimit-remaining: 10  # 10 requests left
-x-ratelimit-reset: 1701234567  # Unix timestamp when limit resets
-```
+### 3. Reduce Your Usage
+- Ask for shorter responses
+- Send fewer messages
+- Use a model with higher limits
 
 ## Common Scenarios & Solutions
 
 ### "I just created an account and I'm already rate limited!"
 
-**OpenAI**: New accounts start with very low limits (sometimes 3 RPM). Add $5 to reach Tier 1 immediately.
-
-**Anthropic**: Default limits are minimal. Add $10-20 to get started properly.
-
-**Gemini**: Free tier is 60 RPM. Enable billing for higher limits.
+New accounts typically have very low default limits. You'll need to add credits or enable billing to get usable limits. Check each provider's documentation for current requirements.
 
 ### "I added money but limits didn't increase"
 
-**OpenAI**: Remember it's based on SPEND, not balance. Also, tier upgrades take up to 7 days.
-
-**Anthropic**: Check your console for updated limits after adding credits.
-
-**Gemini**: Manual quota increases require approval.
+- Some providers require you to actually spend money, not just add it
+- Limit increases aren't always instant
+- Check your provider's console for current limits
 
 ### "Rate limits are killing my productivity"
 
