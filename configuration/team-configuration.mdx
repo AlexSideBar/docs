@@ -1,0 +1,248 @@
+---
+title: "Team Configuration"
+description: "Manage team members and configure custom models for your organization"
+---
+
+Set up AI models and manage your team through the Alex Sidebar Admin Portal at https://www.alexcodes.app/admin.
+
+<Tip>
+  You'll need to be on a team subscription and have admin access to use these features.
+</Tip>
+
+## Access Team Settings
+
+1. Go to [Alex Sidebar Admin Portal](https://www.alexcodes.app/admin)
+2. Sign in with your admin account
+3. Navigate to your team dashboard
+
+## Team Management
+
+### Managing Team Members
+
+<Frame>
+  <img
+    src="/images/team-members-dashboard.png"
+    alt="Team Members dashboard showing member list and invite options"
+  />
+</Frame>
+
+From the **Members** tab, you can:
+
+<Steps>
+  <Step title="View Current Members">
+    See all team members with their roles (Admin/Member)
+  </Step>
+  
+  <Step title="Invite New Members">
+    1. Enter the email address
+    2. Select their role (Member or Admin)
+    3. Click "Send Invitation"
+  </Step>
+  
+  <Step title="Remove Members">
+    Click "Remove" next to any member to revoke their access
+  </Step>
+</Steps>
+
+<Note>
+  Team members automatically inherit all model configurations set by admins. Individual API keys are not needed when using team models.
+</Note>
+
+## Models Configuration
+
+<Frame>
+  <img
+    src="/images/team-models-overview.png"
+    alt="Team Models configuration page showing various model types"
+  />
+</Frame>
+
+The **Models** tab lets you configure custom endpoints for all AI features in Alex Sidebar. Leave fields empty to use default models.
+
+<Tip>
+  Remember to click the "Save Changes" button at the bottom right after configuring your models. Changes won't take effect until saved.
+</Tip>
+
+### Available Model Types
+
+<Tip>
+  Other fields are optional. Alex Sidebar will use the default if you leave them empty.
+</Tip>
+
+1. **Chat Models** - These are the large language models for code generation and conversation in Alex Sidebar. Examples are Claude Sonnet 4, Gemini 2.5 Pro and OpenAI o3 model.
+2. **Autocomplete Model** - Tab completion while you type. Fast models like Codestral work best here.
+3. **Thinking Model** - Models like Gemini 2.5 Pro takes more time to reason on the given prompt and context to come to an answer.
+4. **Voice Model** - Handles voice-to-text if you use voice input.
+5. **Embedding Model** - Powers codebase search and indexing.
+6. **Code-Apply Model** - Specialized for applying code edits.
+7. **Web Model** - Used when searching the web.
+8. **Image Model** - Analyzes screenshots and generates diagrams. Needs vision capabilities like GPT-4V or Claude.
+9. **Summarizer Model** - Condenses long content.
+
+
+<Frame>
+  <img
+    src="/images/different-models-overview.png"
+    alt="Multiple chat models configured for different environments"
+  />
+</Frame>
+
+### Adding Custom Models
+
+For each model type, configure:
+
+<Steps>
+  <Step title="Set Base URL">
+    Enter your model endpoint URL (e.g., `https://internal-ai-gateway.company.com/v1`)
+  </Step>
+  
+  <Step title="Add API Key">
+    Enter the authentication key for your endpoint
+  </Step>
+  
+  <Step title="Specify Model Name">
+    Enter the exact model identifier (e.g., `amazon.nova-pro-v1.0`)
+  </Step>
+</Steps>
+
+### Example Configurations
+
+<Tabs>
+  <Tab title="AWS Bedrock via LiteLLM">
+    ```yaml
+    Base URL: https://your-litellm-proxy.com/v1
+    API Key: your-litellm-key
+    Model Name: amazon.nova-pro-v1.0
+    ```
+  </Tab>
+  
+  <Tab title="Azure OpenAI">
+    ```yaml
+    Base URL: https://your-resource.openai.azure.com/v1
+    API Key: your-azure-key
+    Model Name: gpt-4-deployment-name
+    ```
+  </Tab>
+  
+  <Tab title="Self-Hosted Models">
+    ```yaml
+    Base URL: https://internal-llm.company.com/v1
+    API Key: internal-api-key
+    Model Name: llama-3-70b
+    ```
+  </Tab>
+</Tabs>
+
+### Multiple Chat Models
+
+You can add multiple chat models for different use cases:
+
+<CardGroup cols={2}>
+  <Card title="Model Variety">
+    Add different models (Claude, GPT-4, Gemini) and let developers choose based on their needs
+  </Card>
+  
+  <Card title="Environment Separation">
+    Configure separate models for development, staging, and production environments
+  </Card>
+</CardGroup>
+
+### Using Team Models in Alex Sidebar
+
+After configuring and saving your team models, they automatically appear in Alex Sidebar for all team members.
+
+<Frame>
+  <img
+    src="/images/team-models-in-sidebar.png"
+    alt="Alex Sidebar showing custom team models in the model selector"
+  />
+</Frame>
+
+Team members can:
+- Select from configured models using the model selector (bottom left of chat)
+- See custom model names exactly as configured by admins
+
+<Note>
+  Changes to team models apply immediately to all members. Users may need to restart Alex Sidebar to see new models.
+</Note>
+
+## Advanced Settings
+
+<Frame>
+  <img
+    src="/images/team-advanced-settings.png"
+    alt="Advanced Settings tab showing telemetry toggle"
+  />
+</Frame>
+
+The **Advanced** tab contains telemetry settings:
+
+### Telemetry
+
+Toggle "Enable telemetry data collection for your team" to control:
+- Analytics data collection
+- Crash logs and error reporting  
+- Usage statistics
+
+When disabled, no telemetry data is sent from any team member's Alex Sidebar.
+
+## Best Practices
+
+<Steps>
+  <Step title="Start with Chat Models">
+    Configure chat models first as they're used most frequently
+  </Step>
+  
+  <Step title="Use Consistent Naming">
+    Name models clearly (e.g., `dev-claude`, `prod-gpt4`) so developers know which to use
+  </Step>
+  
+  <Step title="Test Before Deploying">
+    Verify each model works correctly before adding team members
+  </Step>
+  
+  <Step title="Document Model Purposes">
+    Create internal documentation explaining when to use each model
+  </Step>
+</Steps>
+
+## Cost Management
+
+When using team models:
+- All API costs are billed to your organization's accounts
+- Individual developers don't need personal API keys
+- Monitor usage through your cloud provider's dashboard
+- Set up billing alerts to track spending
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Models not appearing for team members">
+    - Ensure you clicked "Save Changes" after configuring models
+    - Check members have synced their Alex Sidebar app
+    - Verify the model endpoints are accessible from user networks
+  </Accordion>
+  
+  <Accordion title="Authentication errors">
+    - Verify API keys are correct and active
+    - Check Base URL includes `/v1` suffix for OpenAI-compatible endpoints
+    - Ensure API keys have necessary permissions
+  </Accordion>
+  
+  <Accordion title="Can't access admin portal">
+    - Verify you have admin role in the team
+    - Check you're using the correct email address
+    - Contact daniel@alexcodes.app if you need admin access
+  </Accordion>
+</AccordionGroup>
+
+## Integration with LiteLLM
+
+For teams using LiteLLM proxy:
+
+1. Deploy LiteLLM with your enterprise models
+2. Add your LiteLLM endpoint as Base URL
+3. All team members automatically use your proxy
+4. No individual cloud accounts needed
+
+See the [LiteLLM Setup Guide](/configuration/litellm-setup) for detailed instructions.
