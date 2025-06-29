@@ -1,0 +1,305 @@
+---
+title: "LiteLLM Proxy Setup"
+description: "Connect Alex Sidebar to Amazon Bedrock, Google Vertex AI, and other enterprise AI providers"
+---
+
+LiteLLM proxy connects Alex Sidebar to Amazon Bedrock, Google Vertex AI, and other enterprise AI providers. Teams can use their existing cloud infrastructure without changing their security setup.
+
+<Info>
+  **For iOS Developers**: If your company already pays for AWS Bedrock or Google Cloud AI, this guide shows how to use those models in Xcode with Alex Sidebar instead of buying separate API keys.
+</Info>
+
+## What is LiteLLM?
+
+LiteLLM is an open-source proxy that translates between the OpenAI API format and 100+ different AI providers. Alex Sidebar can work with enterprise AI services that don't support the OpenAI API format.
+
+<Note>
+  LiteLLM is what Alex Sidebar uses internally for model connections, making it a well-tested solution for enterprise deployments.
+</Note>
+
+## Why Use LiteLLM?
+
+<CardGroup cols={2}>
+  <Card title="Use Your Company's AI" icon="building">
+    If your company uses AWS Bedrock or Google Cloud AI, LiteLLM lets you access those models through Alex Sidebar
+  </Card>
+  
+  <Card title="Data Never Leaves Your Infrastructure" icon="shield">
+    Your code stays within your company's cloud. No data goes to Alex Sidebar servers
+  </Card>
+  
+  <Card title="Track Costs by Project" icon="chart-line">
+    See exactly how much each project costs. Set budgets and get alerts
+  </Card>
+  
+  <Card title="One Interface for All Models" icon="plug">
+    Switch between Claude on Bedrock, Gemini on Vertex, or GPT-4 on Azure without changing code
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+<Steps>
+  <Step title="Install LiteLLM">
+    Choose your deployment method:
+    
+    **Option 1: pip install (simplest)**
+    ```bash
+    pip install 'litellm[proxy]'
+    litellm --model bedrock/claude-3-sonnet --port 4000
+    ```
+    
+    **Option 2: Docker (recommended for production)**
+    ```bash
+    docker run -p 4000:4000 ghcr.io/berriai/litellm:main
+    ```
+  </Step>
+  
+  <Step title="Configure Your Providers">
+    Create a `config.yaml` file in your LiteLLM directory:
+    
+    ```yaml
+    model_list:
+      # Amazon Bedrock
+      - model_name: "claude-3-sonnet"
+        litellm_params:
+          model: "bedrock/anthropic.claude-3-sonnet-20240229-v1:0"
+          aws_region_name: "us-east-1"
+      
+      # Google Vertex AI  
+      - model_name: "gemini-2.5-pro"
+        litellm_params:
+          model: "vertex_ai/gemini-1.5-pro"
+          vertex_project: "your-gcp-project"
+          vertex_location: "us-central1"
+    
+    # Start proxy with config
+    # litellm --config config.yaml --port 4000
+    ```
+  </Step>
+  
+  <Step title="Connect Alex Sidebar">
+    In Alex Sidebar, add a custom model pointing to your LiteLLM proxy:
+    
+    1. Open Settings → Models → Custom Models
+    2. Click "Add New Model"
+    3. Configure:
+       - **Model ID**: Your model name from config.yaml (e.g., `claude-3-sonnet`)
+       - **Base URL**: Your LiteLLM URL + `/v1` (e.g., `https://litellm.company.com/v1`)
+       - **API Key**: Your LiteLLM proxy key (if configured)
+  </Step>
+</Steps>
+
+## Provider-Specific Setup
+
+### Amazon Bedrock
+
+<Tabs>
+  <Tab title="Setup">
+    1. Ensure your AWS credentials are configured on the LiteLLM server
+    2. Enable the models you need in the AWS Bedrock console
+    3. Add to your LiteLLM config:
+    
+    ```yaml
+    model_list:
+      - model_name: "claude-3-opus"
+        litellm_params:
+          model: "bedrock/anthropic.claude-3-opus-20240229-v1:0"
+          aws_region_name: "us-east-1"
+      
+      - model_name: "llama3-70b"
+        litellm_params:
+          model: "bedrock/meta.llama3-70b-instruct-v1:0"
+          aws_region_name: "us-east-1"
+    ```
+  </Tab>
+  
+  <Tab title="Authentication">
+    LiteLLM supports multiple AWS authentication methods:
+    - IAM roles (recommended for EC2/ECS)
+    - Environment variables (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`)
+    - AWS profiles
+    - Temporary credentials with STS
+  </Tab>
+</Tabs>
+
+### Google Vertex AI
+
+<Tabs>
+  <Tab title="Setup">
+    1. Enable the Vertex AI API in your GCP project
+    2. Set up authentication (service account recommended)
+    3. Add to your LiteLLM config:
+    
+    ```yaml
+    model_list:
+      - model_name: "gemini-2.5-pro"
+        litellm_params:
+          model: "vertex_ai/gemini-1.5-pro"
+          vertex_project: "your-project-id"
+          vertex_location: "us-central1"
+      
+      - model_name: "code-bison"
+        litellm_params:
+          model: "vertex_ai/code-bison"
+          vertex_project: "your-project-id"
+          vertex_location: "us-central1"
+    ```
+  </Tab>
+  
+  <Tab title="Authentication">
+    Set up authentication using one of these methods:
+    - Service account JSON file: `export GOOGLE_APPLICATION_CREDENTIALS=path/to/key.json`
+    - Workload Identity (for GKE)
+    - Default application credentials
+  </Tab>
+</Tabs>
+
+## Team Configuration
+
+For team accounts, you can override all Alex Sidebar model endpoints:
+
+1. Go to [Alex Sidebar Admin Portal](https://alexcodes.app/admin)
+2. Navigate to your team settings
+3. Override model endpoints with your LiteLLM proxy URL
+4. All team members will automatically use your proxy
+
+<Tip>
+  All AI requests from your team go through your infrastructure. You control the data and costs.
+</Tip>
+
+## Advanced Configuration
+
+### Load Balancing
+
+Distribute requests across multiple model deployments:
+
+```yaml
+model_list:
+  - model_name: "gpt-4"
+    litellm_params:
+      model: "azure/gpt-4"
+      api_base: "https://endpoint1.openai.azure.com"
+      api_key: "key1"
+  
+  - model_name: "gpt-4"
+    litellm_params:
+      model: "azure/gpt-4"
+      api_base: "https://endpoint2.openai.azure.com"
+      api_key: "key2"
+
+router_settings:
+  routing_strategy: "least-busy"  # or "round-robin"
+```
+
+### Cost Tracking
+
+Enable cost tracking for all requests:
+
+```yaml
+general_settings:
+  master_key: "your-secret-key"
+  database_url: "postgresql://user:pass@localhost:5432/litellm"
+  
+litellm_settings:
+  success_callback: ["langfuse"]  # or other observability tools
+  track_cost_callback: true
+```
+
+### Security
+
+Secure your LiteLLM deployment:
+
+```yaml
+general_settings:
+  master_key: "sk-your-secret-key"  # Required for all requests
+  
+  # IP allowlist
+  allowed_ips: ["10.0.0.0/8", "172.16.0.0/12"]
+  
+  # Rate limiting
+  max_parallel_requests: 100
+  max_request_per_minute: 1000
+```
+
+## Monitoring & Observability
+
+LiteLLM provides built-in support for:
+- Request/response logging
+- Latency tracking  
+- Cost monitoring per user/project
+- Error rates and retry statistics
+- Integration with MLflow, Langfuse, Helicone, Lunary, and more
+
+Example cost tracking dashboard:
+```yaml
+general_settings:
+  database_url: "postgresql://user:pass@localhost:5432/litellm"
+  
+# View costs at http://localhost:4000/ui
+```
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Connection refused error">
+    - Verify LiteLLM is running and accessible
+    - Check firewall rules
+    - Ensure you're using the correct URL format with `/v1` suffix
+  </Accordion>
+  
+  <Accordion title="Authentication errors">
+    - For Bedrock: Verify AWS credentials and permissions
+    - For Vertex: Check service account permissions
+    - Ensure the master key matches if configured
+  </Accordion>
+  
+  <Accordion title="Model not found">
+    - Check model name matches exactly in config.yaml
+    - Verify the model is enabled in your cloud provider
+    - Check region/location settings
+  </Accordion>
+</AccordionGroup>
+
+## Common Use Cases for iOS Teams
+
+### Scenario 1: Company Uses AWS
+Your company has AWS Bedrock with Claude models. Instead of buying Anthropic API keys for each developer:
+1. Deploy LiteLLM on an EC2 instance
+2. Configure it to use your Bedrock models
+3. Developers connect Alex Sidebar to your LiteLLM endpoint
+4. All costs go to your AWS bill
+
+### Scenario 2: Switching Between Models
+Test different models without changing code:
+```yaml
+# Your config.yaml
+model_list:
+  - model_name: "default-model"
+    litellm_params:
+      model: "bedrock/claude-3-sonnet"  # Switch to GPT-4, Gemini, etc.
+```
+
+### Scenario 3: Development vs Production
+```yaml
+# Dev environment - use cheaper models
+- model_name: "dev-model"
+  litellm_params:
+    model: "bedrock/claude-3-haiku"
+
+# Prod environment - use powerful models  
+- model_name: "prod-model"
+  litellm_params:
+    model: "bedrock/claude-3-opus"
+```
+
+## Next Steps
+
+- Review [LiteLLM's official documentation](https://docs.litellm.ai) for detailed configuration options
+- Check the [Proxy UI](http://localhost:4000/ui) to monitor costs and usage
+- Join the [Alex Sidebar Discord](https://discord.gg/T5zxfReEnd) for help with enterprise setups
+- Contact daniel@alexcodes.app for business support
+
+<Note>
+  LiteLLM gives you control over your AI infrastructure and works with all Alex Sidebar features.
+</Note>

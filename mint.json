@@ -122,7 +122,8 @@
         },
         "configuration/git-integration",
         "configuration/custom-prompts",
-        "configuration/codebase-indexing"
+        "configuration/codebase-indexing",
+        "configuration/litellm-setup"
       ]
     },
     {
