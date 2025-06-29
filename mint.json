@@ -146,7 +146,8 @@
       "pages": [
         "support/getting-help",
         "support/discord-channels",
-        "support/troubleshooting"
+        "support/troubleshooting",
+        "support/rate-limits"
       ]
     }
   ],

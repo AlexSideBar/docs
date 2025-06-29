@@ -1,0 +1,144 @@
+---
+title: "Rate Limits Guide"
+description: "Handle API rate limits like a pro when using your own keys"
+---
+
+If you're using your own API keys with Alex Sidebar, you'll eventually hit rate limits. This guide helps you understand, diagnose, and fix rate limit issues for each provider.
+
+## What You'll See When You Hit Rate Limits
+
+### The Dreaded 429 Error
+
+All providers return a `429` HTTP status code when you exceed rate limits, but the error messages differ:
+
+**Anthropic (Claude)**
+```
+429 {"type":"error","error":{"type":"rate_limit_error","message":"Number of request tokens has exceeded your per-minute rate limit"}}
+```
+
+**OpenAI** 
+```
+Error: 429 - Rate limit exceeded: You exceeded your current quota, please check your plan and billing details
+```
+
+**Gemini**
+```
+Error 429: RESOURCE_EXHAUSTED - Quota exceeded for quota metric
+```
+
+## Understanding Rate Limits
+
+Each provider measures limits differently:
+
+### Anthropic
+- **RPM**: Requests per minute
+- **ITPM**: Input tokens per minute  
+- **OTPM**: Output tokens per minute
+
+### OpenAI
+- **RPM**: Requests per minute
+- **TPM**: Total tokens per minute (input + output)
+- **RPD**: Requests per day (for some models)
+
+### Gemini
+- **RPM**: Requests per minute
+- **TPD**: Tokens per day
+- **RPD**: Requests per day
+
+## Check Your Current Limits
+
+### Anthropic Console
+1. Go to [console.anthropic.com](https://console.anthropic.com)
+2. Click on "Usage" in the sidebar.
+3. Check "Rate-limited requests" to see the number of requests that were blocked due to rate limits.
+
+### OpenAI Platform  
+1. Visit [platform.openai.com/account/limits](https://platform.openai.com/account/limits)
+2. See your tier and current limits
+3. Check usage at [platform.openai.com/usage](https://platform.openai.com/usage)
+
+### Google Cloud Console
+1. Go to [console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/apis/dashboard)
+2. Select your project
+3. Click "Quotas & System Limits"
+
+## How to Increase Your Limits
+
+### Anthropic
+- Spend more to automatically get higher limits
+- Contact sales for enterprise needs
+
+### OpenAI  
+- Increase limits by spending (not just depositing) money
+- Multiple tiers available with different requirements
+- Check [platform.openai.com/account/limits](https://platform.openai.com/account/limits) for current tier info
+
+### Gemini
+- Request increases through Google Cloud Console
+- Manual approval required
+
+## Quick Fixes When You're Rate Limited
+
+### 1. Switch Models Temporarily
+Each model has separate limits. If one model is rate limited, try:
+- A different model from the same provider
+- Switch to another provider (OpenAI, Anthropic, Gemini)
+- Use Alex's built-in credits instead
+
+### 2. Wait Before Retrying
+If you hit a rate limit, wait a bit before trying again. The error message might tell you how long to wait.
+
+### 3. Reduce Your Usage
+- Ask for shorter responses
+- Send fewer messages
+- Use a model with higher limits
+
+## Common Scenarios & Solutions
+
+### "I just created an account and I'm already rate limited!"
+
+New accounts typically have very low default limits. You'll need to add credits or enable billing to get usable limits. Check each provider's documentation for current requirements.
+
+### "I added money but limits didn't increase"
+
+- Some providers require you to actually spend money, not just add it
+- Limit increases aren't always instant
+- Check your provider's console for current limits
+
+### "Rate limits are killing my productivity"
+
+Consider using Alex Sidebar's built-in credits. You won't have to worry about:
+- Managing multiple API keys
+- Tracking spending across providers  
+- Dealing with rate limits
+- Waiting for tier upgrades
+
+## Best Practices
+
+1. **Monitor usage proactively** - Check your provider's dashboard regularly
+2. **Set up billing alerts** - Know before you hit spending limits
+3. **Track when you hit limits** - Notice patterns in your usage
+
+## Provider-Specific Tips
+
+### Anthropic
+- Workspaces let you set custom limits per project
+- Different models have different limits
+
+### OpenAI  
+- Different models have different rate limits
+- Some models may have special restrictions
+
+### Gemini
+- Vertex AI and AI Studio have separate quotas
+- Location can affect your limits
+
+## Still Stuck?
+
+If you're consistently hitting rate limits despite following this guide:
+
+1. **Check your code** - You might be making more requests than you think
+2. **Contact support** - Each provider has ways to request custom limits
+3. **Consider Alex credits** - Our Pro and Unlimited plans eliminate these headaches
+
+Rate limits exist to ensure fair usage and system stability. Understanding how they work helps you plan your development workflow better.
