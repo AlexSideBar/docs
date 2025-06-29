@@ -129,7 +129,7 @@ LiteLLM is an open-source proxy that translates between the OpenAI API format an
         litellm_params:
           model: "bedrock/anthropic.claude-4-sonnet-20250514-v1:0"
           aws_region_name: "us-east-1"
-          thinking: true  # Enable reasoning capabilities
+          thinking: true
       
       # Latest Llama 4 Models
       - model_name: "llama4-70b"
@@ -257,7 +257,6 @@ model_list:
     litellm_params:
       model: "anthropic/claude-4-sonnet-20250514"
       thinking: true
-      reasoning_effort: "medium"  # low, medium, high
       
   - model_name: "o3-pro-reasoning"
     litellm_params:
@@ -539,13 +538,12 @@ model_list:
 - model_name: "staging-model"
   litellm_params:
     model: "vertex_ai/gemini-2.5-flash"
-    thinking: true
 
 # Production - use most capable models  
 - model_name: "prod-model"
   litellm_params:
     model: "bedrock/anthropic.claude-4-opus-20250514-v1:0"
-    reasoning_effort: "high"
+    thinking: true
 ```
 
 ### Scenario 4: Enterprise Security and Compliance
