@@ -123,6 +123,7 @@
         "configuration/git-integration",
         "configuration/custom-prompts",
         "configuration/codebase-indexing",
+        "configuration/team-configuration",
         "configuration/litellm-setup"
       ]
     },
