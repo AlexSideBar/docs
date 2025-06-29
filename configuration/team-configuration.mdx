@@ -73,6 +73,14 @@ Teams can configure custom models for:
 8. **Image Model** - Image analysis and generation
 9. **Summarizer Model** - Document summarization
 
+
+<Frame>
+  <img
+    src="/images/different-models-overview.png"
+    alt="Multiple chat models configured for different environments"
+  />
+</Frame>
+
 ### Adding Custom Models
 
 For each model type, configure:
@@ -121,13 +129,6 @@ For each model type, configure:
 
 ### Multiple Chat Models
 
-<Frame>
-  <img
-    src="/images/team-multiple-models.png"
-    alt="Multiple chat models configured for different environments"
-  />
-</Frame>
-
 You can add multiple chat models for different use cases:
 
 <CardGroup cols={2}>
@@ -139,6 +140,26 @@ You can add multiple chat models for different use cases:
     Configure separate models for development, staging, and production environments
   </Card>
 </CardGroup>
+
+### Using Team Models in Alex Sidebar
+
+After configuring and saving your team models, they automatically appear in Alex Sidebar for all team members.
+
+<Frame>
+  <img
+    src="/images/team-models-in-sidebar.png"
+    alt="Alex Sidebar showing custom team models in the model selector"
+  />
+</Frame>
+
+Team members can:
+- Select from configured models using the model selector (bottom left of chat)
+- Switch between models with `Command + /`
+- See custom model names exactly as configured by admins
+
+<Note>
+  Changes to team models apply immediately to all members. Users may need to restart Alex Sidebar to see new models.
+</Note>
 
 ## Advanced Settings
 
@@ -224,23 +245,3 @@ For teams using LiteLLM proxy:
 4. No individual cloud accounts needed
 
 See the [LiteLLM Setup Guide](/configuration/litellm-setup) for detailed instructions.
-
-## Using Team Models in Alex Sidebar
-
-After configuring and saving your team models, they automatically appear in Alex Sidebar for all team members.
-
-<Frame>
-  <img
-    src="/images/team-models-in-sidebar.png"
-    alt="Alex Sidebar showing custom team models in the model selector"
-  />
-</Frame>
-
-Team members can:
-- Select from configured models using the model selector (bottom left of chat)
-- Switch between models with `Command + /`
-- See custom model names exactly as configured by admins
-
-<Note>
-  Changes to team models apply immediately to all members. Users may need to restart Alex Sidebar to see new models.
-</Note>
