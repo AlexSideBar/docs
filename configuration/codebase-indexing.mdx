@@ -57,14 +57,30 @@ This deeper understanding helps Alex:
     - View all indexed files
     - Check indexing status
     - Manage existing indexes
-    - Set custom override paths
+    - Add multiple folders for indexing
+  </Step>
+
+  <Step title="Adding Multiple Folders">
+    To index additional folders beyond your main Xcode project:
+    
+    1. Under "Search Files", click the **"Additional Folders"** collapsible button
+    2. Click the **plus (+) button** to select a folder
+    3. Choose the folder you want to index (e.g., server repo, Android repo)
+    4. Click **"Reload Index"** to start indexing the new folder
+    5. If Alex has difficulties with recognizing the folder, hit delete index and reload it. Or try restarting the app.
+    
+    This allows Alex to understand multiple codebases simultaneously, making it helpful when working with:
+    - Backend server repositories
+    - Android projects alongside iOS
+    - Shared libraries or dependencies
+    - Any other related code folders
   </Step>
 
   <Step title="Index Operations">
     The following operations are available:
     - **Reload Index**: Initialize or refresh indexing for files
     - **Delete Index**: Remove existing index data
-    - **Set override path**: Manually specify a folder path to index
+    - **Add folders**: Include additional directories for comprehensive indexing
   </Step>
 </Steps>
 
