@@ -5,6 +5,18 @@ description: "Write code faster with intelligent, context-aware completions that
 
 Tab completions in Alex Sidebar go beyond simple autocomplete. They understand your code's context and can suggest entire blocks and complete functions based on what you're writing.
 
+<Note>
+To enable Multiline suggestions, which is currently an alpha feature, go to:
+
+1. Settings
+2. Features & Keybindings
+3. Enable Multiline Suggestions
+
+Because multline suggestions requires screen access, you will need to enable screen recording access to AlexSideBar in your system preferences.
+
+Multiline tab (alpha) is available from version 3.3
+</Note>
+
 ## How Tab Works
 
 <video
@@ -20,7 +32,7 @@ Tab completions in Alex Sidebar go beyond simple autocomplete. They understand y
 As you type, Alex Sidebar analyzes your code and suggests completions that appear as completion text. Press **Tab** to accept the suggestion and watch as it intelligently fills in multiple lines at once.
 
 <Note>
-For optimal Tab completion performance, disable Apple's predictive code completion in Xcode → Settings → Text Editing → Editing → uncheck "Use code completion".
+To disable interferece with Xcode, please disable Apple's predictive code completion in Xcode → Settings → Text Editing → Editing → uncheck "Use code completion".
 </Note>
 
 ## Key Features
@@ -95,6 +107,7 @@ Toggle Tab completions in Settings → Features & Keybindings → Enable Autocom
 Tab completions work best when codebase indexing is enabled. This helps Alex understand your project structure and provide more accurate suggestions.
 </Note>
 
+You can also quickly enable/disable it in the system menubar when Alex is focused (Autocomplete section).
 
 
 ## Troubleshooting
@@ -102,7 +115,3 @@ Tab completions work best when codebase indexing is enabled. This helps Alex und
 ### Suggestions not appearing?
 - Check that Tab completions are enabled in settings
 - Try manually triggering with Tab key
-
-### Poor quality suggestions?
-- Make sure you're using a model with good code understanding
-- Consider switching to a more powerful model for complex code
