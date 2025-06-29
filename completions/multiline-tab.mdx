@@ -1,0 +1,108 @@
+---
+title: "Tab Completions"
+description: "Write code faster with intelligent, context-aware completions that span multiple lines"
+---
+
+Tab completions in Alex Sidebar go beyond simple autocomplete. They understand your code's context and can suggest entire blocks and complete functions based on what you're writing.
+
+## How Tab Works
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  alt="Multiline tab completions in action"
+  title="Tab through complex code changes"
+  src="/videos/tab-tab-tab.mp4"
+/>
+
+As you type, Alex Sidebar analyzes your code and suggests completions that appear as completion text. Press **Tab** to accept the suggestion and watch as it intelligently fills in multiple lines at once.
+
+<Note>
+For optimal Tab completion performance, disable Apple's predictive code completion in Xcode → Settings → Text Editing → Editing → uncheck "Use code completion".
+</Note>
+
+## Key Features
+
+<CardGroup cols={2}>
+  <Card title="Context-Aware Suggestions" icon="brain">
+    Understands your entire file and recent edits to provide relevant completions
+  </Card>
+  
+  <Card title="Multi-Line Edits" icon="layer-group">
+    Suggests complete code blocks, not just single lines
+  </Card>
+  
+  <Card title="Project Context" icon="files">
+    Considers other files in your project when making suggestions
+  </Card>
+  
+  <Card title="Fast & Responsive" icon="bolt">
+    Low-latency suggestions that keep up with your typing speed
+  </Card>
+</CardGroup>
+
+## Using Tab Completions
+
+### Basic Usage
+
+<Steps>
+  <Step title="Start typing">
+    Write your code normally. Alex Sidebar watches for opportunities to help.
+  </Step>
+  
+  <Step title="See suggestions">
+    Completion text appears showing what Alex suggests. This could be:
+    - Completing the current line
+    - Adding multiple lines to finish a function
+  </Step>
+  
+  <Step title="Accept or reject">
+    - **Tab**: Accept the entire suggestion
+    - **Esc**: Dismiss the suggestion
+    - Keep typing to ignore and get new suggestions
+  </Step>
+</Steps>
+
+### Advanced Features
+
+#### Learning from Context
+
+Tab uses your recent edits and previous tab acceptances to provide more relevant suggestions.
+
+#### Contextual Understanding
+
+Tab completions consider:
+- Your recent edits and what you're working on
+- The structure of your current function or class
+- Import statements and available APIs
+- Your coding style and naming conventions
+- Xcode's build errors and warnings
+
+<Note>
+Tab remembers your previous accepts across different files. When you accept a suggestion in one file, it learns from that pattern and applies similar suggestions in other files you work on.
+</Note>
+
+
+## Configuration
+
+### Enable/Disable Tab
+
+Toggle Tab completions in Settings → Features & Keybindings → Enable Autocomplete under the "Editor Features" section.
+
+<Note>
+Tab completions work best when codebase indexing is enabled. This helps Alex understand your project structure and provide more accurate suggestions.
+</Note>
+
+
+
+## Troubleshooting
+
+### Suggestions not appearing?
+- Check that Tab completions are enabled in settings
+- Try manually triggering with Tab key
+
+### Poor quality suggestions?
+- Make sure you're using a model with good code understanding
+- Consider switching to a more powerful model for complex code

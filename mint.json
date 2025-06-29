@@ -104,6 +104,7 @@
       "iconType": "solid",
       "pages": [
         "completions/inline-suggestions",
+        "completions/multiline-tab",
         "completions/error-fixes"
       ]
     },
