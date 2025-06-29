@@ -3,7 +3,11 @@ title: "Team Configuration"
 description: "Manage team members and configure custom models for your organization"
 ---
 
-Set up AI models and manage team members through the Alex Sidebar Admin Portal at https://www.alexcodes.app/admin.
+Set up AI models and manage your team through the Alex Sidebar Admin Portal at https://www.alexcodes.app/admin.
+
+<Tip>
+  You'll need to be on a team subscription and have admin access to use these features.
+</Tip>
 
 ## Access Team Settings
 
@@ -61,17 +65,19 @@ The **Models** tab lets you configure custom endpoints for all AI features in Al
 
 ### Available Model Types
 
-Teams can configure custom models for:
+<Tip>
+  Other fields are optional. Alex Sidebar will use the default if you leave them empty.
+</Tip>
 
-1. **Chat Models** - Main conversational AI
-2. **Autocomplete Model** - Code completion suggestions
-3. **Thinking Model** - Models with reasoning capabilities
-4. **Voice Model** - Speech-to-text processing
-5. **Embedding Model** - Code indexing and search
-6. **Code-Apply Model** - Direct code modifications
-7. **Web Model** - Web search integration
-8. **Image Model** - Image analysis and generation
-9. **Summarizer Model** - Document summarization
+1. **Chat Models** - These are the large language models for code generation and conversation in Alex Sidebar. Examples are Claude Sonnet 4, Gemini 2.5 Pro and OpenAI o3 model.
+2. **Autocomplete Model** - Tab completion while you type. Fast models like Codestral work best here.
+3. **Thinking Model** - Models like Gemini 2.5 Pro takes more time to reason on the given prompt and context to come to an answer.
+4. **Voice Model** - Handles voice-to-text if you use voice input.
+5. **Embedding Model** - Powers codebase search and indexing.
+6. **Code-Apply Model** - Specialized for applying code edits.
+7. **Web Model** - Used when searching the web.
+8. **Image Model** - Analyzes screenshots and generates diagrams. Needs vision capabilities like GPT-4V or Claude.
+9. **Summarizer Model** - Condenses long content.
 
 
 <Frame>
