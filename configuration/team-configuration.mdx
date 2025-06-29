@@ -63,17 +63,8 @@ The **Models** tab lets you configure custom endpoints for all AI features in Al
 
 Teams can configure custom models for:
 
-1. **Chat Models** - Main conversational AI
-2. **Autocomplete Model** - Code completion suggestions
-3. **Thinking Model** - Models with reasoning capabilities
-4. **Voice Model** - Speech-to-text processing
-5. **Embedding Model** - Code indexing and search
-6. **Code-Apply Model** - Direct code modifications
-7. **Web Model** - Web search integration
-8. **Image Model** - Image analysis and generation
-9. **Summarizer Model** - Document summarization
-
-### Adding Custom Models
+#### 1. Chat Models
+Main conversational AI for code discussions and assistance.
 
 <Frame>
   <img
@@ -81,6 +72,88 @@ Teams can configure custom models for:
     alt="Chat Models configuration showing Base URL, API Key, and Model Name fields"
   />
 </Frame>
+
+#### 2. Autocomplete Model
+Code completion suggestions as you type.
+
+<Frame>
+  <img
+    src="/images/team-autocomplete-model.png"
+    alt="Autocomplete Model configuration"
+  />
+</Frame>
+
+#### 3. Thinking Model
+Models with reasoning capabilities for complex problem-solving.
+
+<Frame>
+  <img
+    src="/images/team-thinking-model.png"
+    alt="Thinking Model configuration"
+  />
+</Frame>
+
+#### 4. Voice Model
+Speech-to-text processing for voice commands.
+
+<Frame>
+  <img
+    src="/images/team-voice-model.png"
+    alt="Voice Model configuration"
+  />
+</Frame>
+
+#### 5. Embedding Model
+Code indexing and semantic search.
+
+<Frame>
+  <img
+    src="/images/team-embedding-model.png"
+    alt="Embedding Model configuration"
+  />
+</Frame>
+
+#### 6. Code-Apply Model
+Direct code modifications and refactoring.
+
+<Frame>
+  <img
+    src="/images/team-code-apply-model.png"
+    alt="Code-Apply Model configuration"
+  />
+</Frame>
+
+#### 7. Web Model
+Web search integration for documentation and answers.
+
+<Frame>
+  <img
+    src="/images/team-web-model.png"
+    alt="Web Model configuration"
+  />
+</Frame>
+
+#### 8. Image Model
+Image analysis and generation capabilities.
+
+<Frame>
+  <img
+    src="/images/team-image-model.png"
+    alt="Image Model configuration"
+  />
+</Frame>
+
+#### 9. Summarizer Model
+Document and code summarization.
+
+<Frame>
+  <img
+    src="/images/team-summarizer-model.png"
+    alt="Summarizer Model configuration"
+  />
+</Frame>
+
+### Adding Custom Models
 
 For each model type, configure:
 
@@ -94,7 +167,7 @@ For each model type, configure:
   </Step>
   
   <Step title="Specify Model Name">
-    Enter the exact model identifier (e.g., `bedrock-us.amazon.nova-pro-v1.0`)
+    Enter the exact model identifier (e.g., `amazon.nova-pro-v1.0`)
   </Step>
 </Steps>
 
@@ -105,7 +178,7 @@ For each model type, configure:
     ```yaml
     Base URL: https://your-litellm-proxy.com/v1
     API Key: your-litellm-key
-    Model Name: bedrock-us.amazon.nova-pro-v1.0
+    Model Name: amazon.nova-pro-v1.0
     ```
   </Tab>
   
