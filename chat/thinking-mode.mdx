@@ -1,0 +1,122 @@
+---
+title: "Interleaved Thinking"
+description: "See how the AI works through problems step by step"
+---
+
+<Frame>
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    src="/videos/interleaved.mp4"
+    alt="Demonstration of interleaved thinking in Alex Sidebar"
+    title="Alex Sidebar Interleaved Thinking Demo"
+  />
+</Frame>
+
+## Overview
+
+Interleaved Thinking shows how the AI works through your requests. You can see its internal dialogue - how it analyzes problems, considers different approaches, and corrects itself when needed.
+
+## How It Works
+
+Interleaved thinking is always visible for supported models. As the AI processes your request, you'll see:
+
+- Problem analysis and understanding
+- Exploration of different approaches
+- Self-corrections when it identifies mistakes
+- Step-by-step logical reasoning
+- Consideration of edge cases and potential issues
+
+## Supported Models
+
+Interleaved thinking works with:
+- **Claude Sonnet 4** - Shows thinking process
+- **Gemini 2.5 Flash** - Shows thinking process
+- **Gemini 2.5 Pro** - Always shows extensive thinking
+- **DeepSeek R1** - Always shows thinking process
+
+## Visual Indicators
+
+When using a model that supports interleaved thinking:
+- Thinking appears in its own section
+- You can watch the reasoning unfold
+- Thinking is visually separated from the final response
+- The AI may revise its approach as it works
+
+<Note>
+Interleaved thinking is automatic for supported models. No need to enable it - it's always on.
+</Note>
+
+## Benefits
+
+<CardGroup cols={2}>
+  <Card title="Transparency" icon="eye">
+    Understand how the AI analyzes your code and arrives at solutions
+  </Card>
+  
+  <Card title="Learning" icon="graduation-cap">
+    Learn problem-solving approaches by observing the AI's reasoning process
+  </Card>
+  
+  <Card title="Debugging" icon="bug">
+    Better understand why certain suggestions are made or why specific approaches are chosen
+  </Card>
+  
+  <Card title="Complex Problems" icon="puzzle-piece">
+    Particularly useful for complex refactoring or architectural decisions
+  </Card>
+</CardGroup>
+
+## Example Interleaved Thinking
+
+Here's what you might see when the AI works through a problem:
+
+```
+Thinking...
+The user is asking about a memory leak in their Swift code. Let me analyze the code they've shared...
+
+I can see they're creating a strong reference cycle between the view controller and the closure. The closure captures 'self' strongly, and the view controller holds the closure, creating a retain cycle.
+
+Actually, wait - I need to look more carefully at this. The closure is being used in a completion handler... 
+
+Yes, this is definitely a retain cycle. The solution would be to use [weak self] or [unowned self] in the closure to break the cycle.
+```
+
+## When It's Most Valuable
+
+### Complex Problem Solving
+Watch the AI break down multi-step problems, evaluate different solutions, and choose the best approach.
+
+### Debugging
+See how the AI systematically investigates issues, identifies root causes, and proposes fixes.
+
+### Learning
+Understand the reasoning behind suggestions and learn problem-solving patterns.
+
+### Architecture Decisions
+Observe how the AI weighs trade-offs and considers different design patterns.
+
+## What to Expect
+
+<Steps>
+  <Step title="Progressive Updates">
+    Thinking appears as the AI works, not all at once
+  </Step>
+  
+  <Step title="Self-Correction">
+    The AI identifies and fixes its own mistakes as it goes
+  </Step>
+  
+  <Step title="Multiple Approaches">
+    The AI might try different solutions before settling on one
+  </Step>
+</Steps>
+
+## Performance Considerations
+
+<Info>
+  Models with interleaved thinking may take longer to respond as they work through problems step by step. The trade-off is more thoughtful solutions.
+</Info>
+

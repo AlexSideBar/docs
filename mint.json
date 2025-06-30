@@ -90,6 +90,7 @@
       "iconType": "solid",
       "pages": [
         "chat/overview",
+        "chat/thinking-mode",
         "chat/context/agents",
         "chat/context/memory",
         "chat/context/commands",
